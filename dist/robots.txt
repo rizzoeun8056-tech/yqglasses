@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://yqglasses.com/sitemap.xml
