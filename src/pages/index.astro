@@ -1,0 +1,225 @@
+---
+import '../styles/global.css';
+import { collections, site } from '../data/site';
+
+const year = new Date().getFullYear();
+const contactHref = site.contactEmail ? `mailto:${site.contactEmail}?subject=YQ%20GLASSES%20Inquiry` : null;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f0e7" />
+    <meta name="description" content={site.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="YQ GLASSES | Wine Glasses & Drinkware" />
+    <meta property="og:description" content={site.description} />
+    <meta property="og:image" content="https://yqglasses.com/images/hero-glassware.jpg" />
+    <meta property="og:url" content="https://yqglasses.com/" />
+    <link rel="canonical" href="https://yqglasses.com/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebSite', name: site.brand, url: `https://${site.domain}/`, description: site.description })} />
+    <title>YQ GLASSES | Wine Glasses, Champagne Flutes & Drinkware</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="YQ GLASSES home">
+          <span class="brand-symbol">YQ<span class="brand-dot">.</span></span>
+          <span class="brand-name">GLASSES</span>
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#collections">Collections</a>
+          <a href="#approach">Our Approach</a>
+          <a href="#contact">Inquire</a>
+        </nav>
+        <a class="header-action" href="#contact">Make an Inquiry <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
+        <a href="#collections">Collections</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#contact">Inquire</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-image" aria-hidden="true"></div>
+        <div class="hero-content page-width">
+          <div class="hero-copy">
+            <p class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> THE ART OF EVERY POUR</p>
+            <h1 id="hero-title">A glass for<br /><em>every moment.</em></h1>
+            <p class="hero-description">Thoughtful glassware for shared tables, quiet evenings and every reason to raise a glass.</p>
+            <a class="button button-dark" href="#collections">Explore Collections <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-side-note">YQ GLASSES <span>·</span> A NEW PERSPECTIVE ON GLASSWARE</p>
+        </div>
+        <div class="hero-bottom page-width">
+          <span>01 / 03 &nbsp;—&nbsp; THE COLLECTION</span>
+          <a href="#intro" aria-label="Scroll down to learn about YQ GLASSES"><span>SCROLL TO DISCOVER</span><span class="down-arrow" aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="intro page-width" id="intro" aria-labelledby="intro-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MADE FOR THE MOMENT</p>
+        <div class="intro-content">
+          <h2 id="intro-title">The everyday,<br /><em>made memorable.</em></h2>
+          <div class="intro-aside">
+            <p>The shape of a glass changes how a moment feels. YQ GLASSES brings together clean silhouettes and inviting table settings for all the ways we gather.</p>
+            <a class="text-link" href="#approach">Discover Our Approach <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="collections-section" id="collections" aria-labelledby="collections-title">
+        <div class="page-width collections-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> THE COLLECTION</p>
+            <h2 id="collections-title">The right glass<br /><em>for the occasion.</em></h2>
+          </div>
+          <p>From the first pour to the last conversation.<br />Start with the moment you have in mind.</p>
+        </div>
+        <div class="page-width collection-layout">
+          <div class="collection-image-wrap">
+            <img src="/images/collection-glassware.jpg" alt="Illustrative scene with a champagne flute, wine glass and short tumbler" width="1104" height="1380" loading="lazy" />
+            <span class="image-caption">ILLUSTRATIVE GLASSWARE IMAGERY</span>
+          </div>
+          <div class="collection-list">
+            {collections.map((collection) => (
+              <a class="collection-row" href="#contact" data-interest={collection.name} aria-label={`Ask about ${collection.name}`}>
+                <span class="collection-number">{collection.number}</span>
+                <span class="collection-text"><span class="collection-en">{collection.en}</span><strong>{collection.name}</strong><span class="collection-description">{collection.description}</span></span>
+                <span class="collection-arrow" aria-hidden="true">↗</span>
+              </a>
+            ))}
+            <p class="collection-note">Collection imagery is illustrative. Product models and specifications will be added once confirmed.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <div class="page-width approach-layout">
+          <div class="approach-heading">
+            <p class="eyebrow light"><span class="eyebrow-line"></span> OUR POINT OF VIEW</p>
+            <h2 id="approach-title">Make room for<br /><em>the moment.</em></h2>
+          </div>
+          <div class="approach-content">
+            <p class="approach-lead">The right glass feels at home on the table, and special when the occasion calls for it.</p>
+            <p>YQ GLASSES presents glassware through simple shapes and real-life moments. As our product information is finalized, this space will grow with detailed collections, specifications and ways to work together.</p>
+            <span class="approach-mark" aria-hidden="true">YQ.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="moments page-width" aria-labelledby="moments-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span> THE LITTLE DETAILS</p>
+        <div class="moments-heading">
+          <h2 id="moments-title">A glass for <em>the way you gather.</em></h2>
+          <p>Explore by occasion, then ask us about the right fit.</p>
+        </div>
+        <div class="moment-grid">
+          <article class="moment-card">
+            <span class="moment-icon" aria-hidden="true">✦</span><span class="moment-index">01 / SHARING</span>
+            <h3>Share a meal</h3><p>Set the table for good food, easy conversation and another pour.</p>
+          </article>
+          <article class="moment-card">
+            <span class="moment-icon" aria-hidden="true">◌</span><span class="moment-index">02 / CELEBRATING</span>
+            <h3>Mark an occasion</h3><p>Make space for toasts, milestones and every little celebration.</p>
+          </article>
+          <article class="moment-card">
+            <span class="moment-icon" aria-hidden="true">◇</span><span class="moment-index">03 / UNWINDING</span>
+            <h3>Take a moment</h3><p>Find a little more ease in the rituals of an ordinary evening.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="page-width contact-layout">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> LET'S CONNECT</p>
+            <h2 id="contact-title">Let's start<br /><em>a conversation.</em></h2>
+          </div>
+          <div class="contact-aside">
+            <p>Tell us which glassware you are interested in and how we can help. We would love to hear from you.</p>
+            <form class="inquiry-form" id="inquiry-form" data-contact-email={site.contactEmail}>
+              <div class="form-row">
+                <label>Your name <input type="text" name="name" autocomplete="name" required /></label>
+                <label>Business email <input type="email" name="email" autocomplete="email" required /></label>
+              </div>
+              <div class="form-row">
+                <label>Company <input type="text" name="company" autocomplete="organization" /></label>
+                <label>Estimated quantity <input type="number" name="quantity" min="1" inputmode="numeric" /></label>
+              </div>
+              <label>Interested in
+                <select name="interest" required>
+                  <option value="" disabled selected>Select a collection</option>
+                  {collections.map((collection) => <option value={collection.name}>{collection.name}</option>)}
+                  <option value="General inquiry">General inquiry</option>
+                </select>
+              </label>
+              <label>How can we help? <textarea name="message" rows="4" placeholder="Tell us about the products, quantities or collaboration you have in mind." required></textarea></label>
+              <button class="button button-dark" type="submit" disabled={!contactHref}>Prepare Inquiry Email <span aria-hidden="true">↗</span></button>
+              {contactHref ? <p class="form-note">This opens your email app with the inquiry ready to send.</p> : <p class="form-note">The inquiry button will be enabled once our business email is connected.</p>}
+            </form>
+            {contactHref && <a class="contact-whatsapp" href={contactHref}>Or email us directly: {site.contactEmail}</a>}
+            {site.whatsappUrl && <a class="contact-whatsapp" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">Connect on WhatsApp <span aria-hidden="true">↗</span></a>}
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-width footer-top">
+        <a class="brand footer-brand" href="#top" aria-label="Back to YQ GLASSES home"><span class="brand-symbol">YQ<span class="brand-dot">.</span></span><span class="brand-name">GLASSES</span></a>
+        <p>Glassware for moments worth sharing.</p>
+        <a class="back-to-top" href="#top">Back to top ↑</a>
+      </div>
+      <div class="page-width footer-bottom"><span>© {year} YQ GLASSES</span><span>{site.domain}</span></div>
+    </footer>
+
+    <script>
+      const button = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const menu = document.querySelector<HTMLElement>('#mobile-menu');
+      if (button && menu) {
+        const closeMenu = () => { button.setAttribute('aria-expanded', 'false'); button.setAttribute('aria-label', 'Open menu'); menu.hidden = true; };
+        button.addEventListener('click', () => {
+          const isOpen = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', String(!isOpen));
+          button.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+          menu.hidden = isOpen;
+        });
+        menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+        window.addEventListener('resize', () => { if (window.innerWidth > 800) closeMenu(); });
+      }
+      const inquiryForm = document.querySelector<HTMLFormElement>('#inquiry-form');
+      inquiryForm?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const email = inquiryForm.dataset.contactEmail;
+        if (!email || !inquiryForm.reportValidity()) return;
+        const data = new FormData(inquiryForm);
+        const name = String(data.get('name') || '').trim();
+        const senderEmail = String(data.get('email') || '').trim();
+        const company = String(data.get('company') || '').trim();
+        const quantity = String(data.get('quantity') || '').trim();
+        const interest = String(data.get('interest') || '').trim();
+        const message = String(data.get('message') || '').trim();
+        const subject = `YQ GLASSES inquiry: ${interest}`;
+        const body = `Name: ${name}\nEmail: ${senderEmail}\nCompany: ${company || 'Not provided'}\nInterested in: ${interest}\nEstimated quantity: ${quantity || 'Not provided'}\n\nMessage:\n${message}`;
+        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+      document.querySelectorAll<HTMLAnchorElement>('.collection-row').forEach((link) => {
+        link.addEventListener('click', () => {
+          const interest = inquiryForm?.querySelector<HTMLSelectElement>('select[name="interest"]');
+          if (interest) interest.value = link.dataset.interest || '';
+        });
+      });
+    </script>
+  </body>
+</html>
