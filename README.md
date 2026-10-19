@@ -27,9 +27,9 @@ npm run build
 3. 在 `src/data/site.ts` 更新系列名称和说明；有确定的产品型号、参数和价格后，再添加对应产品页。
 4. 审核英语网站文案、Logo 和品牌名称。当前是询盘网站，没有收款或购物车功能。
 
-## Google 搜索收录
+## 搜索引擎收录
 
-页面使用英语语言标记、标题、描述、canonical 地址、结构化数据、`robots.txt` 和 `sitemap.xml`。在 Google Search Console 验证 `yqglasses.com`，提交 `https://yqglasses.com/sitemap.xml`，再检查页面索引状态。提交站点地图不保证立即收录或排名。
+首页目前设置了 `<meta name="robots" content="noindex">`，要求支持该规则的搜索引擎不收录。`robots.txt` 仍允许抓取，以便爬虫读取 `noindex`。如需日后开放收录，移除该标签并重新部署，再检查 Google Search Console 的索引状态。
 
 ## GitHub 与 Hostinger 静态部署
 
