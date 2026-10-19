@@ -35,7 +35,8 @@ jobs:
 
           git fetch origin hostinger-site:refs/remotes/origin/hostinger-site
           git switch -C hostinger-site origin/hostinger-site
-          git rm -r --ignore-unmatch .
+          git rm -rq --ignore-unmatch .
+          git clean -fdxq
           cp -a "$site_dir"/. .
           git add -A
 
