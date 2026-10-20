@@ -4,6 +4,8 @@ import { site } from '../data/site';
 
 const year = new Date().getFullYear();
 const contactHref = 'mailto:' + site.contactEmail + '?subject=YQ%20GLASSES%20Wholesale%20Inquiry';
+const inquiryHref = site.inquiryUrl;
+const inquiryFor = (product: string) => inquiryHref + '?product=' + encodeURIComponent(product);
 
 const glassware = [
   {
@@ -92,11 +94,11 @@ const faqs = [
           <a href="#quality">Quality</a>
           <a href="#faq">FAQ</a>
         </nav>
-        <a class="header-cta" href="#contact">Request a quote <span aria-hidden="true">↗</span></a>
+        <a class="header-cta" href={inquiryHref}>Request a quote <span aria-hidden="true">↗</span></a>
         <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
       </div>
       <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
-        <a href="#collections">Collections</a><a href="#customization">Customization</a><a href="#quality">Quality</a><a href="#faq">FAQ</a><a href="#contact">Request a quote</a>
+        <a href="#collections">Collections</a><a href="#customization">Customization</a><a href="#quality">Quality</a><a href="#faq">FAQ</a><a href={inquiryHref}>Request a quote</a>
       </nav>
     </header>
 
@@ -109,7 +111,7 @@ const faqs = [
             <h1 id="hero-title">Glassware for celebrations.<br /><em>Made for your brand.</em></h1>
             <p class="hero-lead">Custom champagne flutes, cake-serving sets and decorative glassware for wholesale collections, gifting and hospitality.</p>
             <div class="hero-actions">
-              <a class="button button-copper" href="#contact">Request a wholesale quote <span aria-hidden="true">↗</span></a>
+              <a class="button button-copper" href={inquiryHref}>Request a wholesale quote <span aria-hidden="true">↗</span></a>
               <a class="hero-text-link" href="#collections">Explore the collection <span aria-hidden="true">↓</span></a>
             </div>
           </div>
@@ -136,7 +138,7 @@ const faqs = [
             <h2 id="flutes-title">Champagne flutes<br /><em>with a signature finish.</em></h2>
             <p>Choose from flute, tulip, coupe and stemless styles. Explore glass and plastic options, then add crystal details, custom branding or packaging to suit your collection.</p>
             <div class="feature-list"><span>Machine-made & hand-blown</span><span>Glass & plastic options</span><span>Crystal & rhinestone details</span><span>Logo & packaging</span></div>
-            <a class="text-action" href="#contact" data-interest="Champagne Flutes">Ask about champagne flutes <span aria-hidden="true">↗</span></a>
+            <a class="text-action" href={inquiryFor('Champagne Flutes')}>Ask about champagne flutes <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
@@ -148,7 +150,7 @@ const faqs = [
             <h2 id="serving-title">The finishing touch<br /><em>for every occasion.</em></h2>
             <p>Bring cake knives and servers into a coordinated collection. Select handle finishes and decorative details that sit naturally beside your glassware.</p>
             <div class="feature-list"><span>Stainless steel blades</span><span>Crystal-accented handles</span><span>Matching colors & finishes</span><span>Gift-ready presentation</span></div>
-            <a class="text-action" href="#contact" data-interest="Cake Knife & Server Sets">Ask about serving sets <span aria-hidden="true">↗</span></a>
+            <a class="text-action" href={inquiryFor('Cake Knife & Server Sets')}>Ask about serving sets <span aria-hidden="true">↗</span></a>
           </div>
           <div class="feature-image frame-offset">
             <img src="/images/reference/cake-serving-set.webp" alt="Gold-handled crystal cake knife and server set" width="700" height="700" loading="lazy" />
@@ -166,7 +168,7 @@ const faqs = [
           </div>
           <div class="glassware-grid">
             {glassware.map((item) => (
-              <a class="glassware-card" href="#contact" data-interest={item.name} aria-label={'Ask about ' + item.name}>
+              <a class="glassware-card" href={inquiryFor(item.name)} aria-label={'Ask about ' + item.name}>
                 <div class="card-image"><img src={item.image} alt={item.alt} width="400" height="400" loading="lazy" /></div>
                 <div class="card-body"><h3>{item.name}</h3><p>{item.description}</p><span>Explore options <span aria-hidden="true">↗</span></span></div>
               </a>
@@ -243,28 +245,16 @@ const faqs = [
             <p>Share a product, quantity and any design details. We will help you find a practical starting point for your wholesale or custom project.</p>
             <a href={contactHref} class="contact-email">zcolin867@gmail.com <span aria-hidden="true">↗</span></a>
           </div>
-          <form class="inquiry-form" id="inquiry-form" data-contact-email={site.contactEmail}>
-            <div class="form-row">
-              <label>Your name <input type="text" name="name" autocomplete="name" required /></label>
-              <label>Business email <input type="email" name="email" autocomplete="email" required /></label>
-            </div>
-            <div class="form-row">
-              <label>Company <input type="text" name="company" autocomplete="organization" /></label>
-              <label>Estimated quantity <input type="number" name="quantity" min="1" inputmode="numeric" /></label>
-            </div>
-            <label>Product interest
-              <select name="interest" required>
-                <option value="" disabled selected>Select a product</option>
-                <option>Champagne Flutes</option>
-                <option>Cake Knife & Server Sets</option>
-                {glassware.map((item) => <option>{item.name}</option>)}
-                <option>General inquiry</option>
-              </select>
-            </label>
-            <label>Project details <textarea name="message" rows="4" placeholder="Tell us about products, decoration, packaging or timelines." required></textarea></label>
-            <button class="button button-copper" type="submit">Prepare inquiry email <span aria-hidden="true">↗</span></button>
-            <p class="form-note">This opens your email app with the inquiry ready to send.</p>
-          </form>
+          <div class="contact-card">
+            <p class="contact-card-label">A clearer brief gets a faster, more useful review.</p>
+            <ol class="contact-steps">
+              <li><span>01</span><div><strong>Choose a product</strong><small>Tell us what you want to source or develop.</small></div></li>
+              <li><span>02</span><div><strong>Add your requirements</strong><small>Share quantity, finish, packaging and timing.</small></div></li>
+              <li><span>03</span><div><strong>Upload references</strong><small>Attach sketches, photos, artwork or drawings.</small></div></li>
+            </ol>
+            <a class="button button-copper" href={inquiryHref}>Start your inquiry <span aria-hidden="true">↗</span></a>
+            <p class="form-note">Your project details are submitted directly to YQ GLASSES.</p>
+          </div>
         </div>
       </section>
     </main>
@@ -272,7 +262,7 @@ const faqs = [
     <footer class="site-footer">
       <div class="page-width footer-main">
         <div><a class="brand footer-brand" href="#top" aria-label="YQ GLASSES home"><span class="brand-mark">YQ<span>.</span></span><span class="brand-word">GLASSES</span></a><p>Wholesale glassware and serving sets, thoughtfully made for your collection.</p></div>
-        <div class="footer-links"><a href="#collections">Collections</a><a href="#customization">Customization</a><a href="#quality">Quality</a><a href="#contact">Contact</a></div>
+        <div class="footer-links"><a href="#collections">Collections</a><a href="#customization">Customization</a><a href="#quality">Quality</a><a href={inquiryHref}>Request a quote</a></div>
       </div>
       <div class="page-width footer-bottom"><span>© {year} YQ GLASSES</span><span>yqglasses.com</span><a href="#top">Back to top ↑</a></div>
     </footer>
@@ -292,32 +282,6 @@ const faqs = [
         window.addEventListener('resize', () => { if (window.innerWidth > 860) closeMenu(); });
       }
 
-      const form = document.querySelector<HTMLFormElement>('#inquiry-form');
-      document.querySelectorAll<HTMLAnchorElement>('[data-interest]').forEach((link) => {
-        link.addEventListener('click', () => {
-          const select = form?.querySelector<HTMLSelectElement>('select[name="interest"]');
-          if (select) select.value = link.dataset.interest || '';
-        });
-      });
-      form?.addEventListener('submit', (event) => {
-        event.preventDefault();
-        if (!form.reportValidity()) return;
-        const email = form.dataset.contactEmail;
-        if (!email) return;
-        const data = new FormData(form);
-        const subject = 'YQ GLASSES wholesale inquiry: ' + String(data.get('interest') || 'General');
-        const body = [
-          'Name: ' + String(data.get('name') || ''),
-          'Email: ' + String(data.get('email') || ''),
-          'Company: ' + String(data.get('company') || 'Not provided'),
-          'Product: ' + String(data.get('interest') || ''),
-          'Estimated quantity: ' + String(data.get('quantity') || 'Not provided'),
-          '',
-          'Project details:',
-          String(data.get('message') || ''),
-        ].join('\n');
-        window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      });
     </script>
   </body>
 </html>
