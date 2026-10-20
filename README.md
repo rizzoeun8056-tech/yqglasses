@@ -22,7 +22,7 @@ npm run build
 
 ## 后续需要完善的内容
 
-1. 业务邮箱已设置为 `zcolin867@gmail.com`。`/file-upload/` 表单通过 `public/api/submit-inquiry.php` 直接发送询盘和附件。上线后请提交一次真实询盘确认邮件送达；如果 Hostinger 禁用了 PHP `mail()`，再改用 SMTP 邮件服务。如使用 WhatsApp，可在 `src/data/site.ts` 中填写完整的 `https://wa.me/...` 链接。
+1. 业务邮箱已设置为 `zcolin867@gmail.com`。`/file-upload/` 表单通过 Gmail SMTP 发送询盘和附件。Hostinger 服务器需要在 `public_html` 上一级放置 `.yq-mail-config.php`，文件格式参考根目录的 `.yq-mail-config.example.php`。其中必须使用 Google 应用专用密码，不能使用 Gmail 登录密码；真实配置文件不得提交到 GitHub。如使用 WhatsApp，可在 `src/data/site.ts` 中填写完整的 `https://wa.me/...` 链接。
 2. 核对 `public/images/reference/` 中的图片是否对应实际可供货产品，确认规格、材质、起订量和包装方案。如需替换图片，同步修改图片说明。
 3. 有确定的产品型号、参数和价格后，可添加产品页。当前是询盘网站，没有收款或购物车功能。
 
