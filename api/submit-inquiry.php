@@ -1,5 +1,11 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+
+require_once __DIR__ . '/../vendor/phpmailer/src/Exception.php';
+require_once __DIR__ . '/../vendor/phpmailer/src/PHPMailer.php';
+require_once __DIR__ . '/../vendor/phpmailer/src/SMTP.php';
+
 const YQ_RECIPIENT = 'zcolin867@gmail.com';
 const YQ_MAX_FILES = 3;
 const YQ_MAX_FILE_SIZE = 5 * 1024 * 1024;
@@ -24,6 +30,42 @@ function yq_message($value, $limit)
     $text = str_replace("\0", '', $text);
     $text = trim(strip_tags($text));
     return substr($text, 0, $limit);
+}
+
+function yq_smtp_credentials()
+{
+    $username = getenv('YQ_SMTP_USERNAME');
+    $password = getenv('YQ_SMTP_APP_PASSWORD');
+
+    if (is_string($username) && $username !== '' && is_string($password) && $password !== '') {
+        return [
+            'username' => trim($username),
+            'app_password' => preg_replace('/\s+/', '', $password),
+        ];
+    }
+
+    // This file is stored one level above public_html so it is never deployed
+    // from GitHub and cannot be downloaded from the website.
+    $configFile = dirname(__DIR__, 2) . '/.yq-mail-config.php';
+    if (!is_file($configFile)) {
+        return null;
+    }
+
+    $config = require $configFile;
+    if (!is_array($config)) {
+        return null;
+    }
+
+    $username = $config['username'] ?? '';
+    $password = $config['app_password'] ?? '';
+    if (!is_string($username) || trim($username) === '' || !is_string($password) || trim($password) === '') {
+        return null;
+    }
+
+    return [
+        'username' => trim($username),
+        'app_password' => preg_replace('/\s+/', '', $password),
+    ];
 }
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
@@ -133,34 +175,43 @@ $lines = [
     'Reference files: ' . (count($attachments) > 0 ? implode(', ', array_column($attachments, 'name')) : 'None'),
 ];
 
-$boundary = '=_YQ_' . bin2hex(random_bytes(18));
-$body = '--' . $boundary . "\r\n";
-$body .= "Content-Type: text/plain; charset=UTF-8\r\n";
-$body .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
-$body .= implode("\r\n", $lines) . "\r\n";
-
-foreach ($attachments as $attachment) {
-    $body .= '--' . $boundary . "\r\n";
-    $body .= 'Content-Type: ' . $attachment['type'] . '; name="' . $attachment['name'] . '"' . "\r\n";
-    $body .= 'Content-Disposition: attachment; filename="' . $attachment['name'] . '"' . "\r\n";
-    $body .= "Content-Transfer-Encoding: base64\r\n\r\n";
-    $body .= chunk_split(base64_encode($attachment['content'])) . "\r\n";
-}
-$body .= '--' . $boundary . "--\r\n";
-
 $subjectText = 'YQ GLASSES inquiry: ' . $interest;
-$subject = '=?UTF-8?B?' . base64_encode($subjectText) . '?=';
-$headers = [
-    'MIME-Version: 1.0',
-    'From: YQ GLASSES Website <noreply@yqglasses.com>',
-    'Reply-To: ' . $name . ' <' . $email . '>',
-    'Content-Type: multipart/mixed; boundary="' . $boundary . '"',
-    'X-Mailer: PHP/' . PHP_VERSION,
-];
+$credentials = yq_smtp_credentials();
+if ($credentials === null) {
+    error_log('YQ inquiry SMTP credentials are not configured.');
+    yq_redirect('error');
+}
 
-$sent = mail(YQ_RECIPIENT, $subject, $body, implode("\r\n", $headers));
-if (!$sent) {
-    error_log('YQ inquiry mail() returned false.');
+try {
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = $credentials['username'];
+    $mail->Password = $credentials['app_password'];
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+    $mail->Timeout = 20;
+    $mail->CharSet = PHPMailer::CHARSET_UTF8;
+
+    $mail->setFrom($credentials['username'], 'YQ GLASSES Website');
+    $mail->addAddress(YQ_RECIPIENT, 'YQ GLASSES Sales');
+    $mail->addReplyTo($email, $name);
+    $mail->Subject = $subjectText;
+    $mail->Body = implode("\r\n", $lines);
+
+    foreach ($attachments as $attachment) {
+        $mail->addStringAttachment(
+            $attachment['content'],
+            $attachment['name'],
+            PHPMailer::ENCODING_BASE64,
+            $attachment['type']
+        );
+    }
+
+    $mail->send();
+} catch (Throwable $error) {
+    error_log('YQ inquiry SMTP send failed: ' . $error->getMessage());
     yq_redirect('error');
 }
 
