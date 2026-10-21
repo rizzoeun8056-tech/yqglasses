@@ -28,7 +28,7 @@ npm run build
 
 ## 搜索引擎收录
 
-首页目前设置了 `<meta name="robots" content="noindex">`，要求支持该规则的搜索引擎不收录。`robots.txt` 仍允许抓取，以便爬虫读取 `noindex`。如需日后开放收录，移除该标签并重新部署，再检查 Google Search Console 的索引状态。
+网站目前处于开发阶段：页面保留 `noindex`，并在 `robots.txt` 中使用 `Disallow: /` 阻止搜索引擎抓取全站。普通访客仍可通过网址直接访问。正式开放收录时，需要同时移除页面的 `noindex`、把 `robots.txt` 改为 `Allow: /` 并恢复 Sitemap，然后重新部署并检查 Google Search Console。
 
 ## GitHub 与 Hostinger 静态部署
 
