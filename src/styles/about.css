@@ -9,7 +9,7 @@
 .about-button:hover { background: var(--brand-paper); color: var(--brand-copper); }
 .about-button span { font-size: 18px; font-weight: 400; }
 .about-hero { padding: 55px 0 60px; }
-.about-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); align-items: center; gap: 40px; max-width: 980px; }
+.about-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); align-items: center; gap: 60px; max-width: 1020px; }
 .about-hero-copy { max-width: 520px; }
 .about-section-label { margin-bottom: 21px; color: var(--brand-copper); font-size: 14px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .about-hero h1 { margin: 0 0 21px; font-size: var(--font-size-h1); line-height: 1.08; letter-spacing: -.05em; }
