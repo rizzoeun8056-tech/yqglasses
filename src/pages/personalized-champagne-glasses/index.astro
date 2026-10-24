@@ -1,0 +1,190 @@
+---
+import '../../styles/global.css';
+import '../../styles/cake-knife-sets.css';
+import '../../styles/champagne-glasses.css';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import BrandAssets from '../../components/BrandAssets.astro';
+import { site } from '../../data/site';
+
+const inquiry = (mode = 'stock', design = '') => {
+  const params = new URLSearchParams({ product: 'Champagne Glasses', order_type: mode });
+  if (design) params.set('design', design);
+  return `${site.inquiryUrl}?${params.toString()}`;
+};
+
+const shapes = [
+  { name: 'Flute', description: 'A tall, slender silhouette for a classic toast.', path: 'M55 24 Q80 18 105 24 C103 73 98 110 80 126 C62 110 57 73 55 24 Z M80 126 V165 M46 171 Q80 164 114 171', rim: 'M55 24 Q80 31 105 24' },
+  { name: 'Tulip', description: 'A softly curved bowl with a refined profile.', path: 'M55 25 Q80 18 105 25 C115 62 109 101 80 124 C51 101 45 62 55 25 Z M80 124 V165 M46 171 Q80 164 114 171', rim: 'M55 25 Q80 32 105 25' },
+  { name: 'Coupe', description: 'A wide, shallow bowl with vintage character.', path: 'M20 49 Q80 39 140 49 C129 77 108 91 80 91 C52 91 31 77 20 49 Z M80 91 V165 M45 171 Q80 164 115 171', rim: 'M20 49 Q80 57 140 49' },
+  { name: 'Stemless', description: 'A clean, contemporary shape for relaxed celebrations.', path: 'M45 34 Q80 27 115 34 C112 87 104 133 80 146 C56 133 48 87 45 34 Z', rim: 'M45 34 Q80 41 115 34' },
+];
+
+const uses = [
+  { number: '01', title: 'Weddings', description: 'Bring a personal detail to the toast and the table.' },
+  { number: '02', title: 'Hospitality & events', description: 'Choose a consistent look for your venue or event.' },
+  { number: '03', title: 'Branded gifting', description: 'Pair your identity with a considered glass and presentation.' },
+];
+
+const steps = [
+  { number: '01', title: 'Share your brief', description: 'Tell us the shape, quantity, design details and target timing.' },
+  { number: '02', title: 'Review the options', description: 'Discuss suitable decoration, packaging and project requirements.' },
+  { number: '03', title: 'Confirm the next step', description: 'Review the quotation and any sampling needs for your design.' },
+];
+
+const faqs = [
+  { question: 'Can I add a logo or personalized text?', answer: 'Send us your artwork or wording. We will review the suitable method and placement for the selected glass.' },
+  { question: 'Are all four glass shapes available from stock?', answer: 'The shapes shown are design starting points. Share your preferred style and quantity so we can confirm current availability.' },
+  { question: 'What is the minimum order quantity?', answer: 'It depends on the glass style, decoration and packaging. Share your expected quantity for a project-specific quote.' },
+  { question: 'Can I send a reference image?', answer: 'Yes. Photos, sketches and artwork help us understand the result you want.' },
+];
+
+const title = 'Personalized Champagne Glasses | In-Stock & Custom | YQ GLASSES';
+const description = 'Explore champagne glass shapes, available designs and custom decoration for wholesale, events and gifting. Share your brief for availability and a tailored quote.';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f1eb" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://yqglasses.com/personalized-champagne-glasses/" />
+    <link rel="canonical" href="https://yqglasses.com/personalized-champagne-glasses/" />
+    <BrandAssets />
+    <link rel="preload" as="image" href="/images/champagne-glasses/studded-pair.webp" />
+    <title>{title}</title>
+  </head>
+  <body class="cake-page champagne-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+
+    <main id="main">
+      <section class="ck-hero cg-hero" aria-labelledby="champagne-title">
+        <div class="ck-container ck-hero-layout">
+          <figure class="ck-hero-photo cg-hero-photo">
+            <img data-mode-image="stock" src="/images/champagne-glasses/studded-pair.webp" alt="Two glass champagne cups with hand-set studded conical bases" width="600" height="600" fetchpriority="high" />
+            <img data-mode-image="custom" src="/images/champagne-glasses/heart-stem-pair.webp" alt="Two champagne flutes with decorative heart-shaped stems in silver and rose-gold tones" width="600" height="600" hidden />
+          </figure>
+          <div class="ck-hero-copy">
+            <p class="eyebrow"><span class="eyebrow-rule"></span> WHOLESALE · IN STOCK · CUSTOM</p>
+            <h1 id="champagne-title">Personalized <br />Champagne Glasses</h1>
+            <div class="ck-tabs" role="tablist" aria-label="Choose an order type">
+              <button type="button" role="tab" id="stock-tab" aria-selected="true" aria-controls="stock-panel" data-mode="stock">Ready to ship</button>
+              <button type="button" role="tab" id="custom-tab" aria-selected="false" aria-controls="custom-panel" tabindex="-1" data-mode="custom">Custom orders</button>
+            </div>
+            <div class="ck-hero-panel" id="stock-panel" role="tabpanel" aria-labelledby="stock-tab">
+              <p>Explore available champagne glass designs for wholesale collections, hospitality and celebrations. Choose a style and tell us the quantity you need.</p>
+              <div class="ck-hero-actions"><a class="ck-button" href={inquiry()} data-inquiry-link>Check availability <span aria-hidden="true">↗</span></a></div>
+              <small class="ck-hero-note">Availability is confirmed for your selected style and quantity.</small>
+            </div>
+            <div class="ck-hero-panel" id="custom-panel" role="tabpanel" aria-labelledby="custom-tab" hidden>
+              <p>Create personalized champagne glasses for your brand, event or gift collection. Choose a glass style, then discuss wording, artwork, decorative details and packaging.</p>
+              <div class="ck-hero-actions"><a class="ck-button" href={inquiry('custom')} data-inquiry-link data-inquiry-mode="custom">Request a custom quote <span aria-hidden="true">↗</span></a></div>
+              <small class="ck-hero-note">Design details and production requirements are reviewed for each project.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ck-collection ck-section cg-styles" id="styles" aria-labelledby="styles-title">
+        <div class="ck-container">
+          <div class="ck-section-heading"><div><p class="eyebrow"><span class="eyebrow-rule"></span> GLASS STYLE GUIDE</p><h2 id="styles-title">Find your<br /><em>starting point.</em></h2></div><p>Explore four familiar silhouettes, then tell us which shape suits your project. Illustrations show the shape only; availability is confirmed by design and quantity.</p></div>
+          <div class="cg-style-grid">
+            {shapes.map((shape, index) => <article class="cg-style-card">
+              <div class="cg-style-art" aria-hidden="true"><span class="cg-card-index">0{index + 1} / 04</span><svg viewBox="0 0 160 190" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d={shape.path} /><path d={shape.rim} stroke-width="1" /></svg></div>
+              <div class="cg-style-body"><h3>{shape.name}</h3><p>{shape.description}</p></div>
+            </article>)}
+          </div>
+          <div class="cg-style-action"><p>Have a preferred shape? Include it in your inquiry.</p><a class="ck-button" href={inquiry()} data-inquiry-link>Discuss glass styles <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+
+      <section class="ck-customization ck-section" id="customization" aria-labelledby="customization-title">
+        <div class="ck-container ck-detail-grid">
+          <figure class="ck-detail-image"><img src="/images/champagne-glasses/heart-stem-pair.webp" alt="Clear champagne flutes with decorative heart details on the stems" width="600" height="600" loading="lazy" /><figcaption class="cg-image-caption">Decorative stem detail · style example</figcaption></figure>
+          <div class="ck-detail-copy"><p class="eyebrow"><span class="eyebrow-rule"></span> PERSONALIZATION</p><h2 id="customization-title">Details that<br /><em>make it yours.</em></h2><p>Personalized champagne glasses start with your words or artwork. We will review how they can work with your chosen glass and decorative finish.</p>
+            <div class="ck-options">
+              <div><span>01</span><div><h3>Wording & branding</h3><p>Share names, dates, a short message or your logo artwork for review.</p></div></div>
+              <div><span>02</span><div><h3>Decorative details</h3><p>Explore stem and base details, including hand-set studded accents on selected designs.</p></div></div>
+              <div><span>03</span><div><h3>Coordinated finish</h3><p>Discuss color and decoration that fit the rest of your collection.</p></div></div>
+            </div>
+            <a class="ck-text-link" href={inquiry('custom')} data-inquiry-link data-inquiry-mode="custom">Share your design <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="ck-section cg-occasions" aria-labelledby="occasions-title">
+        <div class="ck-container"><div class="ck-section-heading"><div><p class="eyebrow"><span class="eyebrow-rule"></span> OCCASIONS</p><h2 id="occasions-title">Made for the<br /><em>moment.</em></h2></div><p>Glassware for weddings, hospitality and branded gifting.</p></div><div class="cg-occasion-grid">{uses.map((use) => <article><span>{use.number}</span><h3>{use.title}</h3><p>{use.description}</p></article>)}</div></div>
+      </section>
+
+      <section class="ck-packaging ck-section cg-presentation" id="packaging" aria-labelledby="packaging-title">
+        <div class="ck-container ck-packaging-grid">
+          <div class="ck-packaging-copy"><p class="eyebrow"><span class="eyebrow-rule"></span> PRESENTATION</p><h2 id="packaging-title">A considered<br /><em>complete set.</em></h2><p>Discuss gift boxes, branded packaging and protective inserts to suit your glasses. A matching cake knife and server can bring the collection together.</p><p class="cg-configuration-note">Product pairings and packaging are confirmed for each order.</p><a class="ck-text-link" href={inquiry('custom')} data-inquiry-link data-inquiry-mode="custom">Discuss packaging <span aria-hidden="true">↗</span></a></div>
+          <figure class="ck-packaging-image cg-presentation-photo"><img src="/images/champagne-glasses/coordinated-set.webp" alt="Champagne flutes displayed beside a cake knife and server on a tray" width="600" height="600" loading="lazy" /><figcaption class="cg-image-caption">Coordinated display · style example</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="ck-team ck-section cg-process" id="process" aria-labelledby="process-title">
+        <div class="ck-container"><div class="ck-section-heading"><div><p class="eyebrow light"><span class="eyebrow-rule"></span> HOW IT WORKS</p><h2 id="process-title">From your brief<br /><em>to a clear next step.</em></h2></div><p>We review the design, quantity and packaging together before confirming a quotation.</p></div><div class="cg-process-grid">{steps.map((step) => <article><span>{step.number} / 03</span><h3>{step.title}</h3><p>{step.description}</p></article>)}</div></div>
+      </section>
+
+      <section class="ck-contact ck-section cg-contact" id="faq" aria-labelledby="contact-title">
+        <div class="ck-container ck-contact-grid">
+          <div class="ck-contact-copy"><p class="eyebrow"><span class="eyebrow-rule"></span> START YOUR PROJECT</p><h2 id="contact-title">Let's plan your<br /><em>champagne glasses.</em></h2><p>Share a preferred shape, estimated quantity and any design references. We will help you define the next step.</p><a class="ck-button" href={inquiry()} data-inquiry-link>Send your requirements <span aria-hidden="true">↗</span></a><span class="ck-reference-note">Photos, sketches and artwork welcome.</span></div>
+          <div class="ck-faq"><h3 class="ck-table-title">Common questions</h3>{faqs.map((faq) => <details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div>
+        </div>
+      </section>
+    </main>
+
+    <SiteFooter />
+
+    <script>
+      const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.cg-hero [data-mode]'));
+      let currentMode = 'stock';
+
+      function updateInquiryLinks() {
+        document.querySelectorAll<HTMLAnchorElement>('[data-inquiry-link]').forEach((link) => {
+          const mode = link.dataset.inquiryMode || currentMode;
+          const params = new URLSearchParams({ product: 'Champagne Glasses', order_type: mode });
+          if (link.dataset.design) params.set('design', link.dataset.design);
+          link.href = `/file-upload/?${params.toString()}`;
+        });
+      }
+
+      function selectMode(mode: string) {
+        if (mode !== 'stock' && mode !== 'custom') return;
+        currentMode = mode;
+        tabs.forEach((tab) => {
+          const active = tab.dataset.mode === mode;
+          tab.setAttribute('aria-selected', String(active));
+          tab.tabIndex = active ? 0 : -1;
+          const panel = document.getElementById(tab.getAttribute('aria-controls') || '');
+          if (panel) panel.hidden = !active;
+        });
+        document.querySelectorAll<HTMLImageElement>('[data-mode-image]').forEach((image) => {
+          image.hidden = image.dataset.modeImage !== mode;
+        });
+        updateInquiryLinks();
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectMode(tab.dataset.mode || 'stock'));
+        tab.addEventListener('keydown', (event) => {
+          if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+          tabs[next].focus();
+          selectMode(tabs[next].dataset.mode || 'stock');
+        });
+      });
+
+      selectMode(new URLSearchParams(window.location.search).get('mode') === 'custom' ? 'custom' : 'stock');
+    </script>
+  </body>
+</html>

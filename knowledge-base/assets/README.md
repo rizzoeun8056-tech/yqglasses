@@ -13,5 +13,8 @@
 | [OH42026 压印花纹蛋糕刀铲](cake-knife-server/oh42026/README.md) | 8 | 不锈钢／锌合金选项、压印图样、定制图案与去标识 WebP | 本素材说明记录原图映射及图示尺寸 |
 | [OH13275D 来源文件夹刀铲](cake-knife-server/oh13275d/README.md) | 6 | 金色刀铲、透明填充效果手柄、盒装图及标为 OH42017 的尺寸图 | 型号对应关系待核对；材料可选不锈钢或锌合金 |
 | [OH13231CC 来源文件夹刀铲](cake-knife-server/oh13231cc/README.md) | 5 | 不锈钢刀铲、镀金手工点钻拼接手柄、去标识参考尺寸图 | 尺寸图标为 OH42011，型号对应关系待核对 |
+| [手工点钻锥形金属底座香槟杯](champagne-glasses/hand-set-studded-base/README.md) | 7 | 玻璃杯身、手工点钻金属底座、两张去品牌角标图及场景图 | 本素材说明记录原图映射、英文 alt 文本与 OH41077B 图示规格 |
+| [OH41006 爱心点钻香槟杯](champagne-glasses/oh41006-heart-stem/README.md) | 5 | 玻璃杯头、锌合金杯杆、爱心点钻、去品牌角标尺寸图 | 本素材说明记录原图映射、英文 alt 文本与图示规格 |
+| [OH41101 来源文件夹天鹅点钻香槟杯](champagne-glasses/oh41101-swan-source/README.md) | 9 | 玻璃杯头、金银电镀、点钻天鹅、包装图及去标识尺寸图 | [天鹅香槟杯产品记录](../products/swan-champagne-flutes.md)；尺寸图标 OH13370C，型号关系待核对 |
 
 使用图片时以各组的来源映射、画面说明和已确认信息为准；不要把不同素材组的材质或规格合并成同一款产品的声明。

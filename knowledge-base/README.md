@@ -21,6 +21,10 @@
 | KB-ASSET-007 | [OH42026 压印花纹蛋糕刀铲素材](assets/cake-knife-server/oh42026/README.md) | 8 张去标识 WebP、材料与定制图案信息、原图映射及图示尺寸 | 2026-10-24 |
 | KB-ASSET-008 | [OH13275D 来源文件夹蛋糕刀铲素材](assets/cake-knife-server/oh13275d/README.md) | 6 张 WebP、不锈钢／锌合金选项、OH42017 尺寸图型号待核对 | 2026-10-24 |
 | KB-ASSET-009 | [OH13231CC 来源文件夹蛋糕刀铲素材](assets/cake-knife-server/oh13231cc/README.md) | 5 张去标识 WebP、不锈钢与手柄工艺、OH42011 尺寸图型号待核对 | 2026-10-24 |
+| KB-ASSET-010 | [手工点钻锥形金属底座香槟杯素材](assets/champagne-glasses/hand-set-studded-base/README.md) | 7 张 WebP、原图映射、英文 alt 文本与 OH41077B 图示规格 | 2026-10-24 |
+| KB-ASSET-011 | [OH41006 爱心点钻香槟杯素材](assets/champagne-glasses/oh41006-heart-stem/README.md) | 5 张 WebP、玻璃杯头与锌合金杯杆、英文 alt 文本 | 2026-10-24 |
+| KB-PRODUCT-003 | [天鹅点钻香槟杯](products/swan-champagne-flutes.md) | 用户确认的材质选项、点钻和粘接工艺、金银电镀、包装选项及型号待核对项 | 2026-10-24 |
+| KB-ASSET-012 | [OH41101 来源文件夹天鹅香槟杯素材](assets/champagne-glasses/oh41101-swan-source/README.md) | 9 张去标识 WebP、原图映射、英文 alt 与 OH13370C 图示参数 | 2026-10-24 |
 
 图片集合入口：[产品图片素材库](assets/README.md)。
 

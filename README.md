@@ -30,6 +30,8 @@ npm run build
 
 蛋糕刀铲页面：`/cake-knife-server-sets/`。共六个区块，首屏支持现货／定制切换；首页蛋糕刀铲入口已链接至该页。询盘按钮会携带产品类别、订单类型和款式，自动填写到表单，并包含在询盘邮件中。页面文案保持英文，开发期间保留 `noindex`。
 
+香槟杯页面：`/personalized-champagne-glasses/`。首屏支持现货／定制切换；Flute、Tulip、Coupe、Stemless 四种杯型以轮廓示意，不代表所有款式均有现货。询盘会携带产品类别和订单类型，访客可在表单中填写所选杯型；页面继续保留 `noindex`。
+
 ## 后续需要完善的内容
 
 1. 业务邮箱已设置为 `zcolin867@gmail.com`。`/file-upload/` 表单通过 Gmail SMTP 发送询盘和附件。Hostinger 服务器需要在 `public_html` 上一级放置 `.yq-mail-config.php`，文件格式参考根目录的 `.yq-mail-config.example.php`。其中必须使用 Google 应用专用密码，不能使用 Gmail 登录密码；真实配置文件不得提交到 GitHub。如使用 WhatsApp，可在 `src/data/site.ts` 中填写完整的 `https://wa.me/...` 链接。
