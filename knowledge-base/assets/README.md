@@ -17,5 +17,6 @@
 | [OH41006 爱心点钻香槟杯](champagne-glasses/oh41006-heart-stem/README.md) | 5 | 玻璃杯头、锌合金杯杆、爱心点钻、去品牌角标尺寸图 | 本素材说明记录原图映射、英文 alt 文本与图示规格 |
 | [OH41101 来源文件夹天鹅点钻香槟杯](champagne-glasses/oh41101-swan-source/README.md) | 9 | 玻璃杯头、金银电镀、点钻天鹅、包装图及去标识尺寸图 | [天鹅香槟杯产品记录](../products/swan-champagne-flutes.md)；尺寸图标 OH13370C，型号关系待核对 |
 | [OH41013R 镂空雕花香槟杯](champagne-glasses/oh41013r-openwork-stem/README.md) | 6 | 玻璃杯头、锌合金镂空雕花杯杆、去标识图片及尺寸图 | [OH41013R 产品记录](../products/oh41013r-openwork-champagne-flute.md) |
+| [五款香槟杯生产案例图](champagne-glasses/production-cases/README.md) | 5 | 金色点钻锌合金、珐琅锌合金、点钻不锈钢、灌钻亚克力、镀银锌合金杯杆 | [五款杯杆产品记录](../products/champagne-glass-production-cases.md) |
 
 使用图片时以各组的来源映射、画面说明和已确认信息为准；不要把不同素材组的材质或规格合并成同一款产品的声明。
