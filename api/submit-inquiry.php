@@ -85,6 +85,10 @@ $email = yq_single_line($_POST['email'] ?? '', 180);
 $company = yq_single_line($_POST['company'] ?? '', 160);
 $phone = yq_single_line($_POST['phone'] ?? '', 60);
 $interest = yq_single_line($_POST['interest'] ?? '', 120);
+$orderType = yq_single_line($_POST['order_type'] ?? '', 20);
+$orderLabels = ['stock' => 'Ready to ship', 'custom' => 'Custom order'];
+$orderLabel = $orderLabels[$orderType] ?? 'Not specified';
+$design = yq_single_line($_POST['design'] ?? '', 120);
 $quantity = yq_single_line($_POST['quantity'] ?? '', 40);
 $message = yq_message($_POST['message'] ?? '', 3000);
 $source = yq_single_line($_POST['source_page'] ?? '', 120);
@@ -166,6 +170,8 @@ $lines = [
     'Company: ' . ($company !== '' ? $company : 'Not provided'),
     'WhatsApp / phone: ' . ($phone !== '' ? $phone : 'Not provided'),
     'Product: ' . $interest,
+    'Order type: ' . $orderLabel,
+    'Design reference: ' . ($design !== '' ? $design : 'Not provided'),
     'Estimated quantity: ' . ($quantity !== '' ? $quantity : 'Not provided'),
     'Source: ' . ($source !== '' ? $source : 'Website'),
     '',
