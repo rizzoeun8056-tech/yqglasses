@@ -10,28 +10,28 @@ const title = 'About YQ GLASSES | Production & Project Coordination';
 const description = 'Meet YQ GLASSES in Guangzhou. See our glassware and tableware production work, experienced assembly team, project process and design documentation.';
 
 const productionPhotos = [
-  { src: 'assembly-workbench-retouched.webp', alt: 'Workers assembling decorative glassware at a YQ GLASSES worktable', caption: 'Assembly' },
-  { src: 'glass-processing-retouched.webp', alt: 'Two workers handling glass components at workshop stations', caption: 'Glass processing' },
-  { src: 'glassware-workbench.webp', alt: 'Inverted glasses and clear components arranged across a workbench', caption: 'Components' },
-  { src: 'cake-serving-batch.webp', alt: 'Rows of cake knives and servers in protective sleeves', caption: 'Batch preparation' },
-  { src: 'decorated-handles-workbench.webp', alt: 'Decorated handles and colorful glassware stems on a workbench', caption: 'Decorative details' },
-  { src: 'office-workstations-retouched.webp', alt: 'Staff working at desks in the YQ GLASSES office', caption: 'Office team' },
-  { src: 'showroom-aisle-retouched.webp', alt: 'Glassware display cabinets in the YQ GLASSES showroom', caption: 'Showroom' },
+  { src: 'assembly-workbench-retouched.webp', alt: 'Workers assembling decorative glassware at a YQ GLASSES worktable' },
+  { src: 'glass-processing-retouched.webp', alt: 'Two workers handling glass components at workshop stations' },
+  { src: 'glassware-workbench.webp', alt: 'Inverted glasses and clear components arranged across a workbench' },
+  { src: 'cake-serving-batch.webp', alt: 'Rows of cake knives and servers in protective sleeves' },
+  { src: 'decorated-handles-workbench.webp', alt: 'Decorated handles and colorful glassware stems on a workbench' },
+  { src: 'office-workstations-retouched.webp', alt: 'Staff working at desks in the YQ GLASSES office' },
+  { src: 'showroom-aisle-retouched.webp', alt: 'Glassware display cabinets in the YQ GLASSES showroom' },
 ];
 
 const steps = [
-  { number: '01', title: 'Your drawing', body: 'Share a sketch, reference image or technical drawing.' },
-  { number: '02', title: 'Custom mold', body: 'We coordinate tooling and a sample where the design requires it.' },
-  { number: '03', title: 'Production', body: 'Approved materials and components move into batch work.' },
-  { number: '04', title: 'Assembly', body: 'Experienced staff bring the selected parts together.' },
-  { number: '05', title: 'Inspection', body: 'Finished pieces are checked against the approved sample.' },
-  { number: '06', title: 'Packing', body: 'Protective and gift-box packing are arranged for the order.' },
-  { number: '07', title: 'Shipping', body: 'We coordinate handover with the logistics provider.' },
+  { title: 'Your drawing', body: 'Share a sketch, reference image or technical drawing.', paths: ['M11 5h18l8 8v30H11z', 'M29 5v9h8', 'M17 22h14', 'M17 28h11', 'M17 34h8'] },
+  { title: 'Custom mold', body: 'We coordinate tooling and a sample where the design requires it.', paths: ['M8 14l16-8 16 8-16 8z', 'M8 14v19l16 9 16-9V14', 'M24 22v20', 'M16 18v18', 'M32 18v18'] },
+  { title: 'Production', body: 'Approved materials and components move into batch work.', paths: ['M5 41V21l12 6V16l12 7V10h14v31z', 'M29 10V5h9v5', 'M12 33h4', 'M22 33h4', 'M33 32h4', 'M33 24h4'] },
+  { title: 'Assembly', body: 'Experienced staff bring the selected parts together.', paths: ['M9 9l9 9', 'M6 15l9-9', 'M13 13l22 22', 'M31 39l8-8', 'M33 36l4 4', 'M8 38l13-13', 'M5 35l8 8', 'M8 38l-3 3'] },
+  { title: 'Inspection', body: 'Finished pieces are checked against the approved sample.', paths: ['M21 7a14 14 0 1 0 0 28a14 14 0 1 0 0-28', 'M31 31l11 11', 'M15 21l4 4 8-9'] },
+  { title: 'Packing', body: 'Protective and gift-box packing are arranged for the order.', paths: ['M6 15l18-9 18 9-18 9z', 'M6 15v22l18 9 18-9V15', 'M24 24v22', 'M15 10l18 9', 'M33 19v8'] },
+  { title: 'Shipping', body: 'We coordinate handover with the logistics provider.', paths: ['M4 12h25v22H4z', 'M29 19h8l7 9v6H29z', 'M7 34a4 4 0 1 0 8 0a4 4 0 1 0-8 0', 'M33 34a4 4 0 1 0 8 0a4 4 0 1 0-8 0', 'M37 19v9h7', 'M4 21h14'] },
 ];
 
 const patents = [
-  { src: 'glassware-design-patent.webp', title: 'Glassware design patent', alt: 'First page of a Chinese design patent certificate for a crystal cup' },
-  { src: 'cake-serving-design-patent.webp', title: 'Cake knife and server design patent', alt: 'First page of a Chinese design patent certificate for a cake knife and server' },
+  { src: 'glassware-design-patent.webp', alt: 'First page of a Chinese design patent certificate for a crystal cup' },
+  { src: 'cake-serving-design-patent.webp', alt: 'First page of a Chinese design patent certificate for a cake knife and server' },
 ];
 ---
 
@@ -67,11 +67,10 @@ const patents = [
           <div class="about-hero-visual">
             <figure class="about-hero-image">
               <img src="/images/about/building-exterior-concept.webp" alt="Photorealistic illustration of a modern office and workshop building exterior" width="600" height="450" fetchpriority="high" />
-              <figcaption>Illustrative exterior concept</figcaption>
             </figure>
             <div class="about-hero-real-images" aria-label="Company photographs">
-              <figure><img src="/images/about/assembly-workbench-retouched.webp" alt="Team assembling decorative glassware at a real production worktable" width="600" height="450" loading="lazy" /><figcaption>Real workshop</figcaption></figure>
-              <figure><img src="/images/about/showroom-aisle-retouched.webp" alt="Real YQ GLASSES showroom with glassware display cabinets" width="600" height="600" loading="lazy" /><figcaption>Real showroom</figcaption></figure>
+              <figure><img src="/images/about/office-workstations-retouched.webp" alt="Staff working at desks in the YQ GLASSES office" width="600" height="450" loading="lazy" /></figure>
+              <figure><img src="/images/about/showroom-aisle-retouched.webp" alt="YQ GLASSES showroom with glassware display cabinets" width="600" height="600" loading="lazy" /></figure>
             </div>
           </div>
         </div>
@@ -96,7 +95,6 @@ const patents = [
             <div class="about-production-track" id="about-photo-track" role="region" aria-label="Company and production photographs" tabindex="0">
               {productionPhotos.map((photo) => <figure class="about-production-card">
                 <div class="about-production-image"><img src={`/images/about/${photo.src}`} alt={photo.alt} width="600" height={photo.src.includes('showroom') ? 600 : 450} loading="lazy" /></div>
-                <figcaption>{photo.caption}</figcaption>
             </figure>)}
             </div>
             <div class="about-carousel-controls" aria-label="Photo carousel controls">
@@ -121,9 +119,9 @@ const patents = [
 
       <section class="about-section about-process" aria-labelledby="process-title">
         <div class="about-container">
-          <div class="about-heading"><h2 id="process-title">From drawing<br /><em>to delivery.</em></h2><p>Seven clear steps keep a custom project moving.</p></div>
+          <div class="about-heading"><h2 id="process-title">From drawing<br /><em>to delivery.</em></h2><p>A clear path keeps each custom project moving.</p></div>
           <ol class="about-process-grid">
-            {steps.map((step) => <li><span>{step.number} / 07</span><h3>{step.title}</h3><p>{step.body}</p></li>)}
+            {steps.map((step) => <li><svg class="about-process-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{step.paths.map((path) => <path d={path} />)}</svg><h3>{step.title}</h3><p>{step.body}</p></li>)}
           </ol>
         </div>
       </section>
@@ -139,7 +137,7 @@ const patents = [
         <div class="about-container">
           <div class="about-heading"><h2 id="documents-title">Design patents.</h2><p>We can help document custom product designs and coordinate design patent applications. A written contract can define ownership; where eligible, we can arrange a transfer of patent rights to the client through the required registration process. Protecting distinctive designs can help reinforce your brand's position as an innovator.</p></div>
           <div class="about-document-grid">
-            {patents.map((patent) => <figure class="about-document-card"><img src={`/images/about/${patent.src}`} alt={patent.alt} width="424" height="600" loading="lazy" /><figcaption><strong>{patent.title}</strong></figcaption></figure>)}
+            {patents.map((patent) => <figure class="about-document-card"><img src={`/images/about/${patent.src}`} alt={patent.alt} width="424" height="600" loading="lazy" /></figure>)}
           </div>
         </div>
       </section>
