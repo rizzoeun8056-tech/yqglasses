@@ -1,0 +1,24 @@
+---
+interface Props {
+  href?: string;
+  footer?: boolean;
+  dark?: boolean;
+}
+
+const { href = '/', footer = false, dark = false } = Astro.props;
+const image = dark ? 'logo-dark-v2' : 'logo-horizontal-v2';
+const format = dark ? 'webp' : 'png';
+---
+
+<a class:list={['brand', { 'footer-brand': footer }]} href={href} aria-label="YQ GLASSES home">
+  <img
+    class="brand-image"
+    src={`/images/brand/${image}.${format}`}
+    srcset={`/images/brand/${image}.${format} 480w, /images/brand/${image}@2x.${format} 960w`}
+    sizes={footer ? '240px' : '(max-width: 640px) 180px, (max-width: 1050px) 195px, 216px'}
+    width="480"
+    height="160"
+    alt="YQ GLASSES"
+    decoding="async"
+  />
+</a>

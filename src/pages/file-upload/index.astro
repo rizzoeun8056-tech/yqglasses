@@ -1,6 +1,8 @@
 ---
 import '../../styles/global.css';
 import { site } from '../../data/site';
+import Brand from '../../components/Brand.astro';
+import BrandAssets from '../../components/BrandAssets.astro';
 
 const year = new Date().getFullYear();
 const contactHref = 'mailto:' + site.contactEmail + '?subject=YQ%20GLASSES%20Wholesale%20Inquiry';
@@ -29,10 +31,9 @@ const products = [
     <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="Request a Quote | YQ GLASSES" />
     <meta property="og:description" content="Send product details, target quantity and reference files for a practical project review." />
-    <meta property="og:image" content="https://yqglasses.com/images/reference/file-upload-banner.webp" />
+    <BrandAssets />
     <meta property="og:url" content="https://yqglasses.com/file-upload/" />
     <link rel="canonical" href="https://yqglasses.com/file-upload/" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Request a Quote | YQ GLASSES</title>
   </head>
   <body class="inquiry-page">
@@ -40,7 +41,7 @@ const products = [
 
     <header class="site-header" id="top">
       <div class="header-inner page-width">
-        <a class="brand" href="/" aria-label="YQ GLASSES home"><span class="brand-mark">YQ<span>.</span></span><span class="brand-word">GLASSES</span></a>
+        <Brand />
         <nav class="desktop-nav" aria-label="Main navigation">
           <a href="/#collections">Collections</a>
           <a href="/#customization">Customization</a>
@@ -177,7 +178,7 @@ const products = [
 
     <footer class="site-footer">
       <div class="page-width footer-main">
-        <div><a class="brand footer-brand" href="/" aria-label="YQ GLASSES home"><span class="brand-mark">YQ<span>.</span></span><span class="brand-word">GLASSES</span></a><p>Wholesale glassware and serving sets, thoughtfully made for your collection.</p></div>
+        <div><Brand footer /><p>Wholesale glassware and serving sets, thoughtfully made for your collection.</p></div>
         <div class="footer-links"><a href="/#collections">Collections</a><a href="/#customization">Customization</a><a href="/#quality">Quality</a><a href="#project-form">Inquiry form</a></div>
       </div>
       <div class="page-width footer-bottom"><span>© {year} YQ GLASSES</span><span>yqglasses.com</span><a href="#top">Back to top ↑</a></div>

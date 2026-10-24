@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import { site } from '../data/site';
+import Brand from '../components/Brand.astro';
+import BrandAssets from '../components/BrandAssets.astro';
 
 const year = new Date().getFullYear();
 const contactHref = 'mailto:' + site.contactEmail + '?subject=YQ%20GLASSES%20Wholesale%20Inquiry';
@@ -75,10 +77,9 @@ const faqs = [
     <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="YQ GLASSES | Wholesale Glassware & Cake Serving Sets" />
     <meta property="og:description" content={site.description} />
-    <meta property="og:image" content="https://yqglasses.com/images/reference/hero-glassware.webp" />
+    <BrandAssets />
     <meta property="og:url" content="https://yqglasses.com/" />
     <link rel="canonical" href="https://yqglasses.com/" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebSite', name: site.brand, url: 'https://' + site.domain + '/', description: site.description })} />
     <title>YQ GLASSES | Wholesale Glassware & Cake Serving Sets</title>
   </head>
@@ -87,7 +88,7 @@ const faqs = [
 
     <header class="site-header" id="top">
       <div class="header-inner page-width">
-        <a class="brand" href="#top" aria-label="YQ GLASSES home"><span class="brand-mark">YQ<span>.</span></span><span class="brand-word">GLASSES</span></a>
+        <Brand href="#top" />
         <nav class="desktop-nav" aria-label="Main navigation">
           <a href="#collections">Collections</a>
           <a href="#customization">Customization</a>
@@ -261,7 +262,7 @@ const faqs = [
 
     <footer class="site-footer">
       <div class="page-width footer-main">
-        <div><a class="brand footer-brand" href="#top" aria-label="YQ GLASSES home"><span class="brand-mark">YQ<span>.</span></span><span class="brand-word">GLASSES</span></a><p>Wholesale glassware and serving sets, thoughtfully made for your collection.</p></div>
+        <div><Brand href="#top" footer /><p>Wholesale glassware and serving sets, thoughtfully made for your collection.</p></div>
         <div class="footer-links"><a href="#collections">Collections</a><a href="#customization">Customization</a><a href="#quality">Quality</a><a href={inquiryHref}>Request a quote</a></div>
       </div>
       <div class="page-width footer-bottom"><span>© {year} YQ GLASSES</span><span>yqglasses.com</span><a href="#top">Back to top ↑</a></div>

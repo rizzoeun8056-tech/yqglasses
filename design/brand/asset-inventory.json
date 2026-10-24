@@ -1,0 +1,167 @@
+[
+  {
+    "path": "images/brand/logo-horizontal-v2.png",
+    "width": 480,
+    "height": 160,
+    "bytes": 26266,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": true,
+    "setting": "\u65e0\u8c03\u8272\u677f\u91cf\u5316",
+    "notes": ""
+  },
+  {
+    "path": "images/brand/logo-horizontal-v2@2x.png",
+    "width": 960,
+    "height": 320,
+    "bytes": 12241,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": true,
+    "setting": "256 \u8272\u8c03\u8272\u677f",
+    "notes": "PNG \u4f7f\u7528\u8c03\u8272\u677f\u91cf\u5316\uff0c\u53ef\u80fd\u635f\u5931\u989c\u8272\u548c\u534a\u900f\u660e\u5c42\u6b21"
+  },
+  {
+    "path": "images/brand/logo-horizontal-v2.webp",
+    "width": 480,
+    "height": 160,
+    "bytes": 15854,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": true,
+    "setting": "\u8d28\u91cf 95",
+    "notes": ""
+  },
+  {
+    "path": "images/brand/logo-dark-v2.png",
+    "width": 480,
+    "height": 160,
+    "bytes": 39456,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": false,
+    "setting": "128 \u8272\u8c03\u8272\u677f",
+    "notes": "PNG \u4f7f\u7528\u8c03\u8272\u677f\u91cf\u5316\uff0c\u53ef\u80fd\u635f\u5931\u989c\u8272\u548c\u534a\u900f\u660e\u5c42\u6b21"
+  },
+  {
+    "path": "images/brand/logo-dark-v2.webp",
+    "width": 480,
+    "height": 160,
+    "bytes": 7064,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": false,
+    "setting": "\u8d28\u91cf 95",
+    "notes": ""
+  },
+  {
+    "path": "images/brand/logo-dark-v2@2x.webp",
+    "width": 960,
+    "height": 320,
+    "bytes": 16458,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": false,
+    "setting": "\u8d28\u91cf 95",
+    "notes": ""
+  },
+  {
+    "path": "images/brand/logo-mark-512.png",
+    "width": 512,
+    "height": 512,
+    "bytes": 8515,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": true,
+    "setting": "256 \u8272\u8c03\u8272\u677f",
+    "notes": "PNG \u4f7f\u7528\u8c03\u8272\u677f\u91cf\u5316\uff0c\u53ef\u80fd\u635f\u5931\u989c\u8272\u548c\u534a\u900f\u660e\u5c42\u6b21"
+  },
+  {
+    "path": "images/brand/logo-mark-1024.png",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 22523,
+    "limit_bytes": 150000,
+    "status": "ok",
+    "transparent": true,
+    "setting": "256 \u8272\u8c03\u8272\u677f",
+    "notes": "PNG \u4f7f\u7528\u8c03\u8272\u677f\u91cf\u5316\uff0c\u53ef\u80fd\u635f\u5931\u989c\u8272\u548c\u534a\u900f\u660e\u5c42\u6b21"
+  },
+  {
+    "path": "favicon-yq-color-v3-16.png",
+    "width": 16,
+    "height": 16,
+    "bytes": 585,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": false,
+    "setting": "\u65e0\u8c03\u8272\u677f\u91cf\u5316",
+    "notes": ""
+  },
+  {
+    "path": "favicon-yq-color-v3-32.png",
+    "width": 32,
+    "height": 32,
+    "bytes": 1326,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": false,
+    "setting": "\u65e0\u8c03\u8272\u677f\u91cf\u5316",
+    "notes": ""
+  },
+  {
+    "path": "favicon-yq-color-v3-48.png",
+    "width": 48,
+    "height": 48,
+    "bytes": 2212,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": false,
+    "setting": "\u65e0\u8c03\u8272\u677f\u91cf\u5316",
+    "notes": ""
+  },
+  {
+    "path": "apple-touch-icon.png",
+    "width": 180,
+    "height": 180,
+    "bytes": 12318,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": false,
+    "setting": "\u65e0\u8c03\u8272\u677f\u91cf\u5316",
+    "notes": ""
+  },
+  {
+    "path": "android-chrome-192x192.png",
+    "width": 192,
+    "height": 192,
+    "bytes": 13523,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": false,
+    "setting": "\u65e0\u8c03\u8272\u677f\u91cf\u5316",
+    "notes": ""
+  },
+  {
+    "path": "android-chrome-512x512.png",
+    "width": 512,
+    "height": 512,
+    "bytes": 37841,
+    "limit_bytes": 40000,
+    "status": "ok",
+    "transparent": false,
+    "setting": "256 \u8272\u8c03\u8272\u677f",
+    "notes": "PNG \u4f7f\u7528\u8c03\u8272\u677f\u91cf\u5316\uff0c\u53ef\u80fd\u635f\u5931\u989c\u8272\u548c\u534a\u900f\u660e\u5c42\u6b21"
+  },
+  {
+    "path": "images/brand/social-share-v2-1200x630.jpg",
+    "width": 1200,
+    "height": 630,
+    "bytes": 86713,
+    "limit_bytes": 120000,
+    "status": "ok",
+    "transparent": false,
+    "setting": "\u8d28\u91cf 95",
+    "notes": ""
+  }
+]

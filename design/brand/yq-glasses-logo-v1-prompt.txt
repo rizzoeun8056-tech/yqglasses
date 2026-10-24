@@ -1,0 +1,9 @@
+Generated with the built-in image_gen tool.
+Asset: public/images/brand/yq-glasses-logo-v1.png
+
+Use case: logo-brand.
+Asset type: a finished standalone logo for the English wholesale website yqglasses.com, brand YQ GLASSES.
+Primary request: Design a distinctive elegant YQ monogram as the dominant element for a brand specializing in champagne flutes and cake knife-and-server sets. Visually readable Y and Q must be the primary subject. Cleverly make the upper arms of the Y suggest the bowl of a slender champagne flute, with its stem integrated into the Y. Shape the short diagonal tail of Q as a subtle tapered cake-server blade; keep this abstract and refined, not a collection of separate product clip-art. Simple custom letterforms, balanced proportions, confident strokes, refined tableware brand character, strong recognition at website header size.
+Composition: one centered horizontal lockup on a wide transparent canvas: substantial YQ monogram left, precise uppercase wordmark "YQ GLASSES" right with elegant letter spacing and ample breathing room. The symbol should dominate, wordmark smaller. No tagline or other text. Flat crisp vector-like artwork only, suitable for later vector tracing, no mockups.
+Color palette derived from the existing website: monogram solid copper #b94f20; wordmark deep charcoal #292824. Actual transparent background.
+Constraints: exact wordmark text "YQ GLASSES". Keep recognizable Y and Q. Minimal shapes, useful negative space, legible small scale. No gradients, bevels, metallic shine, shadows, photography, crowns, grapes, ornate frames, extra decorative objects, watermark, or presentation-board labels. Produce a single professional logo, not multiple concepts.

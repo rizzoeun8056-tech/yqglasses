@@ -28,10 +28,8 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
 
 .site-header { position: relative; z-index: 30; height: 86px; background: #f8f5f1; border-bottom: 1px solid #e8dfd6; }
 .header-inner { display: flex; align-items: center; height: 100%; gap: 42px; }
-.brand { display: inline-flex; align-items: baseline; gap: 10px; white-space: nowrap; }
-.brand-mark { color: var(--copper); font-family: Georgia, serif; font-size: 31px; font-weight: 700; letter-spacing: -.12em; line-height: 1; }
-.brand-mark span { margin-left: 3px; }
-.brand-word { color: #3e3832; font-size: 11px; font-weight: 800; letter-spacing: .23em; }
+.brand { display: inline-flex; flex: none; align-items: center; white-space: nowrap; }
+.brand-image { display: block; width: 216px; height: 72px; object-fit: contain; }
 .desktop-nav { display: flex; gap: 32px; margin-left: auto; }
 .desktop-nav a { color: #554f49; font-size: 12px; font-weight: 700; letter-spacing: .04em; transition: color .2s; }
 .desktop-nav a:hover, .footer-links a:hover { color: var(--copper); }
@@ -235,7 +233,7 @@ h1 em, h2 em { font-style: normal; }
 
 .site-footer { padding: 54px 0 0; background: #f8f5f1; }
 .footer-main { display: flex; justify-content: space-between; gap: 55px; padding-bottom: 52px; }
-.footer-brand .brand-mark { font-size: 33px; }
+.footer-brand .brand-image { width: 240px; height: 80px; }
 .footer-main p { max-width: 380px; margin: 20px 0 0; color: #736e68; font-size: 13px; line-height: 1.7; }
 .footer-links { display: flex; align-items: flex-start; gap: 30px; padding-top: 9px; }
 .footer-links a { color: #514b45; font-size: 12px; font-weight: 700; }
@@ -245,19 +243,22 @@ h1 em, h2 em { font-style: normal; }
 @media (max-width: 1050px) {
   .page-width { width: min(100% - 56px, 1280px); }
   .header-inner { gap: 28px; }
+  .site-header .brand-image { width: 195px; height: 65px; }
   .desktop-nav { gap: 21px; }
   .feature-grid, .feature-grid.reverse { gap: 6%; }
   .glassware-grid, .finish-grid, .service-grid, .quality-grid { gap: 13px; }
   .card-body { padding-inline: 17px; }
   .finish-card, .service-card, .quality-card { padding-inline: 18px; }
 }
-@media (max-width: 860px) {
+@media (max-width: 980px) {
   .site-header { height: 74px; }
   .desktop-nav, .header-cta { display: none; }
   .menu-toggle { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 39px; height: 39px; margin-left: auto; border: 1px solid #ccbdae; background: transparent; }
   .menu-toggle span { display: block; width: 17px; height: 1px; background: #433b34; }
   .mobile-nav:not([hidden]) { display: flex; position: absolute; left: 0; right: 0; top: 74px; flex-direction: column; padding: 12px 28px 22px; border-bottom: 1px solid var(--line); background: #f8f5f1; box-shadow: 0 20px 30px rgba(0,0,0,.10); }
   .mobile-nav a { padding: 12px 0; border-bottom: 1px solid #e6ded6; font-size: 13px; font-weight: 700; }
+}
+@media (max-width: 860px) {
   .hero, .hero-inner { min-height: 600px; }
   .feature-section { padding-block: 85px; }
   .feature-grid, .feature-grid.reverse { grid-template-columns: 1fr 1fr; }
@@ -277,8 +278,7 @@ h1 em, h2 em { font-style: normal; }
 }
 @media (max-width: 640px) {
   .page-width { width: calc(100% - 36px); }
-  .brand-mark { font-size: 27px; }
-  .brand-word { font-size: 10px; }
+  .site-header .brand-image { width: 180px; height: 60px; }
   .hero, .hero-inner { min-height: 670px; }
   .hero-image { background-image: linear-gradient(180deg, rgba(18,31,37,.88) 0%, rgba(18,31,37,.74) 45%, rgba(18,31,37,.26) 100%), url('/images/reference/hero-glassware.webp'); background-position: 61% center; }
   .hero-inner { align-items: flex-start; padding-top: 82px; }
