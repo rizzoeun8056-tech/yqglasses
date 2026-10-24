@@ -1,0 +1,561 @@
+{
+  "id": "KB-ASSET-015",
+  "title": "YQ GLASSES office showroom and processing factory photographs",
+  "prepared_date": "2026-10-24",
+  "source_statement": "User supplied and confirmed these as YQ GLASSES office and processing factory photographs.",
+  "capture_date": null,
+  "constraints": {
+    "format": "WebP",
+    "max_edge_px": 600,
+    "max_bytes_exclusive": 40000
+  },
+  "processing": "Crop transparent canvas padding, resize proportionally without upscaling, compress to WebP. Preserve scene content and original files.",
+  "assets": [
+    {
+      "id": "YQ-COMP-001",
+      "source": "2_0004_DSC09614.webp",
+      "category": "office",
+      "name": "yq-office-team-workstations",
+      "label": "办公室工作区域",
+      "alt": "YQ GLASSES office with staff working at partitioned desks.",
+      "use": "About Us 的办公与沟通团队介绍",
+      "tags": [
+        "office",
+        "team",
+        "company"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/2_0004_DSC09614.webp",
+      "source_sha256": "c7472acd6f5987109e7d024d94a20064f83842e6266d613680319213e687c0f9",
+      "source_bytes": 97102,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          0,
+          100,
+          800,
+          700
+        ]
+      },
+      "file": "office/yq-office-team-workstations.webp",
+      "width": 600,
+      "height": 450,
+      "bytes": 39046,
+      "quality": 82,
+      "sha256": "0a8335377ac37ccf0c3b352461d99bdc5724cd1fe56b94657cf0b17530d6b071"
+    },
+    {
+      "id": "YQ-COMP-002",
+      "source": "3_0000_DSC09588.webp",
+      "category": "production/cake-knife-server",
+      "name": "yq-cake-serving-sets-batch-portrait",
+      "label": "刀铲批量摆放竖图",
+      "alt": "Rows of cake knives and servers with clear decorative handles in protective sleeves on a worktable.",
+      "use": "蛋糕刀铲页面的批量备货或加工现场展示",
+      "tags": [
+        "cake knife",
+        "cake server",
+        "batch",
+        "protective sleeves"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/3_0000_DSC09588.webp",
+      "source_sha256": "d8704acd579a555b6ac2c4a22b235b9698de83b52ced950572efd18aae40f2a3",
+      "source_bytes": 191854,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          100,
+          0,
+          700,
+          800
+        ]
+      },
+      "file": "production/cake-knife-server/yq-cake-serving-sets-batch-portrait.webp",
+      "width": 450,
+      "height": 600,
+      "bytes": 39300,
+      "quality": 43,
+      "sha256": "2e38aa0a81decf8f43fb33eba010696bdab2016272b2a40cdc347cfc3648d1f0"
+    },
+    {
+      "id": "YQ-COMP-003",
+      "source": "4_0001_DSC01574.webp",
+      "category": "production/cake-knife-server",
+      "name": "yq-cake-serving-set-handling-workbench",
+      "label": "刀铲工作台操作近景",
+      "alt": "A hand handling sleeved cake serving tools on a workbench with gold-colored components nearby.",
+      "use": "刀铲加工或人工操作细节；不单凭画面认定为质检工序",
+      "tags": [
+        "cake serving tools",
+        "workbench",
+        "manual handling"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/4_0001_DSC01574.webp",
+      "source_sha256": "245668218b5a0bae1531cc12f899349b7a6340a714233803b3e3cc979ad9d12d",
+      "source_bytes": 73652,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          175,
+          0,
+          625,
+          800
+        ]
+      },
+      "file": "production/cake-knife-server/yq-cake-serving-set-handling-workbench.webp",
+      "width": 337,
+      "height": 600,
+      "bytes": 39800,
+      "quality": 91,
+      "sha256": "df2228f2b47a920a5478e54dfaf7e49ead4f92d2532fe076966a6736fba42837"
+    },
+    {
+      "id": "YQ-COMP-004",
+      "source": "2_0002_DSC09585.webp",
+      "category": "production/cake-knife-server",
+      "name": "yq-decorated-handles-workbench",
+      "label": "装饰手柄与杯杆工作台",
+      "alt": "Rows of decorated cake serving handles with colored glassware stems arranged behind them on a workbench.",
+      "use": "手柄装饰、配件与配色能力介绍",
+      "tags": [
+        "decorated handles",
+        "glassware stems",
+        "components"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/2_0002_DSC09585.webp",
+      "source_sha256": "178b42a4f4b27e384174d847b37ebaea550f2dc25bdfe042800703ab5855daf9",
+      "source_bytes": 132030,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          0,
+          100,
+          800,
+          700
+        ]
+      },
+      "file": "production/cake-knife-server/yq-decorated-handles-workbench.webp",
+      "width": 600,
+      "height": 450,
+      "bytes": 39172,
+      "quality": 76,
+      "sha256": "ce2cffa68c0b0b9cdde1cfcfe6a28b37c8b5c1a70390f28535ec3034f567727d"
+    },
+    {
+      "id": "YQ-COMP-005",
+      "source": "2_0001_DSC09587.webp",
+      "category": "production/cake-knife-server",
+      "name": "yq-cake-serving-sets-batch-landscape",
+      "label": "刀铲批量摆放横图",
+      "alt": "A worktable covered with cake knives and servers in individual protective sleeves.",
+      "use": "刀铲批量处理的横向现场图；与 002 选一张作为同一区块主图",
+      "tags": [
+        "cake knife",
+        "cake server",
+        "batch",
+        "worktable"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/2_0001_DSC09587.webp",
+      "source_sha256": "75ff2faa1ded6ee8029644d739a68232a104247f67b76b27f5b92429bf15749d",
+      "source_bytes": 177770,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          0,
+          100,
+          800,
+          700
+        ]
+      },
+      "file": "production/cake-knife-server/yq-cake-serving-sets-batch-landscape.webp",
+      "width": 600,
+      "height": 450,
+      "bytes": 39338,
+      "quality": 41,
+      "sha256": "f9279459eba1c0d3f15026c8af4e6b93affafc5c996fed4e5b935985837fe44f"
+    },
+    {
+      "id": "YQ-COMP-006",
+      "source": "展厅 (3).webp",
+      "category": "showroom",
+      "name": "yq-showroom-stemware-display-shelves",
+      "label": "高脚杯与刀铲展架",
+      "alt": "YQ GLASSES showroom shelves displaying stemware, with cake serving sets on the upper shelf.",
+      "use": "公司展厅或产品系列概览",
+      "tags": [
+        "showroom",
+        "stemware",
+        "cake serving sets"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/展厅 (3).webp",
+      "source_sha256": "de15ee6bbf9e664793f89acea519021815252d417302b0783e6de4017db87779",
+      "source_bytes": 133588,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "none",
+        "box": [
+          0,
+          0,
+          800,
+          800
+        ]
+      },
+      "file": "showroom/yq-showroom-stemware-display-shelves.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 39462,
+      "quality": 75,
+      "sha256": "d2efdb8a7e5513bf506b3d28213da67551edb96563a96859d3a7e2186122d0ce"
+    },
+    {
+      "id": "YQ-COMP-007",
+      "source": "展厅 (4).webp",
+      "category": "showroom",
+      "name": "yq-showroom-glassware-corner-cabinets",
+      "label": "综合玻璃器皿展柜",
+      "alt": "Corner display cabinets filled with assorted glasses and decorative glassware in the YQ GLASSES showroom.",
+      "use": "玻璃器皿系列与展厅介绍",
+      "tags": [
+        "showroom",
+        "glassware",
+        "display cabinets"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/展厅 (4).webp",
+      "source_sha256": "16fbf4ff58e47da25bc2042a2cf5e3670e143994ebf43684c073bd8d0e29e4d9",
+      "source_bytes": 147720,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "none",
+        "box": [
+          0,
+          0,
+          800,
+          800
+        ]
+      },
+      "file": "showroom/yq-showroom-glassware-corner-cabinets.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 39496,
+      "quality": 66,
+      "sha256": "ac9c5ae9571f43a6664070c95ce3a30d7417239f79143daa88b28f93c2a67997"
+    },
+    {
+      "id": "YQ-COMP-008",
+      "source": "展厅 (5).webp",
+      "category": "showroom",
+      "name": "yq-showroom-stemware-cabinet-aisle",
+      "label": "高脚杯展柜与展示通道",
+      "alt": "Glass-fronted cabinets displaying stemware beside a table of serving pieces in the YQ GLASSES showroom.",
+      "use": "About Us 展厅主图或香槟杯系列展示",
+      "tags": [
+        "showroom",
+        "stemware",
+        "display cabinets",
+        "serving pieces"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/展厅 (5).webp",
+      "source_sha256": "89159cdba1bd111e725d58a9a67aae66a06847de612326d15cc9127ce07a2de8",
+      "source_bytes": 131768,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "none",
+        "box": [
+          0,
+          0,
+          800,
+          800
+        ]
+      },
+      "file": "showroom/yq-showroom-stemware-cabinet-aisle.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 39970,
+      "quality": 72,
+      "sha256": "3865990d3c40daf30b531b4c75cec26def5a330c836dfaec526515dcb9bb426d"
+    },
+    {
+      "id": "YQ-COMP-009",
+      "source": "展厅 (6).webp",
+      "category": "showroom",
+      "name": "yq-showroom-cake-serving-set-display-table",
+      "label": "蛋糕刀铲样品展示桌",
+      "alt": "A showroom table displaying cake knives, servers and other serving pieces in front of glassware cabinets.",
+      "use": "蛋糕刀铲选款、样品系列与展厅展示",
+      "tags": [
+        "showroom",
+        "cake knife",
+        "cake server",
+        "samples"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/展厅 (6).webp",
+      "source_sha256": "48b5787a1f00f35eaa847c8d8f025031c174a5e373b4a8d46128061d6bdc24c8",
+      "source_bytes": 152968,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "none",
+        "box": [
+          0,
+          0,
+          800,
+          800
+        ]
+      },
+      "file": "showroom/yq-showroom-cake-serving-set-display-table.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 39972,
+      "quality": 62,
+      "sha256": "8ec77968e73bf943736c528eabecccf3afa33b0f23cd31876595406b2d2c235a"
+    },
+    {
+      "id": "YQ-COMP-010",
+      "source": "champagne glass cup and base (2).webp",
+      "category": "production/glassware",
+      "name": "yq-glass-base-components-portrait",
+      "label": "玻璃杯底配件竖图",
+      "alt": "Rows of faceted clear glass base components arranged on a workshop table.",
+      "use": "杯底配件与加工准备介绍；与 015 避免在同一区块重复使用",
+      "tags": [
+        "glass bases",
+        "components",
+        "workshop"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/champagne glass cup and base (2).webp",
+      "source_sha256": "04139de745bdf395b5969c08a3cdd0d78fa2f6af500221eac2741fce897fe77e",
+      "source_bytes": 158232,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          100,
+          0,
+          700,
+          800
+        ]
+      },
+      "file": "production/glassware/yq-glass-base-components-portrait.webp",
+      "width": 450,
+      "height": 600,
+      "bytes": 39670,
+      "quality": 64,
+      "sha256": "5ded2d19be6a29adaa6e87a84978d8ff88b52f5ce189cf7867d5e7384e9d0237"
+    },
+    {
+      "id": "YQ-COMP-011",
+      "source": "champagne glass cup and base (1).webp",
+      "category": "production/glassware",
+      "name": "yq-inverted-glassware-workbench-portrait",
+      "label": "倒置玻璃杯与配件竖图",
+      "alt": "Inverted glasses and glass components arranged on a worktable beside upright stemware.",
+      "use": "酒杯组件与加工现场介绍；画面不用于说明全部杯型的固定工序",
+      "tags": [
+        "glassware",
+        "components",
+        "workbench"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/champagne glass cup and base (1).webp",
+      "source_sha256": "438e5a50f66c2c75756a3c6720fb8cc633343cd2907e7b406aeb3e3aac19e36f",
+      "source_bytes": 202638,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          100,
+          0,
+          700,
+          800
+        ]
+      },
+      "file": "production/glassware/yq-inverted-glassware-workbench-portrait.webp",
+      "width": 420,
+      "height": 560,
+      "bytes": 39592,
+      "quality": 45,
+      "sha256": "389fbe969f10bcceb67f8bd13ce0785ecbd3ea7dde9fd5965b9c7477dcd81325"
+    },
+    {
+      "id": "YQ-COMP-012",
+      "source": "champane glass factory flow (4).webp",
+      "category": "production/glassware",
+      "name": "yq-glassware-assembly-workbench",
+      "label": "酒杯人工加工工作台",
+      "alt": "Workers handling decorative stemware at a table with glass cups, metal stems and stacked boxes.",
+      "use": "加工团队与人工装配场景展示",
+      "tags": [
+        "glassware",
+        "assembly",
+        "team",
+        "workbench"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/champane glass factory flow (4).webp",
+      "source_sha256": "dd2fde4758ff18e1aa61ad18cf9d9bf21a03dbbdea46af7891df6ecf013733c9",
+      "source_bytes": 134684,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          0,
+          100,
+          800,
+          700
+        ]
+      },
+      "file": "production/glassware/yq-glassware-assembly-workbench.webp",
+      "width": 600,
+      "height": 450,
+      "bytes": 39774,
+      "quality": 72,
+      "sha256": "da441b28c955f0604cfd0b91b14ffb8a800719a8f6360c8bdd492df06330021c"
+    },
+    {
+      "id": "YQ-COMP-013",
+      "source": "champane glass factory flow (3).webp",
+      "category": "production/glassware",
+      "name": "yq-inverted-glassware-workbench-landscape",
+      "label": "倒置玻璃杯与配件横图",
+      "alt": "Inverted glass cups and clear decorative components arranged across a workshop table.",
+      "use": "酒杯加工流程的横向配图；与 011 按版式择一",
+      "tags": [
+        "glass cups",
+        "components",
+        "workshop"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/champane glass factory flow (3).webp",
+      "source_sha256": "61e42a5b204e4c5b178f9c5fa53148d9fe3373b6bf5bf406e250bfe9766e74ac",
+      "source_bytes": 131300,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          0,
+          100,
+          800,
+          700
+        ]
+      },
+      "file": "production/glassware/yq-inverted-glassware-workbench-landscape.webp",
+      "width": 600,
+      "height": 450,
+      "bytes": 39982,
+      "quality": 72,
+      "sha256": "f14a2368d074c6fdaa0e4a4f4cd9e5bc3057e02a0f59f3bb563d5a536ef98bbb"
+    },
+    {
+      "id": "YQ-COMP-014",
+      "source": "champane glass factory flow (2).webp",
+      "category": "production/glassware",
+      "name": "yq-glass-processing-stations",
+      "label": "玻璃件机台加工现场",
+      "alt": "Two workers handling glass pieces at rotary processing stations in a workshop.",
+      "use": "加工场地与人工机台操作介绍；具体设备和工序名称待确认",
+      "tags": [
+        "glass processing",
+        "workshop",
+        "team",
+        "rotary equipment"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/champane glass factory flow (2).webp",
+      "source_sha256": "310e3af960baff1f70ae697970f30f2315dafd54333f9232e72d0e7662524ca4",
+      "source_bytes": 95954,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          0,
+          100,
+          800,
+          700
+        ]
+      },
+      "file": "production/glassware/yq-glass-processing-stations.webp",
+      "width": 600,
+      "height": 450,
+      "bytes": 38508,
+      "quality": 83,
+      "sha256": "b11e9f93734fd6c1df01d7d812933216e5df0f3e0a964074adcfb9e00b4aa9ef"
+    },
+    {
+      "id": "YQ-COMP-015",
+      "source": "champane glass factory flow (1).webp",
+      "category": "production/glassware",
+      "name": "yq-glass-base-components-landscape",
+      "label": "玻璃杯底配件横图",
+      "alt": "Clear faceted glass base components laid out in rows across a workshop table.",
+      "use": "杯底组件与批量加工准备；与 010 按版式择一，网页选图时留意左下角二维码",
+      "tags": [
+        "glass bases",
+        "components",
+        "workshop"
+      ],
+      "source_path": "/Users/laotie/Desktop/TP图片/champane glass factory flow (1).webp",
+      "source_sha256": "2910c9e4176dc0ec404df46bc711853c277b70a0f5b9f5b836e43e005f84cda3",
+      "source_bytes": 139268,
+      "source_size": [
+        800,
+        800
+      ],
+      "crop": {
+        "kind": "transparent_canvas_padding",
+        "box": [
+          0,
+          100,
+          800,
+          700
+        ]
+      },
+      "file": "production/glassware/yq-glass-base-components-landscape.webp",
+      "width": 600,
+      "height": 450,
+      "bytes": 39586,
+      "quality": 66,
+      "sha256": "9428644214d1dd0c22db4b96b24f381ba0dce7c6d74a1d566d3b61956f8cebb7"
+    }
+  ]
+}
