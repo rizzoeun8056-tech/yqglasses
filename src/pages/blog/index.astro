@@ -1,0 +1,72 @@
+---
+import '../../styles/global.css';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import BrandAssets from '../../components/BrandAssets.astro';
+
+const title = 'Blog | Glassware & Cake Serving Guides | YQ GLASSES';
+const description = 'Practical guides to cake serving sets, glassware and personalized details from YQ GLASSES.';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://yqglasses.com/blog/" />
+    <link rel="canonical" href="https://yqglasses.com/blog/" />
+    <BrandAssets />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+    <main id="main" class="journal page-width">
+      <header class="journal-heading">
+        <h1>Blog</h1>
+        <p>Ideas and practical guides for the celebration table.</p>
+      </header>
+      <article aria-labelledby="guide-title">
+        <div class="guide-intro">
+          <span class="guide-category">Cake serving guide</span>
+          <h2 id="guide-title">How to Use a Cake Knife and Server Set</h2>
+          <p>The knife separates each portion. The server supports the slice as you move it to the plate. A little preparation helps both work together.</p>
+          <a href="/cake-knife-server-sets/">Explore cake knife and server sets <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="guide-body">
+          <section><h3>Plan your portions</h3><p>Choose slice sizes around the cake’s shape, height and number of guests. For a tiered cake, ask the cake maker about boards, supports and serving order before cutting.</p></section>
+          <section><h3>Cut, then support</h3><p>Use a suitable knife to separate the portion fully. Slide the server underneath to support the slice, then move it close to the plate before setting it down.</p></section>
+          <section><h3>Keep the blade clean</h3><p>Clear frosting and crumbs between cuts. Where a warm blade suits the cake, warm it and wipe it dry before cutting.</p></section>
+          <section><h3>Care for the complete set</h3><p>Follow the care instructions for the selected finish, handle and decoration. Confirm dishwasher suitability for the complete product rather than the metal alone.</p></section>
+        </div>
+      </article>
+    </main>
+    <SiteFooter />
+  </body>
+</html>
+
+<style>
+  .journal { padding-block: 64px 88px; }
+  .journal-heading { border-bottom: 1px solid var(--line); padding-bottom: 36px; margin-bottom: 48px; }
+  h1 { margin-bottom: 15px; font-size: clamp(44px, 5vw, 66px); line-height: 1.1; }
+  .journal-heading p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.8; }
+  article { display: grid; grid-template-columns: 1fr 1fr; gap: 10%; }
+  .guide-category { display: block; margin-bottom: 18px; font-size: 11px; letter-spacing: .12em; color: var(--copper-dark); text-transform: uppercase; }
+  h2 { max-width: 490px; font-size: clamp(34px, 3.5vw, 48px); line-height: 1.15; margin-bottom: 24px; }
+  article p { color: var(--muted); font-size: 14px; line-height: 1.85; }
+  .guide-intro > p { max-width: 440px; margin-bottom: 30px; }
+  .guide-intro > a { display: inline-flex; align-items: center; gap: 22px; padding-bottom: 9px; border-bottom: 1px solid var(--copper); font-size: 12px; color: var(--copper-dark); }
+  .guide-body section + section { margin-top: 27px; }
+  h3 { font-size: 24px; font-weight: 400; margin-bottom: 11px; }
+  .guide-body p { margin-bottom: 0; }
+  @media (max-width: 700px) {
+    .journal { padding-block: 42px 60px; }
+    .journal-heading { padding-bottom: 26px; margin-bottom: 32px; }
+    article { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>

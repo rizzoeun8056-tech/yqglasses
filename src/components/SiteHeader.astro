@@ -8,27 +8,24 @@ interface Props {
 }
 
 const { home = false, inquiryPage = false } = Astro.props;
-const sectionHref = (id: string) => `${home ? '' : '/'}#${id}`;
 const quoteHref = inquiryPage ? '#project-form' : site.inquiryUrl;
 const quoteLabel = inquiryPage ? 'Start your inquiry' : 'Request a quote';
 const cakePage = Astro.url.pathname.startsWith('/cake-knife-server-sets/');
+const blogPage = Astro.url.pathname.startsWith('/blog/');
 ---
 
 <header class="site-header" id="top">
   <div class="header-inner page-width">
     <Brand href={home ? '#top' : '/'} />
     <nav class="desktop-nav" aria-label="Main navigation">
-      <a href={sectionHref('collections')}>Collections</a>
       <a href="/cake-knife-server-sets/" aria-current={cakePage ? 'page' : undefined}>Cake Knife and Server Set</a>
-      <a href={sectionHref('customization')}>Customization</a>
-      <a href={sectionHref('quality')}>Quality</a>
-      <a href={sectionHref('faq')}>FAQ</a>
+      <a href="/blog/" aria-current={blogPage ? 'page' : undefined}>Blog</a>
     </nav>
     <a class:list={['header-cta', { 'is-current': inquiryPage }]} href={quoteHref}>{quoteLabel} <span aria-hidden="true">{inquiryPage ? '↓' : '↗'}</span></a>
     <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
   <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
-    <a href={sectionHref('collections')}>Collections</a><a href="/cake-knife-server-sets/" aria-current={cakePage ? 'page' : undefined}>Cake Knife and Server Set</a><a href={sectionHref('customization')}>Customization</a><a href={sectionHref('quality')}>Quality</a><a href={sectionHref('faq')}>FAQ</a><a href={quoteHref}>{quoteLabel}</a>
+    <a href="/cake-knife-server-sets/" aria-current={cakePage ? 'page' : undefined}>Cake Knife and Server Set</a><a href="/blog/" aria-current={blogPage ? 'page' : undefined}>Blog</a><a href={quoteHref}>{quoteLabel}</a>
   </nav>
 </header>
 

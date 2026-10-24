@@ -25,6 +25,8 @@
 | KB-ASSET-011 | [OH41006 爱心点钻香槟杯素材](assets/champagne-glasses/oh41006-heart-stem/README.md) | 5 张 WebP、玻璃杯头与锌合金杯杆、英文 alt 文本 | 2026-10-24 |
 | KB-PRODUCT-003 | [天鹅点钻香槟杯](products/swan-champagne-flutes.md) | 用户确认的材质选项、点钻和粘接工艺、金银电镀、包装选项及型号待核对项 | 2026-10-24 |
 | KB-ASSET-012 | [OH41101 来源文件夹天鹅香槟杯素材](assets/champagne-glasses/oh41101-swan-source/README.md) | 9 张去标识 WebP、原图映射、英文 alt 与 OH13370C 图示参数 | 2026-10-24 |
+| KB-PRODUCT-004 | [OH41013R 镂空雕花杯杆香槟杯](products/oh41013r-openwork-champagne-flute.md) | 用户确认的玻璃杯头与锌合金杯杆、图片标注参数及网站使用边界 | 2026-10-24 |
+| KB-ASSET-013 | [OH41013R 镂空雕花香槟杯素材](assets/champagne-glasses/oh41013r-openwork-stem/README.md) | 6 张去标识 WebP、原图映射、英文 alt 与尺寸图标注 | 2026-10-24 |
 
 图片集合入口：[产品图片素材库](assets/README.md)。
 
