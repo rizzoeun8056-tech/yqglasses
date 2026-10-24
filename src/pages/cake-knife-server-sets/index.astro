@@ -1,0 +1,169 @@
+---
+import '../../styles/global.css';
+import '../../styles/cake-knife-sets.css';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import BrandAssets from '../../components/BrandAssets.astro';
+import { site } from '../../data/site';
+
+const inquiry = (mode = 'stock', design = '') => {
+  const params = new URLSearchParams({ product: 'Cake Knife & Server Sets', order_type: mode });
+  if (design) params.set('design', design);
+  return `${site.inquiryUrl}?${params.toString()}`;
+};
+const styles = [
+  { name: 'Faceted handles', image: 'faceted-pair', alt: 'Cake knife and server with clear decorative handles and faceted ends' },
+  { name: 'Hand-decorated handles', image: 'studded-pair', alt: 'Silver-colored cake knife and server with hand-decorated sparkling handles' },
+  { name: 'Rose handles', image: 'rose-pair', alt: 'Gold-plated zinc alloy cake knife and server with rose-shaped handles' },
+];
+const roles = [
+  { title: 'Assembly', text: 'Your chosen components, brought together.', icon: 'M7 3h10v6H7z M3 15h6v6H3z M15 15h6v6h-6z M12 9v3M6 12h12M6 12v3M18 12v3' },
+  { title: 'Inspection', text: 'Products reviewed before packing.', icon: 'M8 4H5v16h14V4h-3M8 2h8v4H8z M8 13l3 3 5-6' },
+  { title: 'Packing', text: 'Prepared in the boxes you selected.', icon: 'M3 7l9-4 9 4v11l-9 4-9-4z M3 7l9 4 9-4M12 11v11M7.5 5l9 4' },
+  { title: 'Support', text: 'Order updates through to dispatch.', icon: 'M4 13v-2a8 8 0 0116 0v2 M4 11H2v7h4v-7z M20 11h2v7h-4v-7z M18 18c0 3-3 4-6 4' },
+];
+const leadTimes = [
+  { label: 'In-stock dispatch', time: '1–3', unit: 'days' },
+  { label: 'Bulk stock dispatch', time: '3–7', unit: 'days' },
+  { label: 'Custom samples*', time: '3–7', unit: 'days' },
+  { label: 'Custom production', time: '5–25', unit: 'days' },
+];
+const description = 'Stainless steel and zinc alloy cake knife and server sets. Explore existing designs or customize handles, metal finishes, engraving and packaging with YQ GLASSES.';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f1eb" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cake Knife & Server Sets | YQ GLASSES" />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://yqglasses.com/cake-knife-server-sets/" />
+    <link rel="canonical" href="https://yqglasses.com/cake-knife-server-sets/" />
+    <BrandAssets />
+    <link rel="preload" as="image" href="/images/cake-knife-sets/faceted-pair.webp" />
+    <title>Cake Knife & Server Sets | YQ GLASSES</title>
+  </head>
+  <body class="cake-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+
+    <main id="main">
+      <section class="ck-hero" aria-label="Cake knife and server sets">
+        <div class="ck-container">
+          <div class="ck-tabs" role="tablist" aria-label="Choose an order type">
+            <button type="button" role="tab" id="stock-tab" aria-selected="true" aria-controls="stock-panel" data-mode="stock">Ready to ship <span aria-hidden="true">↗</span></button>
+            <button type="button" role="tab" id="custom-tab" aria-selected="false" aria-controls="custom-panel" tabindex="-1" data-mode="custom">Custom orders <span aria-hidden="true">↗</span></button>
+          </div>
+
+          <div class="ck-hero-panel" id="stock-panel" role="tabpanel" aria-labelledby="stock-tab">
+            <div class="ck-hero-copy">
+              <h1>Cake knife &amp;<br />server sets.<br /><em>Ready to ship.</em></h1>
+              <p>Stainless steel and zinc alloy designs for weddings, gifting and your next collection.</p>
+              <div class="ck-hero-timing"><div><strong>1–3 days</strong><span>Stock dispatch</span></div><div><strong>3–7 days</strong><span>Bulk stock dispatch</span></div></div>
+              <div class="ck-hero-actions"><a class="ck-button" href={inquiry()} data-inquiry-link>Check availability <span aria-hidden="true">↗</span></a><a class="ck-text-link" href="#collection">Explore designs <span aria-hidden="true">↓</span></a></div>
+              <small class="ck-hero-note">Availability confirmed for your design and quantity.</small>
+            </div>
+            <figure class="ck-hero-photo">
+              <img src="/images/cake-knife-sets/faceted-pair.webp" alt="Cake knife and server with clear decorative handles and faceted ends on a dark tabletop" width="600" height="600" fetchpriority="high" />
+            </figure>
+          </div>
+
+          <div class="ck-hero-panel" id="custom-panel" role="tabpanel" aria-labelledby="custom-tab" hidden>
+            <div class="ck-hero-copy">
+              <h1>Cake knife &amp;<br />server sets.<br /><em>Made for you.</em></h1>
+              <p>Your choice of handle, metal finish and engraving. Finished with packaging designed around your set.</p>
+              <div class="ck-hero-timing"><div><strong>3–7 days</strong><span>Custom samples*</span></div><div><strong>5–25 days</strong><span>Bulk production</span></div></div>
+              <div class="ck-hero-actions"><a class="ck-button" href={inquiry('custom')} data-inquiry-link data-inquiry-mode="custom">Request a custom quote <span aria-hidden="true">↗</span></a><a class="ck-text-link" href="#customization">See the options <span aria-hidden="true">↓</span></a></div>
+              <small class="ck-hero-note">*For samples requiring mold development. Timing confirmed with your design.</small>
+            </div>
+            <figure class="ck-hero-photo">
+              <img src="/images/cake-knife-sets/rose-pair.webp" alt="Gold-plated cake knife and server with sculptural rose-shaped handles" width="600" height="600" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="ck-collection ck-section" id="collection" aria-labelledby="collection-title">
+        <div class="ck-container">
+          <div class="ck-section-heading"><h2 id="collection-title">Find your starting point.</h2><p>Stainless steel &amp; zinc alloy designs.<br />Acrylic, hollow acrylic &amp; metal handle options.</p></div>
+          <div class="ck-product-grid">
+            {styles.map((style) => <article class="ck-product"><a class="ck-product-image" href={inquiry('stock', style.name)} data-inquiry-link data-design={style.name} aria-label={`Ask about ${style.name.toLowerCase()}`}><img src={`/images/cake-knife-sets/${style.image}.webp`} alt={style.alt} width="600" height="600" loading="lazy" /><span class="ck-product-arrow" aria-hidden="true">↗</span></a><div class="ck-product-info"><div><h3>{style.name}</h3></div><a href={inquiry('stock', style.name)} data-inquiry-link data-design={style.name} aria-label={`Inquire about ${style.name.toLowerCase()}`}>Inquire <span aria-hidden="true">↗</span></a></div></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section class="ck-customization ck-section" id="customization" aria-labelledby="customization-title">
+        <div class="ck-container ck-detail-grid">
+          <figure class="ck-detail-image"><img src="/images/cake-knife-sets/studded-detail.webp" alt="Close-up of hand-decorated silver-colored cake serving set handles" width="600" height="600" loading="lazy" /></figure>
+          <div class="ck-detail-copy"><h2 id="customization-title">A finish<br /><em>that’s yours.</em></h2><p>Personalize the surface, the wording and the details.</p><div class="ck-options"><div><span>01</span><div><h3>Metal finishes</h3><p>Coordinate the look of your knife, server and handle.</p></div><div class="ck-swatches" aria-label="Gold and silver finish examples"><i class="ck-swatch-gold" title="Gold-colored finish"></i><i class="ck-swatch-silver" title="Silver-colored finish"></i></div></div><div><span>02</span><div><h3>Personalized text</h3><p>Names, dates and messages for a personal touch.</p></div></div><div><span>03</span><div><h3>Laser engraving</h3><p>Your text or artwork, with placement reviewed together.</p></div></div></div><a class="ck-text-link" href={inquiry('custom')} data-inquiry-link data-inquiry-mode="custom">Share your design <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+
+      <section class="ck-packaging ck-section" id="packaging" aria-labelledby="packaging-title">
+        <div class="ck-container ck-packaging-grid">
+          <div class="ck-packaging-copy"><h2 id="packaging-title">The set.<br /><em>The presentation.</em></h2><p>Gift boxes or standard boxes, with shapes, designs and wording tailored to your order.</p><div class="ck-packaging-types"><span>Gift boxes</span><span>Standard boxes</span></div><div class="ck-packaging-details"><div><span aria-hidden="true">◇</span><h3>Shape</h3></div><div><span aria-hidden="true">▤</span><h3>Design</h3></div><div><span aria-hidden="true">Aa</span><h3>Your text</h3></div></div><a class="ck-text-link" href={inquiry('custom')} data-inquiry-link data-inquiry-mode="custom">Plan your packaging <span aria-hidden="true">↗</span></a></div>
+          <figure class="ck-packaging-image"><img src="/images/cake-knife-sets/gift-box.webp" alt="Gold rose-handle cake knife and server presented in a black window gift box" width="600" height="600" loading="lazy" /></figure>
+        </div>
+      </section>
+
+      <section class="ck-team ck-section" aria-labelledby="team-title">
+        <div class="ck-container"><div class="ck-section-heading"><h2 id="team-title">A dedicated team.<br /><em>A clear process.</em></h2><p>Order updates from assembly to dispatch.</p></div><div class="ck-team-grid">{roles.map((role, i) => <article><div class="ck-role-top"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={role.icon} /></svg><span>0{i + 1}</span></div><h3>{role.title}</h3><p>{role.text}</p></article>)}</div></div>
+      </section>
+
+      <section class="ck-contact ck-section" id="lead-times" aria-labelledby="contact-title">
+        <div class="ck-container ck-contact-grid">
+          <div class="ck-contact-copy"><h2 id="contact-title">Let’s plan<br /><em>your order.</em></h2><p>Share a design, quantity and packaging idea.<br />We’ll help you take the next step.</p><a class="ck-button" href={inquiry()} data-inquiry-link>Send your requirements <span aria-hidden="true">↗</span></a><span class="ck-reference-note">Photos, sketches and artwork welcome.</span></div>
+          <div class="ck-order-details"><h3 class="ck-table-title">Lead times</h3><dl class="ck-lead-times">{leadTimes.map((lead) => <div><dt>{lead.label}</dt><dd><strong>{lead.time}</strong> {lead.unit}</dd></div>)}</dl><p class="ck-timing-note">*Samples requiring mold development. Final timing depends on the design, quantity and packaging. Shipping transit is additional.</p><div class="ck-faq"><details><summary>What is the minimum order?<span aria-hidden="true">+</span></summary><p>Send your preferred style and quantity so we can confirm the minimum order for your project.</p></details><details><summary>What should I include in my inquiry?<span aria-hidden="true">+</span></summary><p>Your preferred design, quantity, finish, engraving details and packaging. Reference photos or artwork are helpful.</p></details></div></div>
+        </div>
+      </section>
+    </main>
+
+    <SiteFooter />
+
+    <script>
+      const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-mode]'));
+      let currentMode = 'stock';
+
+      function updateInquiryLinks() {
+        document.querySelectorAll<HTMLAnchorElement>('[data-inquiry-link]').forEach((link) => {
+          const mode = link.dataset.inquiryMode || currentMode;
+          const params = new URLSearchParams({ product: 'Cake Knife & Server Sets', order_type: mode });
+          if (link.dataset.design) params.set('design', link.dataset.design);
+          link.href = `/file-upload/?${params.toString()}`;
+        });
+      }
+
+      function selectMode(mode: string) {
+        if (mode !== 'stock' && mode !== 'custom') return;
+        currentMode = mode;
+        tabs.forEach((tab) => {
+          const active = tab.dataset.mode === mode;
+          tab.setAttribute('aria-selected', String(active));
+          tab.tabIndex = active ? 0 : -1;
+          const panel = document.getElementById(tab.getAttribute('aria-controls') || '');
+          if (panel) panel.hidden = !active;
+        });
+        updateInquiryLinks();
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectMode(tab.dataset.mode || 'stock'));
+        tab.addEventListener('keydown', (event) => {
+          if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+          tabs[next].focus();
+          selectMode(tabs[next].dataset.mode || 'stock');
+        });
+      });
+
+      const initialMode = new URLSearchParams(window.location.search).get('mode');
+      selectMode(initialMode === 'custom' ? 'custom' : 'stock');
+    </script>
+  </body>
+</html>

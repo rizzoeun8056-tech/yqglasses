@@ -156,6 +156,7 @@ h1 em, h2 em { font-style: normal; }
 .contact-steps small { color: #766f68; font-size: 12px; line-height: 1.55; }
 .inquiry-form { display: grid; gap: 19px; padding: 32px; color: #302c28; background: #f8f4ef; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+#order-context[hidden] { display: none; }
 .inquiry-form label { display: grid; gap: 8px; color: #5c554d; font-size: 10px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
 .inquiry-form input, .inquiry-form select, .inquiry-form textarea { width: 100%; min-height: 46px; padding: 11px 12px; border: 1px solid #d6cbbf; border-radius: 0; outline: none; color: #2d2925; background: #fff; font-size: 13px; font-weight: 400; letter-spacing: 0; text-transform: none; }
 .inquiry-form textarea { resize: vertical; line-height: 1.6; }

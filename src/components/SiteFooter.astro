@@ -1,0 +1,21 @@
+---
+import Brand from './Brand.astro';
+import { site } from '../data/site';
+
+interface Props {
+  home?: boolean;
+  inquiryPage?: boolean;
+}
+
+const { home = false, inquiryPage = false } = Astro.props;
+const year = new Date().getFullYear();
+const sectionHref = (id: string) => `${home ? '' : '/'}#${id}`;
+---
+
+<footer class="site-footer">
+  <div class="page-width footer-main">
+    <div><Brand href={home ? '#top' : '/'} footer /><p>Wholesale glassware and serving sets, thoughtfully made for your collection.</p></div>
+    <div class="footer-links"><a href={sectionHref('collections')}>Collections</a><a href={sectionHref('customization')}>Customization</a><a href={sectionHref('quality')}>Quality</a><a href={inquiryPage ? '#project-form' : site.inquiryUrl}>{inquiryPage ? 'Inquiry form' : 'Request a quote'}</a></div>
+  </div>
+  <div class="page-width footer-bottom"><span>© {year} YQ GLASSES</span><span>yqglasses.com</span><a href="#top">Back to top ↑</a></div>
+</footer>

@@ -1,6 +1,14 @@
 # YQ GLASSES
 
-使用 Astro 构建的英语批发询盘网站，品牌为 YQ GLASSES。网站已发布在 <https://yqglasses.com/>。首页按品牌提供的参考页面重新设计，展示香槟杯、蛋糕刀叉套装、其他酒杯、定制工艺、质量与包装，并使用参考页面中的产品图片。具体产品规格和可提供的定制选项仍需由品牌方逐项确认。
+使用 Astro 构建的英语批发询盘网站，品牌为 YQ GLASSES。网站已发布在 <https://yqglasses.com/>。首页按品牌提供的参考页面重新设计，展示香槟杯、蛋糕刀铲套装、其他酒杯、定制工艺、质量与包装，并使用参考页面中的产品图片。具体产品规格和可提供的定制选项仍需由品牌方逐项确认。
+
+## 产品知识库
+
+产品介绍与内容参考资料见 [知识库索引](knowledge-base/README.md)。当前包含 [Cake Knife & Server Sets（蛋糕刀铲套装）](knowledge-base/products/cake-knife-server-sets.md)及[定制蛋糕刀铲套装](knowledge-base/customization/custom-cake-knife-server-sets.md)，覆盖产品常识、使用保养、定制设计维度、询盘字段、FAQ 和英文文案参考。后续撰写相关页面时先查阅；知识库通用信息不替代 YQ 具体型号的规格和定制能力确认。
+
+使用场景的扩展资料见 [蛋糕刀铲使用与分餐指南](knowledge-base/guides/cake-cutting-serving.md)，包含按形状切分、份量参考及原文操作纠错。
+
+YQ 当前通用供货与定制能力见 [品牌方确认记录](knowledge-base/company/yq-cake-knife-server-capabilities.md)；后续页面设计可使用 [现货／定制首屏切换的六区块英文文案](knowledge-base/content/cake-knife-server-page-copy-en.md)。
 
 ## 本地运行
 
@@ -19,6 +27,8 @@ npm run build
 ```
 
 构建后的静态文件位于 `dist/`。
+
+蛋糕刀铲页面：`/cake-knife-server-sets/`。共六个区块，首屏支持现货／定制切换；首页蛋糕刀铲入口已链接至该页。询盘按钮会携带产品类别、订单类型和款式，自动填写到表单，并包含在询盘邮件中。页面文案保持英文，开发期间保留 `noindex`。
 
 ## 后续需要完善的内容
 

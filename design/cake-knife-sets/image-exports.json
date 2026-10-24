@@ -1,0 +1,42 @@
+[
+  {
+    "source": "knowledge-base/assets/cake-knife-server/oh42053/oh42053-clear-filled-handle-pair.webp",
+    "output": "public/images/cake-knife-sets/faceted-pair.webp",
+    "width": 600,
+    "height": 600,
+    "bytes": 38506,
+    "quality": 86
+  },
+  {
+    "source": "knowledge-base/assets/cake-knife-server/studded-handle/studded-handle-knife-server-pair-black.webp",
+    "output": "public/images/cake-knife-sets/studded-pair.webp",
+    "width": 600,
+    "height": 600,
+    "bytes": 12116,
+    "quality": 86
+  },
+  {
+    "source": "knowledge-base/assets/cake-knife-server/oh42029/oh42029-gold-rose-knife-server-pair.webp",
+    "output": "public/images/cake-knife-sets/rose-pair.webp",
+    "width": 600,
+    "height": 600,
+    "bytes": 52636,
+    "quality": 86
+  },
+  {
+    "source": "knowledge-base/assets/cake-knife-server/studded-handle/studded-handle-closeup-black.webp",
+    "output": "public/images/cake-knife-sets/studded-detail.webp",
+    "width": 600,
+    "height": 600,
+    "bytes": 25166,
+    "quality": 86
+  },
+  {
+    "source": "knowledge-base/assets/cake-knife-server/oh42029/oh42029-gold-rose-knife-server-gift-box.webp",
+    "output": "public/images/cake-knife-sets/gift-box.webp",
+    "width": 600,
+    "height": 600,
+    "bytes": 45804,
+    "quality": 86
+  }
+]

@@ -1,10 +1,10 @@
 ---
 import '../../styles/global.css';
 import { site } from '../../data/site';
-import Brand from '../../components/Brand.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 import BrandAssets from '../../components/BrandAssets.astro';
 
-const year = new Date().getFullYear();
 const contactHref = 'mailto:' + site.contactEmail + '?subject=YQ%20GLASSES%20Wholesale%20Inquiry';
 
 const products = [
@@ -39,22 +39,7 @@ const products = [
   <body class="inquiry-page">
     <a class="skip-link" href="#main">Skip to inquiry form</a>
 
-    <header class="site-header" id="top">
-      <div class="header-inner page-width">
-        <Brand />
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="/#collections">Collections</a>
-          <a href="/#customization">Customization</a>
-          <a href="/#quality">Quality</a>
-          <a href="/#faq">FAQ</a>
-        </nav>
-        <a class="header-cta is-current" href="#project-form">Start your inquiry <span aria-hidden="true">↓</span></a>
-        <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
-      </div>
-      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
-        <a href="/#collections">Collections</a><a href="/#customization">Customization</a><a href="/#quality">Quality</a><a href="/#faq">FAQ</a><a href="#project-form">Start your inquiry</a>
-      </nav>
-    </header>
+    <SiteHeader inquiryPage />
 
     <main id="main">
       <section class="upload-hero" aria-labelledby="upload-hero-title">
@@ -130,6 +115,18 @@ const products = [
                     <input type="text" name="quantity" inputmode="numeric" maxlength="40" placeholder="e.g. 500 sets" />
                   </label>
                 </div>
+                <div class="form-row" id="order-context" hidden>
+                  <label>Order type
+                    <select name="order_type" id="order-type">
+                      <option value="">Select an order type</option>
+                      <option value="stock">Ready to ship</option>
+                      <option value="custom">Custom order</option>
+                    </select>
+                  </label>
+                  <label>Design reference
+                    <input type="text" name="design" id="design-reference" maxlength="120" placeholder="Preferred design" />
+                  </label>
+                </div>
                 <label>Project details <span aria-hidden="true">*</span>
                   <textarea name="message" rows="6" minlength="20" maxlength="3000" placeholder="Describe the product, size or capacity, finish, logo, packaging and timing." required></textarea>
                 </label>
@@ -176,33 +173,23 @@ const products = [
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="page-width footer-main">
-        <div><Brand footer /><p>Wholesale glassware and serving sets, thoughtfully made for your collection.</p></div>
-        <div class="footer-links"><a href="/#collections">Collections</a><a href="/#customization">Customization</a><a href="/#quality">Quality</a><a href="#project-form">Inquiry form</a></div>
-      </div>
-      <div class="page-width footer-bottom"><span>© {year} YQ GLASSES</span><span>yqglasses.com</span><a href="#top">Back to top ↑</a></div>
-    </footer>
+    <SiteFooter inquiryPage />
 
     <script>
-      const menuButton = document.querySelector<HTMLButtonElement>('.menu-toggle');
-      const mobileMenu = document.querySelector<HTMLElement>('#mobile-menu');
-      if (menuButton && mobileMenu) {
-        const closeMenu = () => { menuButton.setAttribute('aria-expanded', 'false'); menuButton.setAttribute('aria-label', 'Open menu'); mobileMenu.hidden = true; };
-        menuButton.addEventListener('click', () => {
-          const open = menuButton.getAttribute('aria-expanded') === 'true';
-          menuButton.setAttribute('aria-expanded', String(!open));
-          menuButton.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
-          mobileMenu.hidden = open;
-        });
-        mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-        window.addEventListener('resize', () => { if (window.innerWidth > 860) closeMenu(); });
-      }
-
       const params = new URLSearchParams(window.location.search);
       const product = params.get('product');
       const select = document.querySelector<HTMLSelectElement>('#product-interest');
       if (product && select && Array.from(select.options).some((option) => option.value === product)) select.value = product;
+
+      const orderType = params.get('order_type');
+      const orderContext = document.querySelector<HTMLElement>('#order-context');
+      const orderSelect = document.querySelector<HTMLSelectElement>('#order-type');
+      const designReference = document.querySelector<HTMLInputElement>('#design-reference');
+      if ((orderType === 'stock' || orderType === 'custom') && orderContext && orderSelect) {
+        orderContext.hidden = false;
+        orderSelect.value = orderType;
+        if (designReference) designReference.value = (params.get('design') || '').slice(0, 120);
+      }
 
       const success = document.querySelector<HTMLElement>('#form-success');
       const error = document.querySelector<HTMLElement>('#form-error');

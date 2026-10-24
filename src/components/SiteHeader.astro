@@ -1,0 +1,47 @@
+---
+import Brand from './Brand.astro';
+import { site } from '../data/site';
+
+interface Props {
+  home?: boolean;
+  inquiryPage?: boolean;
+}
+
+const { home = false, inquiryPage = false } = Astro.props;
+const sectionHref = (id: string) => `${home ? '' : '/'}#${id}`;
+const quoteHref = inquiryPage ? '#project-form' : site.inquiryUrl;
+const quoteLabel = inquiryPage ? 'Start your inquiry' : 'Request a quote';
+---
+
+<header class="site-header" id="top">
+  <div class="header-inner page-width">
+    <Brand href={home ? '#top' : '/'} />
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href={sectionHref('collections')}>Collections</a>
+      <a href={sectionHref('customization')}>Customization</a>
+      <a href={sectionHref('quality')}>Quality</a>
+      <a href={sectionHref('faq')}>FAQ</a>
+    </nav>
+    <a class:list={['header-cta', { 'is-current': inquiryPage }]} href={quoteHref}>{quoteLabel} <span aria-hidden="true">{inquiryPage ? '↓' : '↗'}</span></a>
+    <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
+    <a href={sectionHref('collections')}>Collections</a><a href={sectionHref('customization')}>Customization</a><a href={sectionHref('quality')}>Quality</a><a href={sectionHref('faq')}>FAQ</a><a href={quoteHref}>{quoteLabel}</a>
+  </nav>
+</header>
+
+<script>
+  const menuButton = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const mobileMenu = document.querySelector<HTMLElement>('#mobile-menu');
+  if (menuButton && mobileMenu) {
+    const closeMenu = () => { menuButton.setAttribute('aria-expanded', 'false'); menuButton.setAttribute('aria-label', 'Open menu'); mobileMenu.hidden = true; };
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!open));
+      menuButton.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      mobileMenu.hidden = open;
+    });
+    mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    window.addEventListener('resize', () => { if (window.innerWidth > 860) closeMenu(); });
+  }
+</script>

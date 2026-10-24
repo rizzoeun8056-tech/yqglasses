@@ -1,10 +1,10 @@
 ---
 import '../styles/global.css';
 import { site } from '../data/site';
-import Brand from '../components/Brand.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 import BrandAssets from '../components/BrandAssets.astro';
 
-const year = new Date().getFullYear();
 const contactHref = 'mailto:' + site.contactEmail + '?subject=YQ%20GLASSES%20Wholesale%20Inquiry';
 const inquiryHref = site.inquiryUrl;
 const inquiryFor = (product: string) => inquiryHref + '?product=' + encodeURIComponent(product);
@@ -86,22 +86,7 @@ const faqs = [
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header" id="top">
-      <div class="header-inner page-width">
-        <Brand href="#top" />
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="#collections">Collections</a>
-          <a href="#customization">Customization</a>
-          <a href="#quality">Quality</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-        <a class="header-cta" href={inquiryHref}>Request a quote <span aria-hidden="true">↗</span></a>
-        <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
-      </div>
-      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
-        <a href="#collections">Collections</a><a href="#customization">Customization</a><a href="#quality">Quality</a><a href="#faq">FAQ</a><a href={inquiryHref}>Request a quote</a>
-      </nav>
-    </header>
+    <SiteHeader home />
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
@@ -151,7 +136,7 @@ const faqs = [
             <h2 id="serving-title">The finishing touch<br /><em>for every occasion.</em></h2>
             <p>Bring cake knives and servers into a coordinated collection. Select handle finishes and decorative details that sit naturally beside your glassware.</p>
             <div class="feature-list"><span>Stainless steel blades</span><span>Crystal-accented handles</span><span>Matching colors & finishes</span><span>Gift-ready presentation</span></div>
-            <a class="text-action" href={inquiryFor('Cake Knife & Server Sets')}>Ask about serving sets <span aria-hidden="true">↗</span></a>
+            <a class="text-action" href="/cake-knife-server-sets/">Explore cake serving sets <span aria-hidden="true">↗</span></a>
           </div>
           <div class="feature-image frame-offset">
             <img src="/images/reference/cake-serving-set.webp" alt="Gold-handled crystal cake knife and server set" width="700" height="700" loading="lazy" />
@@ -260,29 +245,8 @@ const faqs = [
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="page-width footer-main">
-        <div><Brand href="#top" footer /><p>Wholesale glassware and serving sets, thoughtfully made for your collection.</p></div>
-        <div class="footer-links"><a href="#collections">Collections</a><a href="#customization">Customization</a><a href="#quality">Quality</a><a href={inquiryHref}>Request a quote</a></div>
-      </div>
-      <div class="page-width footer-bottom"><span>© {year} YQ GLASSES</span><span>yqglasses.com</span><a href="#top">Back to top ↑</a></div>
-    </footer>
+    <SiteFooter home />
 
-    <script>
-      const menuButton = document.querySelector<HTMLButtonElement>('.menu-toggle');
-      const mobileMenu = document.querySelector<HTMLElement>('#mobile-menu');
-      if (menuButton && mobileMenu) {
-        const closeMenu = () => { menuButton.setAttribute('aria-expanded', 'false'); menuButton.setAttribute('aria-label', 'Open menu'); mobileMenu.hidden = true; };
-        menuButton.addEventListener('click', () => {
-          const open = menuButton.getAttribute('aria-expanded') === 'true';
-          menuButton.setAttribute('aria-expanded', String(!open));
-          menuButton.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
-          mobileMenu.hidden = open;
-        });
-        mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-        window.addEventListener('resize', () => { if (window.innerWidth > 860) closeMenu(); });
-      }
 
-    </script>
   </body>
 </html>
