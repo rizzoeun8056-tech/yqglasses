@@ -1,6 +1,6 @@
 """Prepare user-supplied company photographs without changing their scene content."""
 from pathlib import Path
-from PIL import Image, ImageOps, ImageChops, ImageDraw, ImageFont
+from PIL import Image, ImageOps, ImageDraw, ImageFont
 import hashlib
 import io
 import json
@@ -113,6 +113,6 @@ for index, record in enumerate(records):
     thumb.thumbnail((350, 258), Image.Resampling.LANCZOS)
     sheet.paste(thumb, (x + (350 - thumb.width) // 2, y + (258 - thumb.height) // 2))
     draw.text((x, y + 268), record['id'], font=font, fill='#8f3714')
-    draw.text((x, y + 291), f"{record['width']} x {record['height']}  |  {record['bytes'] / 1000:.1f} KB", font=font, fill='#292824')
+    draw.text((x, y + 291), f"{record['width']} x {record['height']}  |  {record['bytes'] / 1000:.2f} KB", font=font, fill='#292824')
 sheet.save(Path(__file__).parent / 'contact-sheet.jpg', quality=88, optimize=True)
 print(json.dumps({'count': len(records), 'bytes': sum(a['bytes'] for a in records), 'largest': max(a['bytes'] for a in records)}))
