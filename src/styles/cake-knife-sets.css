@@ -3,15 +3,14 @@
 .cake-page h1, .cake-page h2, .cake-page h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .cake-page h1 em, .cake-page h2 em { font-style: normal; color: var(--ck-copper); }
 .ck-container { width: min(1280px, calc(100% - 112px)); margin-inline: auto; }
-.ck-hero { padding: 28px 0 36px; }
+.ck-hero { padding: 44px 0; }
 .ck-tabs { display: inline-flex; gap: 4px; padding: 4px; margin-bottom: 20px; background: #eae5dc; border-radius: 5px; }
-.ck-tabs button { display: flex; align-items: center; gap: 28px; min-height: 42px; padding: 0 18px; border: 0; border-radius: 3px; background: transparent; color: #766e63; font-size: 12px; transition: background .18s, color .18s; }
+.ck-tabs button { display: flex; align-items: center; justify-content: center; min-width: 142px; min-height: 40px; padding: 0 18px; border: 0; border-radius: 3px; background: transparent; color: #766e63; font-size: 12px; transition: background .18s, color .18s; }
 .ck-tabs button[aria-selected='true'] { background: #30312c; color: #fff; box-shadow: 0 2px 4px #00000010; }
-.ck-tabs button span { font-size: 15px; opacity: .8; }
-.ck-hero-panel { display: grid; grid-template-columns: .9fr 1.1fr; gap: 6%; align-items: center; }
+.ck-hero-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 8%; align-items: center; }
 .ck-hero-copy { grid-column: 2; grid-row: 1; padding: 9px 0; }
-.ck-hero h1 { margin-bottom: 18px; font-size: clamp(42px, 4.1vw, 60px); line-height: 1.055; letter-spacing: -.05em; }
-.ck-hero-copy > p { max-width: 400px; margin-bottom: 22px; color: #726b60; font-size: 14px; line-height: 1.8; }
+.ck-hero h1 { margin-bottom: 18px; font-size: clamp(42px, 4.3vw, 62px); line-height: 1.055; letter-spacing: -.05em; }
+.ck-hero-panel > p { max-width: 400px; margin-bottom: 22px; color: #726b60; font-size: 14px; line-height: 1.8; }
 .ck-hero-timing { display: flex; gap: 35px; margin-bottom: 24px; }
 .ck-hero-timing > div { display: flex; flex-direction: column; gap: 7px; }
 .ck-hero-timing > div + div { border-left: 1px solid #d5cbbf; padding-left: 35px; }
@@ -94,9 +93,9 @@
 .ck-faq details > p { margin: 0 25px 18px 0; color: #82776a; font-size: 12px; line-height: 1.8; }
 @media (max-width: 1100px) {
   .ck-container { width: calc(100% - 72px); }
-  .ck-hero-panel { gap: 5%; }
+  .ck-hero-layout { gap: 5%; }
   .ck-hero h1 { font-size: 53px; }
-  .ck-hero-copy > p { font-size: 13px; }
+  .ck-hero-panel > p { font-size: 13px; }
   .ck-hero-actions { gap: 12px; }
   .ck-hero-timing { gap: 22px; }
   .ck-hero-timing > div + div { padding-left: 22px; }
@@ -107,7 +106,7 @@
 @media (max-width: 800px) {
   .ck-container { width: calc(100% - 44px); }
   .ck-hero { padding: 28px 0 36px; }
-  .ck-hero-panel { grid-template-columns: 1fr 1fr; gap: 5%; }
+  .ck-hero-layout { grid-template-columns: 1fr 1fr; gap: 5%; }
   .ck-hero h1 { font-size: 43px; }
   .ck-hero-timing { gap: 15px; margin-bottom: 23px; }
   .ck-hero-timing > div + div { padding-left: 15px; }
@@ -131,11 +130,11 @@
   .ck-container { width: calc(100% - 36px); }
   .ck-hero { padding: 23px 0 45px; }
   .ck-tabs { display: flex; width: 100%; margin-bottom: 27px; }
-  .ck-tabs button { justify-content: space-between; flex: 1; gap: 13px; padding: 0 13px; font-size: 12px; }
-  .ck-hero-panel { grid-template-columns: 1fr; gap: 22px; }
+  .ck-tabs button { justify-content: center; min-width: 0; flex: 1; gap: 13px; padding: 0 13px; font-size: 12px; }
+  .ck-hero-layout { grid-template-columns: 1fr; gap: 22px; }
   .ck-hero-copy { grid-column: 1; grid-row: 1; padding: 0; }
   .ck-hero h1 { font-size: clamp(44px,11.5vw,65px); margin-bottom: 20px; }
-  .ck-hero-copy > p { max-width: 360px; font-size: 13px; margin-bottom: 23px; }
+  .ck-hero-panel > p { max-width: 360px; font-size: 13px; margin-bottom: 23px; }
   .ck-hero-timing { gap: 28px; margin-bottom: 24px; }
   .ck-hero-timing > div + div { padding-left: 28px; }
   .ck-hero-actions { flex-direction: row; align-items: center; gap: 19px; }

@@ -28,7 +28,9 @@ const leadTimes = [
   { label: 'Custom samples*', time: '3–7', unit: 'days' },
   { label: 'Custom production', time: '5–25', unit: 'days' },
 ];
-const description = 'Stainless steel and zinc alloy cake knife and server sets. Explore existing designs or customize handles, metal finishes, engraving and packaging with YQ GLASSES.';
+const title = 'Cake Knife and Server Set | Wholesale & Custom | YQ GLASSES';
+const description = 'Explore stainless steel and zinc alloy cake knife and server sets. Wholesale stock and custom designs, with engraving, metal finishes and gift packaging.';
+const keywords = 'cake knife and server set, custom cake knife and server set, wholesale cake knife and server set, stainless steel cake serving set, zinc alloy cake serving set';
 ---
 
 <!doctype html>
@@ -38,52 +40,48 @@ const description = 'Stainless steel and zinc alloy cake knife and server sets. 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f5f1eb" />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
     <meta name="robots" content="noindex, nofollow" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cake Knife & Server Sets | YQ GLASSES" />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <meta property="og:url" content="https://yqglasses.com/cake-knife-server-sets/" />
     <link rel="canonical" href="https://yqglasses.com/cake-knife-server-sets/" />
     <BrandAssets />
     <link rel="preload" as="image" href="/images/cake-knife-sets/faceted-pair.webp" />
-    <title>Cake Knife & Server Sets | YQ GLASSES</title>
+    <title>{title}</title>
   </head>
   <body class="cake-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <SiteHeader />
 
     <main id="main">
-      <section class="ck-hero" aria-label="Cake knife and server sets">
-        <div class="ck-container">
-          <div class="ck-tabs" role="tablist" aria-label="Choose an order type">
-            <button type="button" role="tab" id="stock-tab" aria-selected="true" aria-controls="stock-panel" data-mode="stock">Ready to ship <span aria-hidden="true">↗</span></button>
-            <button type="button" role="tab" id="custom-tab" aria-selected="false" aria-controls="custom-panel" tabindex="-1" data-mode="custom">Custom orders <span aria-hidden="true">↗</span></button>
-          </div>
-
-          <div class="ck-hero-panel" id="stock-panel" role="tabpanel" aria-labelledby="stock-tab">
-            <div class="ck-hero-copy">
-              <h1>Cake knife &amp;<br />server sets.<br /><em>Ready to ship.</em></h1>
-              <p>Stainless steel and zinc alloy designs for weddings, gifting and your next collection.</p>
+      <section class="ck-hero" aria-labelledby="cake-title">
+        <div class="ck-container ck-hero-layout">
+          <figure class="ck-hero-photo">
+            <img data-mode-image="stock" src="/images/cake-knife-sets/faceted-pair.webp" alt="Cake knife and server set with clear decorative handles and faceted ends" width="600" height="600" fetchpriority="high" />
+            <img data-mode-image="custom" src="/images/cake-knife-sets/rose-pair.webp" alt="Gold-plated cake knife and server set with sculptural rose handles" width="600" height="600" hidden />
+          </figure>
+          <div class="ck-hero-copy">
+            <h1 id="cake-title">Cake Knife and <br />Server Set</h1>
+            <div class="ck-tabs" role="tablist" aria-label="Choose an order type">
+              <button type="button" role="tab" id="stock-tab" aria-selected="true" aria-controls="stock-panel" data-mode="stock">Ready to ship</button>
+              <button type="button" role="tab" id="custom-tab" aria-selected="false" aria-controls="custom-panel" tabindex="-1" data-mode="custom">Custom orders</button>
+            </div>
+            <div class="ck-hero-panel" id="stock-panel" role="tabpanel" aria-labelledby="stock-tab">
+              <p>Stainless steel and zinc alloy sets for weddings, gifting and wholesale collections.</p>
               <div class="ck-hero-timing"><div><strong>1–3 days</strong><span>Stock dispatch</span></div><div><strong>3–7 days</strong><span>Bulk stock dispatch</span></div></div>
               <div class="ck-hero-actions"><a class="ck-button" href={inquiry()} data-inquiry-link>Check availability <span aria-hidden="true">↗</span></a><a class="ck-text-link" href="#collection">Explore designs <span aria-hidden="true">↓</span></a></div>
               <small class="ck-hero-note">Availability confirmed for your design and quantity.</small>
             </div>
-            <figure class="ck-hero-photo">
-              <img src="/images/cake-knife-sets/faceted-pair.webp" alt="Cake knife and server with clear decorative handles and faceted ends on a dark tabletop" width="600" height="600" fetchpriority="high" />
-            </figure>
-          </div>
-
-          <div class="ck-hero-panel" id="custom-panel" role="tabpanel" aria-labelledby="custom-tab" hidden>
-            <div class="ck-hero-copy">
-              <h1>Cake knife &amp;<br />server sets.<br /><em>Made for you.</em></h1>
-              <p>Your choice of handle, metal finish and engraving. Finished with packaging designed around your set.</p>
+            <div class="ck-hero-panel" id="custom-panel" role="tabpanel" aria-labelledby="custom-tab" hidden>
+              <p>Choose your handles, metal finish and engraving, with packaging tailored to your set.</p>
               <div class="ck-hero-timing"><div><strong>3–7 days</strong><span>Custom samples*</span></div><div><strong>5–25 days</strong><span>Bulk production</span></div></div>
               <div class="ck-hero-actions"><a class="ck-button" href={inquiry('custom')} data-inquiry-link data-inquiry-mode="custom">Request a custom quote <span aria-hidden="true">↗</span></a><a class="ck-text-link" href="#customization">See the options <span aria-hidden="true">↓</span></a></div>
-              <small class="ck-hero-note">*For samples requiring mold development. Timing confirmed with your design.</small>
+              <small class="ck-hero-note">*Samples requiring mold development. Timing confirmed with your design.</small>
             </div>
-            <figure class="ck-hero-photo">
-              <img src="/images/cake-knife-sets/rose-pair.webp" alt="Gold-plated cake knife and server with sculptural rose-shaped handles" width="600" height="600" />
-            </figure>
           </div>
         </div>
       </section>
@@ -147,6 +145,9 @@ const description = 'Stainless steel and zinc alloy cake knife and server sets. 
           tab.tabIndex = active ? 0 : -1;
           const panel = document.getElementById(tab.getAttribute('aria-controls') || '');
           if (panel) panel.hidden = !active;
+        });
+        document.querySelectorAll<HTMLImageElement>('[data-mode-image]').forEach((image) => {
+          image.hidden = image.dataset.modeImage !== mode;
         });
         updateInquiryLinks();
       }

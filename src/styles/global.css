@@ -27,10 +27,12 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
 :focus-visible { outline: 2px solid var(--copper); outline-offset: 4px; }
 
 .site-header { position: relative; z-index: 30; height: 86px; background: #f8f5f1; border-bottom: 1px solid #e8dfd6; }
-.header-inner { display: flex; align-items: center; height: 100%; gap: 42px; }
+.header-inner { display: flex; align-items: center; height: 100%; gap: 28px; }
 .brand { display: inline-flex; flex: none; align-items: center; white-space: nowrap; }
 .brand-image { display: block; width: 216px; height: 72px; object-fit: contain; }
-.desktop-nav { display: flex; gap: 32px; margin-left: auto; }
+.desktop-nav { display: flex; gap: 24px; margin-left: auto; }
+.desktop-nav a { white-space: nowrap; }
+.desktop-nav a[aria-current='page'], .mobile-nav a[aria-current='page'] { color: var(--copper-dark); }
 .desktop-nav a { color: #554f49; font-size: 12px; font-weight: 700; letter-spacing: .04em; transition: color .2s; }
 .desktop-nav a:hover, .footer-links a:hover { color: var(--copper); }
 .header-cta { display: inline-flex; justify-content: space-between; gap: 18px; align-items: center; padding: 13px 17px; border: 1px solid var(--copper); color: var(--copper-dark); font-size: 12px; font-weight: 800; transition: background .2s, color .2s; }
