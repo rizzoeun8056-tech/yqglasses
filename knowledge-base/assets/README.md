@@ -1,10 +1,11 @@
 # YQ GLASSES 产品与公司图片素材库
 
-此目录保存供后续网站内容选用的产品、办公室、展厅与加工现场图片及说明。库内图片统一为 **WebP**，宽高不超过 **600 px**，单张小于 **40,000 字节**。原始文件仍保存在用户提供的来源位置；图片放在 `knowledge-base/assets/`，不会随 Astro 构建自动发布。选定网页图片后可复制到 `public/images/` 并在页面中引用。
+此目录保存供后续网站内容选用的产品、办公室、展厅、加工现场与外观设计专利证书图片及说明。库内图片统一为 **WebP**，宽高不超过 **600 px**，单张小于 **40,000 字节**。原始文件仍保存在用户提供的来源位置；图片放在 `knowledge-base/assets/`，不会随 Astro 构建自动发布。选定网页图片后可复制到 `public/images/` 并在页面中引用。
 
 | 素材组 | 图片数量 | 内容 | 对应知识条目 |
 |---|---:|---|---|
 | [YQ GLASSES 办公室展厅与加工工厂实拍](company/README.md) | 15 | 办公室 1 张、展厅 4 张、刀铲加工 4 张、酒杯加工与组件 6 张 | 含原图映射、英文 alt、尺寸与大小、裁边记录及选图用途 |
+| [玻璃杯与蛋糕刀铲外观设计专利证书](company/patents/README.md) | 2 | 两份证书首页的完整预览，原件保留 | 含专利号、授权公告日、证载权利人、英文 alt 与 About Us 展示建议 |
 | [OH42053 蛋糕刀铲](cake-knife-server/oh42053/README.md) | 3 | 透明闪亮填充效果手柄，材质待确认 | [通用蛋糕刀铲知识](../products/cake-knife-server-sets.md) |
 | [不锈钢点钻手柄蛋糕刀铲](cake-knife-server/studded-handle/README.md) | 5 | 点钻手柄、双件与四件展示、细节及场景图 | [点钻手柄产品记录](../products/studded-handle-cake-knife-server.md) |
 | [OH42047 刀铲 + OH42047B 香槟杯组合](cake-knife-server/oh42047-oh42047b-set/README.md) | 6 | 组合展示、杯杆工艺细节与两张尺寸图 | 本素材说明记录用户确认的工艺与图示规格 |

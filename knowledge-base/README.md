@@ -30,6 +30,7 @@
 | KB-PRODUCT-005 | [五款香槟杯生产案例](products/champagne-glass-production-cases.md) | 五个来源型号的杯杆材质和工艺，逐款记录用户确认信息 | 2026-10-24 |
 | KB-ASSET-014 | [五款香槟杯案例图片素材](assets/champagne-glasses/production-cases/README.md) | 5 张 WebP、原图映射、英文 alt 与网站案例用途 | 2026-10-24 |
 | KB-ASSET-015 | [YQ GLASSES 办公室展厅与加工工厂实拍素材](assets/company/README.md) | 15 张 WebP、四类场景、原图映射、英文 alt、加工与选图说明 | 2026-10-24 |
+| KB-ASSET-016 | [玻璃杯与蛋糕刀铲外观设计专利证书素材](assets/company/patents/README.md) | 2 张证书首页 WebP、证载专利信息、英文 alt 与 About Us 展示建议 | 2026-10-24 |
 
 图片集合入口：[产品与公司图片素材库](assets/README.md)。
 

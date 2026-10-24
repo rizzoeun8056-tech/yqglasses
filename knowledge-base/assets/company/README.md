@@ -21,6 +21,8 @@ review_status: 已逐张核对画面及导出规格，原始文件保留在来�
 
 [文件与来源清单](manifest.json) · [全部图片总览](../../../design/company/contact-sheet.jpg) · [处理脚本](../../../design/company/prepare-assets.py)
 
+用于 About Us 的两张[玻璃杯与蛋糕刀铲外观设计专利证书](patents/README.md)另行归档，包含证书信息、英文 alt 与完整页面预览。
+
 ## 分类与选图用途
 
 | 分类 | 数量 | 建议用途 |

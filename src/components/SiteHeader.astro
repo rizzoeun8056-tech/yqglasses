@@ -12,6 +12,7 @@ const quoteLabel = inquiryPage ? 'Start your inquiry' : 'Request a quote';
 const cakePage = Astro.url.pathname.startsWith('/cake-knife-server-sets/');
 const champagnePage = Astro.url.pathname.startsWith('/personalized-champagne-glasses/');
 const blogPage = Astro.url.pathname.startsWith('/blog/');
+const aboutPage = Astro.url.pathname.startsWith('/about/');
 ---
 
 <header class="site-header" id="top">
@@ -20,6 +21,7 @@ const blogPage = Astro.url.pathname.startsWith('/blog/');
     <nav class="primary-nav" id="mobile-menu" aria-label="Main navigation">
       <a href="/personalized-champagne-glasses/" aria-current={champagnePage ? 'page' : undefined}>Champagne Glasses</a>
       <a href="/cake-knife-server-sets/" aria-current={cakePage ? 'page' : undefined}>Cake Knife and Server Set</a>
+      <a href="/about/" aria-current={aboutPage ? 'page' : undefined}>About Us</a>
       <a href="/blog/" aria-current={blogPage ? 'page' : undefined}>Blog</a>
       <a class="mobile-quote" href={quoteHref}>{quoteLabel}</a>
     </nav>

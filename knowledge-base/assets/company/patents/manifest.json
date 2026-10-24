@@ -1,0 +1,81 @@
+{
+  "id": "KB-ASSET-016",
+  "prepared_date": "2026-10-24",
+  "source_type": "User-supplied scans of Chinese design patent certificate first pages",
+  "constraints": {
+    "format": "WebP",
+    "max_edge_px": 600,
+    "max_bytes_exclusive": 40000
+  },
+  "processing": "Proportional resize and WebP compression only. Preserve the complete page including certificate text, seals, watermarks, QR codes and page numbering.",
+  "legal_status_source": "Certificate images only; no current patent-register status lookup performed.",
+  "website_section": "About Us / Design Patents",
+  "assets": [
+    {
+      "id": "YQ-PATENT-001",
+      "source_path": "/Users/laotie/Desktop/TP图片/TP/专利资料/水晶杯2022301452406-外观专利电子证书/水晶杯外观专利证书.jpg",
+      "file": "yq-glassware-design-patent-zl2022301452406.webp",
+      "label": "玻璃杯外观设计专利证书",
+      "design_title_zh": "水晶杯",
+      "design_title_en": "Crystal cup",
+      "patent_number": "ZL202230145240.6",
+      "certificate_number": "7503123",
+      "application_date": "2022-03-20",
+      "authorization_publication_number": "CN307487759S",
+      "alt": "First page of a Chinese design patent certificate for a crystal cup, patent number ZL202230145240.6.",
+      "display_title_en": "Glassware Design Patent",
+      "patent_type": "Chinese design patent",
+      "issuing_authority_zh": "国家知识产权局",
+      "patentee_as_printed_zh": "广州市拓天家居用品有限公司",
+      "designer_as_printed_zh": "肖志勇",
+      "authorization_publication_date": "2022-08-02",
+      "provided_page": 1,
+      "total_pages_as_printed": 2,
+      "source_size": [
+        800,
+        1131
+      ],
+      "source_bytes": 347889,
+      "source_sha256": "9fc9b91cc4c44b36edad57a939d8c80042ac0d487b0a16d72a09b738baf8355d",
+      "width": 424,
+      "height": 600,
+      "bytes": 39314,
+      "quality": 93,
+      "sha256": "04544adbe9c717ce8d80d91a3d824f552f362cc259894a7f5634ad96d8a9f28e",
+      "crop": null
+    },
+    {
+      "id": "YQ-PATENT-002",
+      "source_path": "/Users/laotie/Desktop/TP图片/TP/专利资料/蛋糕刀铲（水晶）2022301412409-外观专利电子证书/4.jpg",
+      "file": "yq-cake-serving-set-design-patent-zl2022301412409.webp",
+      "label": "蛋糕刀铲外观设计专利证书",
+      "design_title_zh": "蛋糕刀铲（水晶）",
+      "design_title_en": "Cake knife and server (crystal)",
+      "patent_number": "ZL202230141240.9",
+      "certificate_number": "7507599",
+      "application_date": "2022-03-18",
+      "authorization_publication_number": "CN307479124S",
+      "alt": "First page of a Chinese design patent certificate for a cake knife and server, patent number ZL202230141240.9.",
+      "display_title_en": "Cake Knife and Server Design Patent",
+      "patent_type": "Chinese design patent",
+      "issuing_authority_zh": "国家知识产权局",
+      "patentee_as_printed_zh": "广州市拓天家居用品有限公司",
+      "designer_as_printed_zh": "肖志勇",
+      "authorization_publication_date": "2022-08-02",
+      "provided_page": 1,
+      "total_pages_as_printed": 2,
+      "source_size": [
+        800,
+        1131
+      ],
+      "source_bytes": 208686,
+      "source_sha256": "710ad3d0af436e9aaee4708b64c1eaf3a1d488620622fadadcbfe51c03f621f9",
+      "width": 424,
+      "height": 600,
+      "bytes": 37656,
+      "quality": 92,
+      "sha256": "cd6bcadfcbb5311c61b413e1b8a3ac35dd716cc0322a13a7109c4a7047cd2600",
+      "crop": null
+    }
+  ]
+}

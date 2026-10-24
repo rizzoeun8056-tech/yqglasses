@@ -1,0 +1,160 @@
+---
+import '../../styles/global.css';
+import '../../styles/about.css';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import BrandAssets from '../../components/BrandAssets.astro';
+import { site } from '../../data/site';
+
+const title = 'About YQ GLASSES | Production & Project Coordination';
+const description = 'Meet YQ GLASSES in Guangzhou. See our glassware and tableware production work, experienced assembly team, project process and design documentation.';
+
+const productionPhotos = [
+  { src: 'assembly-workbench-retouched.webp', alt: 'Workers assembling decorative glassware at a YQ GLASSES worktable', caption: 'Assembly' },
+  { src: 'glass-processing-retouched.webp', alt: 'Two workers handling glass components at workshop stations', caption: 'Glass processing' },
+  { src: 'glassware-workbench.webp', alt: 'Inverted glasses and clear components arranged across a workbench', caption: 'Components' },
+  { src: 'cake-serving-batch.webp', alt: 'Rows of cake knives and servers in protective sleeves', caption: 'Batch preparation' },
+  { src: 'decorated-handles-workbench.webp', alt: 'Decorated handles and colorful glassware stems on a workbench', caption: 'Decorative details' },
+  { src: 'office-workstations-retouched.webp', alt: 'Staff working at desks in the YQ GLASSES office', caption: 'Office team' },
+  { src: 'showroom-aisle-retouched.webp', alt: 'Glassware display cabinets in the YQ GLASSES showroom', caption: 'Showroom' },
+];
+
+const steps = [
+  { number: '01', title: 'Your drawing', body: 'Share a sketch, reference image or technical drawing.' },
+  { number: '02', title: 'Custom mold', body: 'We coordinate tooling and a sample where the design requires it.' },
+  { number: '03', title: 'Production', body: 'Approved materials and components move into batch work.' },
+  { number: '04', title: 'Assembly', body: 'Experienced staff bring the selected parts together.' },
+  { number: '05', title: 'Inspection', body: 'Finished pieces are checked against the approved sample.' },
+  { number: '06', title: 'Packing', body: 'Protective and gift-box packing are arranged for the order.' },
+  { number: '07', title: 'Shipping', body: 'We coordinate handover with the logistics provider.' },
+];
+
+const patents = [
+  { src: 'glassware-design-patent.webp', title: 'Glassware design patent', alt: 'First page of a Chinese design patent certificate for a crystal cup' },
+  { src: 'cake-serving-design-patent.webp', title: 'Cake knife and server design patent', alt: 'First page of a Chinese design patent certificate for a cake knife and server' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f1eb" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://yqglasses.com/about/" />
+    <link rel="canonical" href="https://yqglasses.com/about/" />
+    <link rel="preload" as="image" href="/images/about/building-exterior-concept.webp" />
+    <BrandAssets />
+    <title>{title}</title>
+  </head>
+  <body class="about-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+    <main id="main">
+      <section class="about-hero" aria-labelledby="about-title">
+        <div class="about-container about-hero-grid">
+          <div class="about-hero-copy">
+            <p class="about-section-label">Guangzhou · Since 2010</p>
+            <h1 id="about-title">About <em>YQ GLASSES.</em></h1>
+            <p>YQ GLASSES coordinates custom glassware and tableware projects from design review to sampling, production, packaging and delivery. Our own processing and assembly line anchors the work; specialist partners support the steps around it.</p>
+            <a class="about-button" href={site.inquiryUrl}>Discuss your project <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="about-hero-visual">
+            <figure class="about-hero-image">
+              <img src="/images/about/building-exterior-concept.webp" alt="Photorealistic illustration of a modern office and workshop building exterior" width="600" height="450" fetchpriority="high" />
+              <figcaption>Illustrative exterior concept</figcaption>
+            </figure>
+            <div class="about-hero-real-images" aria-label="Company photographs">
+              <figure><img src="/images/about/assembly-workbench-retouched.webp" alt="Team assembling decorative glassware at a real production worktable" width="600" height="450" loading="lazy" /><figcaption>Real workshop</figcaption></figure>
+              <figure><img src="/images/about/showroom-aisle-retouched.webp" alt="Real YQ GLASSES showroom with glassware display cabinets" width="600" height="600" loading="lazy" /><figcaption>Real showroom</figcaption></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-facts" aria-label="Company at a glance">
+        <div class="about-container about-facts-grid">
+          <div><strong>2010</strong><span>Year established</span></div>
+          <div><strong>50+</strong><span>People across the company</span></div>
+          <div><strong>30+</strong><span>Experienced assembly staff</span></div>
+          <div><strong>Global</strong><span>Project coordination</span></div>
+        </div>
+      </section>
+
+      <section class="about-section about-production" id="production" aria-labelledby="production-title">
+        <div class="about-container">
+          <div class="about-heading">
+            <h2 id="production-title">Inside our <em>work.</em></h2>
+            <p>Production, office and showroom scenes from YQ GLASSES. Workshop images lead this photo collection.</p>
+          </div>
+          <div class="about-carousel-shell">
+            <div class="about-production-track" id="about-photo-track" role="region" aria-label="Company and production photographs" tabindex="0">
+              {productionPhotos.map((photo) => <figure class="about-production-card">
+                <div class="about-production-image"><img src={`/images/about/${photo.src}`} alt={photo.alt} width="600" height={photo.src.includes('showroom') ? 600 : 450} loading="lazy" /></div>
+                <figcaption>{photo.caption}</figcaption>
+            </figure>)}
+            </div>
+            <div class="about-carousel-controls" aria-label="Photo carousel controls">
+              <button type="button" data-carousel-prev aria-label="Previous photos">←</button>
+              <button type="button" data-carousel-next aria-label="Next photos">→</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section about-capabilities" aria-labelledby="capabilities-title">
+        <div class="about-container about-capabilities-grid">
+          <div class="about-capabilities-copy">
+            <h2 id="capabilities-title">One connected route<br /><em>from idea to order.</em></h2>
+            <p>We operate our own processing and assembly line and coordinate specialist resources for mold development, gift-box packaging and logistics. This gives each project a clear path from drawing to sample and standardized batch production.</p>
+          </div>
+          <div class="about-capabilities-copy">
+            <p>Logo details and coordinated tabletop presentation can be considered during the design review. Champagne glasses and cake serving sets are among the categories we work with; the production plan is defined by the selected design.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section about-process" aria-labelledby="process-title">
+        <div class="about-container">
+          <div class="about-heading"><h2 id="process-title">From drawing<br /><em>to delivery.</em></h2><p>Seven clear steps keep a custom project moving.</p></div>
+          <ol class="about-process-grid">
+            {steps.map((step) => <li><span>{step.number} / 07</span><h3>{step.title}</h3><p>{step.body}</p></li>)}
+          </ol>
+        </div>
+      </section>
+
+      <section class="about-section about-people" aria-labelledby="people-title">
+        <div class="about-container about-people-grid">
+          <h2 id="people-title">The people behind<br /><em>every detail.</em></h2>
+          <div class="about-people-copy"><p>More than 30 experienced assembly staff work within a company team of over 50. Our office and showroom keep communication, sample review and production coordination close together.</p><p>We work with buyers in Europe, the United States, the Middle East, Africa, South America and selected markets in Oceania. Requirements for each destination are reviewed with the order.</p></div>
+        </div>
+      </section>
+
+      <section class="about-section about-documents" id="documents" aria-labelledby="documents-title">
+        <div class="about-container">
+          <div class="about-heading"><h2 id="documents-title">Design patents.</h2><p>We can help document custom product designs and coordinate design patent applications. A written contract can define ownership; where eligible, we can arrange a transfer of patent rights to the client through the required registration process. Protecting distinctive designs can help reinforce your brand's position as an innovator.</p></div>
+          <div class="about-document-grid">
+            {patents.map((patent) => <figure class="about-document-card"><img src={`/images/about/${patent.src}`} alt={patent.alt} width="424" height="600" loading="lazy" /><figcaption><strong>{patent.title}</strong></figcaption></figure>)}
+          </div>
+        </div>
+      </section>
+    </main>
+    <SiteFooter />
+    <script>
+      const photoTrack = document.querySelector<HTMLElement>('#about-photo-track');
+      document.querySelectorAll<HTMLButtonElement>('[data-carousel-prev], [data-carousel-next]').forEach((button) => {
+        button.addEventListener('click', () => {
+          if (!photoTrack) return;
+          const card = photoTrack.querySelector<HTMLElement>('.about-production-card');
+          const distance = (card?.offsetWidth || 220) + 14;
+          photoTrack.scrollBy({ left: button.hasAttribute('data-carousel-next') ? distance : -distance, behavior: 'smooth' });
+        });
+      });
+    </script>
+  </body>
+</html>
