@@ -8,14 +8,46 @@ interface Props {
 }
 
 const { home = false, inquiryPage = false } = Astro.props;
-const year = new Date().getFullYear();
-const sectionHref = (id: string) => `${home ? '' : '/'}#${id}`;
+const inquiryHref = inquiryPage ? '#project-form' : site.inquiryUrl;
 ---
 
-<footer class="site-footer">
-  <div class="page-width footer-main">
-    <div><Brand href={home ? '#top' : '/'} footer /><p>Wholesale glassware and serving sets, thoughtfully made for your collection.</p></div>
-    <div class="footer-links"><a href={sectionHref('collections')}>Collections</a><a href="/personalized-champagne-glasses/">Champagne Glasses</a><a href={sectionHref('customization')}>Customization</a><a href={sectionHref('quality')}>Quality</a><a href={inquiryPage ? '#project-form' : site.inquiryUrl}>{inquiryPage ? 'Inquiry form' : 'Request a quote'}</a></div>
+<footer class="site-footer" id="footer">
+  <div class="page-width footer-invite">
+    <div>
+      <p class="footer-kicker">YQ GLASSES · GUANGZHOU</p>
+      <h2>Let's make something<br /><em>worth raising a glass to.</em></h2>
+    </div>
+    <a class="footer-cta" href={inquiryHref}>Start your project <span aria-hidden="true">↗</span></a>
   </div>
-  <div class="page-width footer-bottom"><span>© {year} YQ GLASSES</span><span>yqglasses.com</span><a href="#top">Back to top ↑</a></div>
+  <div class="page-width footer-main">
+    <div class="footer-brand-block">
+      <Brand href={home ? null : '/'} footer />
+      <p class="footer-tagline">Your one-stop partner for glassware &amp; tableware.</p>
+    </div>
+    <nav class="footer-navigation" aria-label="Footer navigation">
+      <h3>Explore</h3>
+      <div class="footer-links">
+        <a href="/personalized-champagne-glasses/">Champagne Glasses</a>
+        <a href="/cake-knife-server-sets/">Cake Knife &amp; Server Sets</a>
+        <a href="/blog/">Blog</a>
+      </div>
+    </nav>
+    <div class="footer-contact">
+      <h3>Get in touch</h3>
+      <div class="footer-contact-list">
+        <a href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span><strong>{site.whatsappNumber}</strong>
+        </a>
+        <a href={`mailto:${site.contactEmail}`}>
+          <span>Email</span><strong>{site.contactEmail}</strong>
+        </a>
+        <div><span>Location</span><strong>{site.location}</strong></div>
+      </div>
+    </div>
+  </div>
+  <div class="page-width footer-bottom">
+    <span>YQ GLASSES · Since 2010</span>
+    <span>yqglasses.com</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
 </footer>

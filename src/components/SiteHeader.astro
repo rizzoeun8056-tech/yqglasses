@@ -18,34 +18,31 @@ const blogPage = Astro.url.pathname.startsWith('/blog/');
 <header class="site-header" id="top">
   <div class="header-inner page-width">
     <Brand href={home ? '#top' : '/'} />
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="/personalized-champagne-glasses/" aria-current={champagnePage ? 'page' : undefined}>Champagne Glasses</a>
-      <a href="/cake-knife-server-sets/" aria-current={cakePage ? 'page' : undefined}>Cake Knife and Server Set</a>
+    <nav class="primary-nav" id="mobile-menu" aria-label="Main navigation">
+      {home ? <a href="#collections">Collections</a> : <>
+        <a href="/personalized-champagne-glasses/" aria-current={champagnePage ? 'page' : undefined}>Champagne Glasses</a>
+        <a href="/cake-knife-server-sets/" aria-current={cakePage ? 'page' : undefined}>Cake Knife and Server Set</a>
+      </>}
       <a href="/blog/" aria-current={blogPage ? 'page' : undefined}>Blog</a>
+      {!home && <a class="mobile-quote" href={quoteHref}>{quoteLabel}</a>}
     </nav>
-    <a class:list={['header-cta', { 'is-current': inquiryPage }]} href={quoteHref}>{quoteLabel} <span aria-hidden="true">{inquiryPage ? '↓' : '↗'}</span></a>
+    {!home && <a class:list={['header-cta', { 'is-current': inquiryPage }]} href={quoteHref}>{quoteLabel} <span aria-hidden="true">{inquiryPage ? '↓' : '↗'}</span></a>}
     <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
-    <a href="/personalized-champagne-glasses/" aria-current={champagnePage ? 'page' : undefined}>Champagne Glasses</a>
-    <a href="/cake-knife-server-sets/" aria-current={cakePage ? 'page' : undefined}>Cake Knife and Server Set</a>
-    <a href="/blog/" aria-current={blogPage ? 'page' : undefined}>Blog</a>
-    <a href={quoteHref}>{quoteLabel}</a>
-  </nav>
 </header>
 
 <script>
   const menuButton = document.querySelector<HTMLButtonElement>('.menu-toggle');
-  const mobileMenu = document.querySelector<HTMLElement>('#mobile-menu');
-  if (menuButton && mobileMenu) {
-    const closeMenu = () => { menuButton.setAttribute('aria-expanded', 'false'); menuButton.setAttribute('aria-label', 'Open menu'); mobileMenu.hidden = true; };
+  const mainNav = document.querySelector<HTMLElement>('#mobile-menu');
+  if (menuButton && mainNav) {
+    const closeMenu = () => { menuButton.setAttribute('aria-expanded', 'false'); menuButton.setAttribute('aria-label', 'Open menu'); mainNav.classList.remove('is-open'); };
     menuButton.addEventListener('click', () => {
       const open = menuButton.getAttribute('aria-expanded') === 'true';
       menuButton.setAttribute('aria-expanded', String(!open));
       menuButton.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
-      mobileMenu.hidden = open;
+      mainNav.classList.toggle('is-open', !open);
     });
-    mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    mainNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
     window.addEventListener('resize', () => { if (window.innerWidth > 980) closeMenu(); });
   }
 </script>

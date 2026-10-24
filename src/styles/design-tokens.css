@@ -1,0 +1,10 @@
+/* Site-wide limits: all text <= 36px; exactly three UI background colors. */
+:root {
+  --brand-paper: #f5f1eb;
+  --brand-surface: #ece5dc;
+  --brand-copper: #b94f20;
+  --brand-ink: #292824;
+  --brand-muted: #6e6860;
+  --font-size-h1: clamp(30px, 3vw, 36px);
+  --font-size-h2: clamp(26px, 2.5vw, 32px);
+}
