@@ -1,4 +1,5 @@
-/* Site-wide limits: all text <= 36px; exactly three UI background colors. */
+/* Site-wide limits: all text <= 36px; at most three UI background colors.
+   Reuse these background tokens across sections, cards, controls and states. */
 :root {
   --brand-paper: #f5f1eb;
   --brand-surface: #ece5dc;

@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { home = false, inquiryPage = false } = Astro.props;
+const year = new Date().getFullYear();
 const inquiryHref = inquiryPage ? '#project-form' : site.inquiryUrl;
 ---
 
@@ -46,7 +47,7 @@ const inquiryHref = inquiryPage ? '#project-form' : site.inquiryUrl;
     </div>
   </div>
   <div class="page-width footer-bottom">
-    <span>YQ GLASSES · Since 2010</span>
+    <span>© {year} YQ GLASSES</span>
     <span>yqglasses.com</span>
     <a href="#top">Back to top ↑</a>
   </div>

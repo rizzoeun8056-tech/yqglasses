@@ -54,13 +54,13 @@
 .champagne-page .ck-packaging-copy > p.cg-configuration-note { margin-top: 19px; margin-bottom: 27px; color: #8b8073; font-size: 11px; }
 
 .cg-process { background: var(--brand-copper); }
-.cg-process .ck-section-heading > p { color: var(--brand-paper); }
-.cg-process .ck-section-heading h2 em { color: var(--brand-paper); }
+.cg-process .ck-section-heading > p { color: #fff; }
+.cg-process .ck-section-heading h2 em { color: #fff; }
 .cg-process-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px; }
 .cg-process-grid article { min-height: 175px; padding-top: 22px; border-top: 1px solid #7f89754d; }
-.cg-process-grid article > span { color: var(--brand-paper); font-size: 10px; letter-spacing: .12em; }
+.cg-process-grid article > span { color: #fff; font-size: 10px; letter-spacing: .12em; }
 .cg-process-grid h3 { margin: 30px 0 10px; font-size: 24px; }
-.cg-process-grid p { max-width: 300px; margin: 0; color: var(--brand-paper); font-size: 12px; line-height: 1.8; }
+.cg-process-grid p { max-width: 300px; margin: 0; color: #fff; font-size: 12px; line-height: 1.8; }
 
 .cg-contact { background: var(--brand-paper); }
 .cg-contact .ck-faq { border-top: 1px solid #cfc4b5; }

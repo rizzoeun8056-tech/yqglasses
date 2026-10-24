@@ -61,16 +61,16 @@
 .ck-packaging-details h3 { margin: 12px 0 0; font-family: Arial,sans-serif; font-size: 10px; font-weight: 400; color: #75695b; }
 .ck-packaging-image { margin: 0; }
 .ck-packaging-image img { width: 100%; height: auto; }
-.ck-team { background: var(--brand-copper); color: var(--brand-paper); }
+.ck-team { background: var(--brand-copper); color: #fff; }
 .ck-team .ck-section-heading { margin-bottom: 45px; }
-.ck-team h2 em { color: var(--brand-paper); }
-.ck-team .ck-section-heading > p { color: var(--brand-paper); }
+.ck-team h2 em { color: #fff; }
+.ck-team .ck-section-heading > p { color: #fff; }
 .ck-team-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 33px; }
 .ck-team-grid article { border-top: 1px solid #7f89754d; padding-top: 26px; }
-.ck-role-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; color: var(--brand-paper); }
-.ck-role-top > span { color: var(--brand-paper); font-size: 10px; }
+.ck-role-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; color: #fff; }
+.ck-role-top > span { color: #fff; font-size: 10px; }
 .ck-team-grid h3 { margin: 0 0 11px; font-size: 24px; }
-.ck-team-grid p { max-width: 200px; margin: 0; color: var(--brand-paper); font-size: 12px; line-height: 1.8; }
+.ck-team-grid p { max-width: 200px; margin: 0; color: #fff; font-size: 12px; line-height: 1.8; }
 .ck-contact { padding-top: 100px; padding-bottom: 100px; }
 .ck-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11%; }
 .ck-contact-copy h2 { font-size: var(--font-size-h2); }
