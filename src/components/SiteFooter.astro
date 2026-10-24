@@ -3,11 +3,10 @@ import Brand from './Brand.astro';
 import { site } from '../data/site';
 
 interface Props {
-  home?: boolean;
   inquiryPage?: boolean;
 }
 
-const { home = false, inquiryPage = false } = Astro.props;
+const { inquiryPage = false } = Astro.props;
 const year = new Date().getFullYear();
 const inquiryHref = inquiryPage ? '#project-form' : site.inquiryUrl;
 ---
@@ -22,7 +21,7 @@ const inquiryHref = inquiryPage ? '#project-form' : site.inquiryUrl;
   </div>
   <div class="page-width footer-main">
     <div class="footer-brand-block">
-      <Brand href={home ? null : '/'} footer />
+      <Brand href="/" footer />
       <p class="footer-tagline">Your one-stop partner for glassware &amp; tableware.</p>
     </div>
     <nav class="footer-navigation" aria-label="Footer navigation">

@@ -3,11 +3,10 @@ import Brand from './Brand.astro';
 import { site } from '../data/site';
 
 interface Props {
-  home?: boolean;
   inquiryPage?: boolean;
 }
 
-const { home = false, inquiryPage = false } = Astro.props;
+const { inquiryPage = false } = Astro.props;
 const quoteHref = inquiryPage ? '#project-form' : site.inquiryUrl;
 const quoteLabel = inquiryPage ? 'Start your inquiry' : 'Request a quote';
 const cakePage = Astro.url.pathname.startsWith('/cake-knife-server-sets/');
@@ -17,16 +16,14 @@ const blogPage = Astro.url.pathname.startsWith('/blog/');
 
 <header class="site-header" id="top">
   <div class="header-inner page-width">
-    <Brand href={home ? '#top' : '/'} />
+    <Brand href="/" />
     <nav class="primary-nav" id="mobile-menu" aria-label="Main navigation">
-      {home ? <a href="#collections">Collections</a> : <>
-        <a href="/personalized-champagne-glasses/" aria-current={champagnePage ? 'page' : undefined}>Champagne Glasses</a>
-        <a href="/cake-knife-server-sets/" aria-current={cakePage ? 'page' : undefined}>Cake Knife and Server Set</a>
-      </>}
+      <a href="/personalized-champagne-glasses/" aria-current={champagnePage ? 'page' : undefined}>Champagne Glasses</a>
+      <a href="/cake-knife-server-sets/" aria-current={cakePage ? 'page' : undefined}>Cake Knife and Server Set</a>
       <a href="/blog/" aria-current={blogPage ? 'page' : undefined}>Blog</a>
-      {!home && <a class="mobile-quote" href={quoteHref}>{quoteLabel}</a>}
+      <a class="mobile-quote" href={quoteHref}>{quoteLabel}</a>
     </nav>
-    {!home && <a class:list={['header-cta', { 'is-current': inquiryPage }]} href={quoteHref}>{quoteLabel} <span aria-hidden="true">{inquiryPage ? '↓' : '↗'}</span></a>}
+    <a class:list={['header-cta', { 'is-current': inquiryPage }]} href={quoteHref}>{quoteLabel} <span aria-hidden="true">{inquiryPage ? '↓' : '↗'}</span></a>
     <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </header>
