@@ -1,0 +1,62 @@
+---
+import '../../styles/global.css';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import BrandAssets from '../../components/BrandAssets.astro';
+import { blogCategories, blogPosts } from '../../data/blog';
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const category = blogCategories.find((item) => item.id === post.category)!;
+const title = `${post.title} | YQ GLASSES`;
+const canonical = `https://yqglasses.com/blog/${post.slug}/`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={post.description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={post.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`https://yqglasses.com${post.image}`} />
+    <link rel="canonical" href={canonical} />
+    <BrandAssets />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+    <main id="main" class="blog-article page-width">
+      <a class="back-link" href={`/blog/#${category.id}`}>← Back to blog</a>
+      <article>
+        <header><p class="article-category">{category.label}</p><h1>{post.title}</h1><p class="article-lead">{post.description}</p></header>
+        <img class="article-image" src={post.image} alt={post.alt} width="600" height="600" />
+        {post.sections.map((section) => <section><h2>{section.title}</h2><p>{section.text}</p></section>)}
+        <a class="article-product" href={post.productUrl}>{post.productLabel} <span aria-hidden="true">↗</span></a>
+      </article>
+    </main>
+    <SiteFooter />
+  </body>
+</html>
+
+<style>
+  .blog-article { max-width: 760px; padding-block: 44px 80px; }
+  .back-link { display: inline-block; margin-bottom: 34px; font-size: 14px; color: var(--copper-dark); }
+  .article-category { margin-bottom: 15px; font-size: 14px; color: var(--copper-dark); }
+  h1 { font-size: var(--font-size-h1); line-height: 1.2; margin-bottom: 20px; }
+  .article-lead { color: var(--muted); font-size: 16px; line-height: 1.8; }
+  .article-image { width: 100%; max-width: 600px; height: auto; margin: 32px auto 40px; }
+  section + section { margin-top: 30px; }
+  h2 { font-size: 26px; line-height: 1.25; margin-bottom: 12px; }
+  section p { margin-bottom: 0; color: var(--muted); font-size: 16px; line-height: 1.85; }
+  .article-product { display: inline-flex; gap: 22px; margin-top: 38px; padding-bottom: 12px; border-bottom: 1px solid var(--copper); color: var(--copper-dark); font-size: 14px; line-height: 1.6; }
+  @media (max-width: 700px) { .blog-article { padding-block: 32px 60px; } h2 { font-size: 24px; } }
+</style>

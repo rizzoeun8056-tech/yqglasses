@@ -1,0 +1,24 @@
+{
+  "prepared_date": "2026-10-25",
+  "asset_type": "AI-generated editorial celebration scene; not a real event photograph",
+  "tool": "Built-in image_gen",
+  "source": "/Users/laotie/.codex/generated_images/01a15337-b339-7cd2-8058-64601b2e816c/exec-f62471ce-ea15-4c65-b3ef-2a6fd925d2bd.png",
+  "source_size": [
+    2172,
+    724
+  ],
+  "source_sha256": "c641e439f0e4bf2360de85bae6d5785173bb5affce952f481495569eb3a280be",
+  "references": [
+    "public/images/cake-knife-sets/studded-pair.webp",
+    "public/images/champagne-glasses/heart-stem-pair.webp"
+  ],
+  "file": "public/images/blog/celebration-table-banner.webp",
+  "width": 600,
+  "height": 200,
+  "bytes": 38152,
+  "quality": 89,
+  "sha256": "624d4264b813320dd29e1ee70d740f2a4f94c8c008b523e9a67d856eb3a6a646",
+  "processing": "Proportional resize and WebP compression; no cropping or retouching.",
+  "usage": "Full-width decorative background behind the Blog H1; empty alt because it adds no article information.",
+  "prompt_file": "design/blog/banner-prompt.txt"
+}

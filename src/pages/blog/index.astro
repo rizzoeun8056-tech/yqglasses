@@ -3,9 +3,11 @@ import '../../styles/global.css';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import BrandAssets from '../../components/BrandAssets.astro';
+import { blogCategories, blogPosts } from '../../data/blog';
 
 const title = 'Blog | Glassware & Cake Serving Guides | YQ GLASSES';
 const description = 'Practical guides to cake serving sets, glassware and personalized details from YQ GLASSES.';
+const pageSize = 9;
 ---
 
 <!doctype html>
@@ -26,47 +28,164 @@ const description = 'Practical guides to cake serving sets, glassware and person
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <SiteHeader />
-    <main id="main" class="journal page-width">
+    <main id="main">
       <header class="journal-heading">
+        <img class="journal-banner" src="/images/blog/celebration-table-banner.webp" alt="" width="600" height="200" fetchpriority="high" />
         <h1>Blog</h1>
-        <p>Ideas and practical guides for the celebration table.</p>
       </header>
-      <article aria-labelledby="guide-title">
-        <div class="guide-intro">
-          <span class="guide-category">Cake serving guide</span>
-          <h2 id="guide-title">How to Use a Cake Knife and Server Set</h2>
-          <p>The knife separates each portion. The server supports the slice as you move it to the plate. A little preparation helps both work together.</p>
-          <a href="/cake-knife-server-sets/">Explore cake knife and server sets <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="guide-body">
-          <section><h3>Plan your portions</h3><p>Choose slice sizes around the cake’s shape, height and number of guests. For a tiered cake, ask the cake maker about boards, supports and serving order before cutting.</p></section>
-          <section><h3>Cut, then support</h3><p>Use a suitable knife to separate the portion fully. Slide the server underneath to support the slice, then move it close to the plate before setting it down.</p></section>
-          <section><h3>Keep the blade clean</h3><p>Clear frosting and crumbs between cuts. Where a warm blade suits the cake, warm it and wipe it dry before cutting.</p></section>
-          <section><h3>Care for the complete set</h3><p>Follow the care instructions for the selected finish, handle and decoration. Confirm dishwasher suitability for the complete product rather than the metal alone.</p></section>
-        </div>
-      </article>
+      <div class="journal page-width">
+      <div class="journal-tabs" role="tablist" aria-label="Blog topics">
+        {blogCategories.map((category, index) => (
+          <button type="button" role="tab" id={`tab-${category.id}`} aria-controls={`panel-${category.id}`} aria-selected={index === 0 ? 'true' : 'false'} tabindex={index === 0 ? 0 : -1} data-blog-category={category.id}>{category.label}</button>
+        ))}
+      </div>
+      {blogCategories.map((category, index) => (
+        <section class="journal-panel" id={`panel-${category.id}`} role="tabpanel" aria-labelledby={`tab-${category.id}`} tabindex="0" data-page-size={pageSize} hidden={index !== 0}>
+          <div class="journal-grid">
+            {blogPosts.filter((post) => post.category === category.id).map((post, postIndex) => (
+              <article class="journal-card" hidden={postIndex >= pageSize}>
+                <a class="journal-card-link" href={`/blog/${post.slug}/`}>
+                  <h2>{post.title} <span aria-hidden="true">↗</span></h2><p>{post.description}</p>
+                </a>
+              </article>
+            ))}
+          </div>
+          <p class="journal-empty" hidden={blogPosts.some((post) => post.category === category.id)}>Articles coming soon.</p>
+          <nav class="journal-pagination" aria-label={`${category.label} article pages`} hidden>
+            <button type="button" data-page-previous aria-label="Previous page">← Previous</button>
+            <div class="journal-page-numbers"></div>
+            <button type="button" data-page-next aria-label="Next page">Next →</button>
+            <span class="journal-page-status" aria-live="polite" aria-atomic="true"></span>
+          </nav>
+        </section>
+      ))}
+      </div>
     </main>
     <SiteFooter />
   </body>
 </html>
 
 <style>
-  .journal { padding-block: 64px 88px; }
-  .journal-heading { max-width: 760px; margin: 0 auto 48px; padding-bottom: 36px; border-bottom: 1px solid var(--line); text-align: center; }
-  h1 { margin-bottom: 15px; font-size: var(--font-size-h1); line-height: 1.1; }
-  .journal-heading p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.8; }
-  article { display: grid; grid-template-columns: 1fr 1fr; gap: 10%; }
-  .guide-category { display: block; margin-bottom: 18px; font-size: var(--font-size-small); letter-spacing: .12em; color: var(--copper-dark); text-transform: uppercase; }
-  h2 { max-width: 490px; font-size: var(--font-size-h2); line-height: 1.15; margin-bottom: 24px; }
-  article p { color: var(--muted); font-size: 14px; line-height: 1.85; }
-  .guide-intro > p { max-width: 440px; margin-bottom: 30px; }
-  .guide-intro > a { display: inline-flex; align-items: center; gap: 22px; padding-bottom: 9px; border-bottom: 1px solid var(--copper); font-size: var(--font-size-small); color: var(--copper-dark); }
-  .guide-body section + section { margin-top: 27px; }
-  h3 { font-size: 24px; font-weight: 400; margin-bottom: 11px; }
-  .guide-body p { margin-bottom: 0; }
+  .journal { max-width: 1080px; padding-block: 40px 88px; }
+  .journal-heading { position: relative; width: 100%; aspect-ratio: 3 / 1; min-height: 180px; overflow: hidden; background: var(--brand-surface); }
+  .journal-banner { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  h1 { position: absolute; top: 26%; left: 50%; transform: translate(-50%, -50%); margin: 0; font-size: var(--font-size-h1); line-height: 1.1; color: var(--brand-ink); }
+  .journal-tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 36px; }
+  .journal-tabs button { min-height: 46px; padding: 12px 22px; border: 1px solid var(--line); border-radius: 3px; background: var(--brand-surface); color: var(--ink); font-size: 14px; line-height: 1.5; }
+  .journal-tabs button[aria-selected='true'] { border-color: var(--copper); background: var(--brand-copper); color: #fff; }
+  .journal-tabs button:hover { border-color: var(--copper); }
+  .journal-panel[hidden], .journal-card[hidden], .journal-pagination[hidden], .journal-empty[hidden] { display: none; }
+  .journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .journal-card { border-top: 1px solid var(--line); }
+  .journal-card-link { display: block; height: 100%; padding: 24px 0 18px; }
+  h2 { margin-bottom: 14px; font-size: 24px; line-height: 1.3; }
+  h2 span { color: var(--copper-dark); font-family: Arial, sans-serif; font-size: 18px; white-space: nowrap; }
+  .journal-card-link:hover h2 { color: var(--copper-dark); }
+  .journal-card p, .journal-empty { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+  .journal-empty { text-align: center; padding-block: 32px; }
+  .journal-pagination { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+  .journal-pagination button { min-height: 42px; min-width: 42px; padding: 9px 12px; border: 1px solid var(--line); background: var(--brand-paper); color: var(--ink); font-size: 14px; }
+  .journal-pagination button[aria-current='page'] { background: var(--brand-copper); border-color: var(--copper); color: #fff; }
+  .journal-pagination button:disabled { color: var(--muted); cursor: default; }
+  .journal-page-numbers { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+  .journal-page-status { flex-basis: 100%; text-align: center; color: var(--muted); font-size: 14px; line-height: 1.5; }
+  @media (min-width: 701px) and (max-width: 980px) { .journal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 700px) {
-    .journal { padding-block: 42px 60px; }
-    .journal-heading { padding-bottom: 26px; margin-bottom: 32px; }
-    article { grid-template-columns: 1fr; gap: 40px; }
+    .journal { padding-block: 30px 60px; }
+    .journal-tabs { gap: 6px; margin-bottom: 28px; }
+    .journal-tabs button { flex: 1; padding: 10px 8px; }
+    .journal-grid { grid-template-columns: 1fr; gap: 32px; }
+    h2 { font-size: 22px; }
   }
 </style>
+
+<script>
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-blog-category]'));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>('.journal-panel'));
+  const currentPages = new Map<string, number>();
+  const saveLocation = (category: string, page: number) => {
+    const url = new URL(window.location.href);
+    url.hash = category;
+    if (page > 1) url.searchParams.set('page', String(page));
+    else url.searchParams.delete('page');
+    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+  };
+  const renderPage = (panel: HTMLElement, requestedPage: number) => {
+    const cards = Array.from(panel.querySelectorAll<HTMLElement>('.journal-card'));
+    const pageSize = Number(panel.dataset.pageSize);
+    const pageCount = Math.max(1, Math.ceil(cards.length / pageSize));
+    const page = Math.min(pageCount, Math.max(1, Math.trunc(requestedPage) || 1));
+    currentPages.set(panel.id, page);
+    cards.forEach((card, index) => { card.hidden = index < (page - 1) * pageSize || index >= page * pageSize; });
+    const pagination = panel.querySelector<HTMLElement>('.journal-pagination')!;
+    pagination.hidden = pageCount <= 1;
+    const numbers = panel.querySelector<HTMLElement>('.journal-page-numbers')!;
+    numbers.replaceChildren();
+    for (let number = 1; number <= pageCount; number++) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = String(number);
+      button.dataset.page = String(number);
+      button.setAttribute('aria-label', `Page ${number}`);
+      if (number === page) button.setAttribute('aria-current', 'page');
+      numbers.append(button);
+    }
+    panel.querySelector<HTMLButtonElement>('[data-page-previous]')!.disabled = page === 1;
+    panel.querySelector<HTMLButtonElement>('[data-page-next]')!.disabled = page === pageCount;
+    panel.querySelector<HTMLElement>('.journal-page-status')!.textContent = `Page ${page} of ${pageCount}`;
+    return page;
+  };
+  panels.forEach((panel) => {
+    renderPage(panel, 1);
+    panel.querySelector('.journal-pagination')!.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const button = target.closest<HTMLButtonElement>('button');
+      if (!button || button.disabled) return;
+      const previousPage = currentPages.get(panel.id) || 1;
+      const requestedPage = button.hasAttribute('data-page-next') ? previousPage + 1 : button.hasAttribute('data-page-previous') ? previousPage - 1 : Number(button.dataset.page);
+      const page = renderPage(panel, requestedPage);
+      const tab = tabs.find((tab) => tab.getAttribute('aria-controls') === panel.id)!;
+      saveLocation(tab.dataset.blogCategory!, page);
+      panel.focus({ preventScroll: true });
+      panel.scrollIntoView({ block: 'start', behavior: 'instant' });
+    });
+  });
+  const selectCategory = (selected: HTMLButtonElement, page = 1) => {
+    tabs.forEach((tab) => {
+      const active = tab === selected;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+      const panel = document.getElementById(tab.getAttribute('aria-controls') || '');
+      if (panel) {
+        panel.hidden = !active;
+        if (active) renderPage(panel, page);
+      }
+    });
+  };
+  const selectFromHash = () => {
+    const selected = tabs.find((tab) => tab.dataset.blogCategory === window.location.hash.slice(1)) || tabs[0];
+    const requestedPage = Number(new URLSearchParams(window.location.search).get('page')) || 1;
+    if (selected) selectCategory(selected, requestedPage);
+  };
+  selectFromHash();
+  window.addEventListener('hashchange', selectFromHash);
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      selectCategory(tab);
+      saveLocation(tab.dataset.blogCategory!, 1);
+    });
+    tab.addEventListener('keydown', (event) => {
+      let next = index;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      selectCategory(tabs[next]);
+      saveLocation(tabs[next].dataset.blogCategory!, 1);
+      tabs[next].focus();
+    });
+  });
+</script>
