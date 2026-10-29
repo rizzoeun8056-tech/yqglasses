@@ -14,3 +14,5 @@ For every new blog article, read the complete supplied content and prepare Engli
 - The left sidebar carousel uses square source exports and a 1:1 image viewport. Set both CSS width and height explicitly so HTML aspect-ratio attributes cannot stretch it.
 
 - For supplied-document articles, preserve embedded images in their original content positions. Use only source-document images and any featured image explicitly designated by the user; do not add stock/generated photos or company-photo carousels without a separate request.
+
+- The user has explicitly requested the shared four-photo company carousel and inquiry CTA below the table of contents on every blog article. Keep this shared sidebar sticky within the article body on desktop, highlight the current section and matching TOC entry, and keep long TOCs independently scrollable. Do not overlap the article hero, site header or footer. Use normal flow on narrow screens.

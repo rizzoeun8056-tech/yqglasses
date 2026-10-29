@@ -72,7 +72,7 @@ const companyPhotos = [
             <h2>On this page</h2>
             <ol>{post.sections.map((section, index) => <li><a href={`#section-${index + 1}`}>{section.title}</a></li>)}</ol>
           </nav>
-          {post.showCompanyPhotos !== false && <section class="article-company" aria-labelledby="company-photos-title">
+          <section class="article-company" aria-labelledby="company-photos-title">
             <div class="article-company-heading"><span>Behind the work</span><h2 id="company-photos-title">Inside YQ GLASSES</h2></div>
             <div class="article-carousel" aria-roledescription="carousel" aria-label="Four company photographs">
               <div class="article-carousel-track" data-company-track tabindex="0">
@@ -81,7 +81,7 @@ const companyPhotos = [
               <div class="article-carousel-controls"><button type="button" data-company-prev aria-label="Previous company photo">←</button><span data-company-count aria-live="polite">01 / 04</span><button type="button" data-company-next aria-label="Next company photo">→</button></div>
             </div>
             <a class="article-inquiry" href={`${site.inquiryUrl}?source=blog&article=${encodeURIComponent(post.slug)}`}>Request a quote <span aria-hidden="true">↗</span></a>
-          </section>}
+          </section>
         </aside>
         <article class="article-content" aria-label={post.title}>
           {post.intro?.map((paragraph) => <p>{paragraph}</p>)}
@@ -100,6 +100,55 @@ const companyPhotos = [
     </main>
     <SiteFooter />
     <script>
+      const tocLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>('.article-toc a'));
+      const articleSections = Array.from(document.querySelectorAll<HTMLElement>('.article-content > section[id]'));
+      const tocList = document.querySelector<HTMLOListElement>('.article-toc ol');
+      let activeSection = '';
+      let scrollFrame = 0;
+      const updateCurrentSection = () => {
+        scrollFrame = 0;
+        if (!articleSections.length) return;
+        const readingLine = Math.min(160, window.innerHeight * .25);
+        let current = articleSections[0];
+        for (const section of articleSections) {
+          if (section.getBoundingClientRect().top <= readingLine) current = section;
+          else break;
+        }
+        if (activeSection === current.id) return;
+        activeSection = current.id;
+        articleSections.forEach((section) => section.toggleAttribute('data-current-section', section === current));
+        tocLinks.forEach((link) => {
+          const active = link.hash === `#${current.id}`;
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+          if (active && tocList) {
+            const linkRect = link.getBoundingClientRect();
+            const listRect = tocList.getBoundingClientRect();
+            if (linkRect.top < listRect.top) tocList.scrollTop += linkRect.top - listRect.top;
+            else if (linkRect.bottom > listRect.bottom) tocList.scrollTop += linkRect.bottom - listRect.bottom;
+          }
+        });
+      };
+      const queueSectionUpdate = () => {
+        if (!scrollFrame) scrollFrame = window.requestAnimationFrame(updateCurrentSection);
+      };
+      tocLinks.forEach((link) => link.addEventListener('click', (event) => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        const target = document.getElementById(link.hash.slice(1));
+        if (!target) return;
+        event.preventDefault();
+        window.history.pushState(null, '', link.hash);
+        target.scrollIntoView({ behavior: 'instant', block: 'start' });
+        updateCurrentSection();
+      }));
+      window.addEventListener('scroll', queueSectionUpdate, { passive: true });
+      window.addEventListener('resize', queueSectionUpdate);
+      window.addEventListener('hashchange', queueSectionUpdate);
+      window.addEventListener('load', queueSectionUpdate);
+      const articleBody = document.querySelector('.article-content');
+      if (articleBody) new ResizeObserver(queueSectionUpdate).observe(articleBody);
+      updateCurrentSection();
+
       const track = document.querySelector<HTMLElement>('[data-company-track]');
       const slides = Array.from(document.querySelectorAll<HTMLElement>('.article-carousel-slide'));
       const count = document.querySelector<HTMLElement>('[data-company-count]');

@@ -21,7 +21,6 @@ interface BlogPost {
   seo?: { title: string; description: string; keywords: string; primaryKeyword: string };
   intro?: string[];
   introImage?: { src: string; alt: string; width: number; height: number };
-  showCompanyPhotos?: boolean;
   sections: { title: string; text: string; blocks?: { type: string; text?: string; items?: string[]; headers?: string[]; rows?: string[][] }[] }[];
   productUrl: string;
   productLabel: string;
@@ -45,7 +44,6 @@ export const blogPosts: BlogPost[] = [
     alt: 'A cake knife and two cake servers with sparkling decorative handles on a woven mat and wooden table',
     intro: cakeSlicingArticle.intro,
     introImage: { src: '/images/blog/cake-slicing-document-production.webp', alt: 'Cake knives and servers in protective sleeves on a production workbench', width: 393, height: 393 },
-    showCompanyPhotos: false,
     sections: cakeSlicingArticle.sections,
     productUrl: '/cake-knife-server-sets/',
     productLabel: 'Explore custom cake knife and server sets',
