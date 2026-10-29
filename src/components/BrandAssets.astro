@@ -1,5 +1,16 @@
 ---
-const shareImage = 'https://yqglasses.com/images/brand/social-share-v2-1200x630.jpg';
+interface Props {
+  shareImage?: string;
+  shareImageType?: string;
+  shareImageWidth?: number;
+  shareImageHeight?: number;
+  shareImageAlt?: string;
+}
+const {
+  shareImage = 'https://yqglasses.com/images/brand/social-share-v2-1200x630.jpg',
+  shareImageType = 'image/jpeg', shareImageWidth = 1200, shareImageHeight = 630,
+  shareImageAlt = 'YQ GLASSES — Champagne Flutes & Cake Serving Sets',
+} = Astro.props;
 ---
 
 <link rel="icon" href="/favicon-yq-color-v3.ico" sizes="16x16 32x32 48x48 64x64" />
@@ -8,10 +19,10 @@ const shareImage = 'https://yqglasses.com/images/brand/social-share-v2-1200x630.
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <meta property="og:image" content={shareImage} />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="YQ GLASSES — Champagne Flutes & Cake Serving Sets" />
+<meta property="og:image:type" content={shareImageType} />
+<meta property="og:image:width" content={shareImageWidth} />
+<meta property="og:image:height" content={shareImageHeight} />
+<meta property="og:image:alt" content={shareImageAlt} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content={shareImage} />
-<meta name="twitter:image:alt" content="YQ GLASSES — Champagne Flutes & Cake Serving Sets" />
+<meta name="twitter:image:alt" content={shareImageAlt} />

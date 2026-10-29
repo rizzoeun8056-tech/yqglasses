@@ -1,3 +1,5 @@
+import cakeSlicingArticle from './blog/best-knife-for-slicing-cake.json';
+
 export const blogCategories = [
   { id: 'champagne-glassware', label: 'Champagne Glassware' },
   { id: 'cake-knife-set', label: 'Cake Knife Set' },
@@ -12,12 +14,34 @@ interface BlogPost {
   description: string;
   image: string;
   alt: string;
-  sections: { title: string; text: string }[];
+  heroImage?: string;
+  heroAlt?: string;
+  seo?: { title: string; description: string; keywords: string; primaryKeyword: string };
+  intro?: string[];
+  sections: { title: string; text: string; blocks?: { type: string; text?: string; items?: string[]; headers?: string[]; rows?: string[][] }[] }[];
   productUrl: string;
   productLabel: string;
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'best-knife-for-slicing-cake',
+    category: 'cake-knife-set',
+    title: cakeSlicingArticle.title,
+    description: 'Choose a knife for your cake’s texture and explore matching servers and custom set options.',
+    seo: {
+      title: 'Best Knife for Slicing Cake: A Practical Guide',
+      description: 'Find the best knife for slicing cake by texture and learn how cake servers and custom set details improve serving and presentation.',
+      keywords: 'best knife for slicing cake, cake knife and server set, serrated cake knife, custom cake knife set',
+      primaryKeyword: 'best knife for slicing cake',
+    },
+    image: '/images/blog/cake-slicing-knife-and-servers-oh42046.webp',
+    alt: 'A cake knife and two cake servers with sparkling decorative handles on a woven mat and wooden table',
+    intro: cakeSlicingArticle.intro,
+    sections: cakeSlicingArticle.sections,
+    productUrl: '/cake-knife-server-sets/',
+    productLabel: 'Explore custom cake knife and server sets',
+  },
   {
     slug: 'choosing-champagne-glassware',
     category: 'champagne-glassware',

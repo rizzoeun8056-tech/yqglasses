@@ -1,18 +1,38 @@
 ---
 import '../../styles/global.css';
+import '../../styles/blog-article.css';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import BrandAssets from '../../components/BrandAssets.astro';
 import { blogCategories, blogPosts } from '../../data/blog';
+import { site } from '../../data/site';
 
 export function getStaticPaths() {
+  for (const post of blogPosts) {
+    if (!post.seo) continue;
+    const { title, description, keywords, primaryKeyword } = post.seo;
+    if (title.length > 58 || description.length > 156 || !title || !description || !keywords ||
+      (title.match(/,/g)?.length || 0) > 2 || (description.match(/,/g)?.length || 0) > 2 ||
+      !title.toLowerCase().includes(primaryKeyword.toLowerCase()) || !description.toLowerCase().includes(primaryKeyword.toLowerCase())) {
+      throw new Error(`Blog TDK does not meet publishing rules: ${post.slug}`);
+    }
+  }
   return blogPosts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
 }
 
 const { post } = Astro.props;
 const category = blogCategories.find((item) => item.id === post.category)!;
-const title = `${post.title} | YQ GLASSES`;
+const title = post.seo?.title ?? `${post.title} | YQ GLASSES`;
+const description = post.seo?.description ?? post.description;
 const canonical = `https://yqglasses.com/blog/${post.slug}/`;
+const heroImage = post.heroImage ?? post.image;
+const heroAlt = post.heroAlt ?? post.alt;
+const companyPhotos = [
+  { src: '/images/about/assembly-workbench-retouched.webp', alt: 'YQ GLASSES team assembling decorative glassware at a workbench' },
+  { src: '/images/about/glass-processing-retouched.webp', alt: 'Workers handling glass components at workshop stations' },
+  { src: '/images/about/cake-serving-batch.webp', alt: 'Rows of cake knives and servers prepared in protective sleeves during production' },
+  { src: '/images/about/showroom-aisle-retouched.webp', alt: 'Glassware displays in the YQ GLASSES showroom' },
+];
 ---
 
 <!doctype html>
@@ -20,43 +40,87 @@ const canonical = `https://yqglasses.com/blog/${post.slug}/`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={post.description} />
+    <meta name="description" content={description} />
+    {post.seo && <meta name="keywords" content={post.seo.keywords} />}
     <meta name="robots" content="noindex, nofollow" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={post.description} />
+    <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={`https://yqglasses.com${post.image}`} />
     <link rel="canonical" href={canonical} />
-    <BrandAssets />
+    <BrandAssets shareImage={`https://yqglasses.com${heroImage}`} shareImageType="image/webp" shareImageWidth={600} shareImageHeight={600} shareImageAlt={heroAlt} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="blog-detail-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <SiteHeader />
-    <main id="main" class="blog-article page-width">
-      <a class="back-link" href={`/blog/#${category.id}`}>← Back to blog</a>
-      <article>
-        <header><p class="article-category">{category.label}</p><h1>{post.title}</h1><p class="article-lead">{post.description}</p></header>
-        <img class="article-image" src={post.image} alt={post.alt} width="600" height="600" />
-        {post.sections.map((section) => <section><h2>{section.title}</h2><p>{section.text}</p></section>)}
-        <a class="article-product" href={post.productUrl}>{post.productLabel} <span aria-hidden="true">↗</span></a>
-      </article>
+    <main id="main" class="blog-article">
+      <header class="article-hero">
+        <div class="page-width article-hero-grid">
+          <div class="article-hero-copy">
+            <a class="article-back-link" href={`/blog/#${category.id}`}>← Back to blog</a>
+            <p class="article-category">{category.label}</p>
+            <h1>{post.title}</h1>
+            <p class="article-lead">{post.description}</p>
+          </div>
+          <figure class="article-hero-image"><img src={heroImage} alt={heroAlt} width="600" height="600" fetchpriority="high" /></figure>
+        </div>
+      </header>
+      <div class="page-width article-layout">
+        <aside class="article-sidebar" aria-label="Article navigation and company information">
+          <nav class="article-toc" aria-label="On this page">
+            <h2>On this page</h2>
+            <ol>{post.sections.map((section, index) => <li><a href={`#section-${index + 1}`}>{section.title}</a></li>)}</ol>
+          </nav>
+          <section class="article-company" aria-labelledby="company-photos-title">
+            <div class="article-company-heading"><span>Behind the work</span><h2 id="company-photos-title">Inside YQ GLASSES</h2></div>
+            <div class="article-carousel" aria-roledescription="carousel" aria-label="Four company photographs">
+              <div class="article-carousel-track" data-company-track tabindex="0">
+                {companyPhotos.map((photo, index) => <figure class="article-carousel-slide" id={`company-photo-${index + 1}`}><img src={photo.src} alt={photo.alt} width="600" height="450" loading="lazy" /><figcaption>{String(index + 1).padStart(2, '0')} / 04</figcaption></figure>)}
+              </div>
+              <div class="article-carousel-controls"><button type="button" data-company-prev aria-label="Previous company photo">←</button><span data-company-count aria-live="polite">01 / 04</span><button type="button" data-company-next aria-label="Next company photo">→</button></div>
+            </div>
+            <a class="article-inquiry" href={`${site.inquiryUrl}?source=blog&article=${encodeURIComponent(post.slug)}`}>Request a quote <span aria-hidden="true">↗</span></a>
+          </section>
+        </aside>
+        <article class="article-content" aria-label={post.title}>
+          {post.intro?.map((paragraph) => <p>{paragraph}</p>)}
+          {post.sections.map((section, index) => <section id={`section-${index + 1}`}><h2>{section.title}</h2>
+            {section.blocks ? section.blocks.map((block) => (
+              block.type === 'paragraph' ? <p>{block.text}</p> :
+              block.type === 'heading' ? <h3>{block.text}</h3> :
+              block.type === 'list' ? <ul>{block.items?.map((item) => <li>{item}</li>)}</ul> :
+              block.type === 'table' ? <div class="article-table" role="region" aria-label="Cake types and recommended knives" tabindex="0"><table><thead><tr>{block.headers?.map((cell) => <th scope="col">{cell}</th>)}</tr></thead><tbody>{block.rows?.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody></table></div> : null
+            )) : <p>{section.text}</p>}
+          </section>)}
+          <div class="article-next-step"><span>Explore the product</span><a href={post.productUrl}>{post.productLabel} <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
     </main>
     <SiteFooter />
+    <script>
+      const track = document.querySelector<HTMLElement>('[data-company-track]');
+      const slides = Array.from(document.querySelectorAll<HTMLElement>('.article-carousel-slide'));
+      const count = document.querySelector<HTMLElement>('[data-company-count]');
+      const showSlide = (index: number) => {
+        if (!track || !slides.length) return;
+        const next = (index + slides.length) % slides.length;
+        track.scrollTo({ left: slides[next].offsetLeft - slides[0].offsetLeft, behavior: 'smooth' });
+        if (count) count.textContent = `${String(next + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+      };
+      document.querySelector<HTMLButtonElement>('[data-company-prev]')?.addEventListener('click', () => {
+        const current = Math.round((track?.scrollLeft || 0) / (track?.clientWidth || 1));
+        showSlide(current - 1);
+      });
+      document.querySelector<HTMLButtonElement>('[data-company-next]')?.addEventListener('click', () => {
+        const current = Math.round((track?.scrollLeft || 0) / (track?.clientWidth || 1));
+        showSlide(current + 1);
+      });
+      track?.addEventListener('scroll', () => {
+        if (!count || !track) return;
+        const current = Math.min(slides.length, Math.max(1, Math.round(track.scrollLeft / (track.clientWidth || 1)) + 1));
+        count.textContent = `${String(current).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+      }, { passive: true });
+    </script>
   </body>
 </html>
-
-<style>
-  .blog-article { max-width: 760px; padding-block: 44px 80px; }
-  .back-link { display: inline-block; margin-bottom: 34px; font-size: 14px; color: var(--copper-dark); }
-  .article-category { margin-bottom: 15px; font-size: 14px; color: var(--copper-dark); }
-  h1 { font-size: var(--font-size-h1); line-height: 1.2; margin-bottom: 20px; }
-  .article-lead { color: var(--muted); font-size: 16px; line-height: 1.8; }
-  .article-image { width: 100%; max-width: 600px; height: auto; margin: 32px auto 40px; }
-  section + section { margin-top: 30px; }
-  h2 { font-size: 26px; line-height: 1.25; margin-bottom: 12px; }
-  section p { margin-bottom: 0; color: var(--muted); font-size: 16px; line-height: 1.85; }
-  .article-product { display: inline-flex; gap: 22px; margin-top: 38px; padding-bottom: 12px; border-bottom: 1px solid var(--copper); color: var(--copper-dark); font-size: 14px; line-height: 1.6; }
-  @media (max-width: 700px) { .blog-article { padding-block: 32px 60px; } h2 { font-size: 24px; } }
-</style>
