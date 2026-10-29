@@ -1,0 +1,35 @@
+{
+  "source_document": "/Users/laotie/Documents/Custom Cake Knife and Server Set Buyer’s Guide.docx",
+  "source_sha256": "901cfa0102a3ee56891cc27df6fd75ee71eaa14276528713a2aa24f5de3a16b8",
+  "assets": [
+    {
+      "document_media": "word/media/image2.jpeg",
+      "file": "public/images/blog/buyer-guide-yq-mark.webp",
+      "source_size": [
+        64,
+        64
+      ],
+      "width": 64,
+      "height": 64,
+      "bytes": 1268,
+      "quality": 92,
+      "source_sha256": "a56e5c2b3fa5127f5323cd4f290e973304d8f874d4338f7ebc6eea2f415cbcab",
+      "processing": "Proportional resize and WebP compression only; no enlargement or cropping."
+    },
+    {
+      "document_media": "word/media/image1.jpeg",
+      "file": "public/images/blog/buyer-guide-cake-knife-server.webp",
+      "source_size": [
+        875,
+        875
+      ],
+      "width": 428,
+      "height": 428,
+      "bytes": 29558,
+      "quality": 66,
+      "source_sha256": "005bb33ab6c92e9c7704cdaf82675f972ebd5b497465da10cafe4c373b68a1b2",
+      "processing": "Proportional resize and WebP compression only; no enlargement or cropping."
+    }
+  ],
+  "content": "Original body text, table and embedded images retained; draft TDK replaced with concise publishing metadata."
+}

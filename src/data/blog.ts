@@ -1,4 +1,5 @@
 import cakeSlicingArticle from './blog/best-knife-for-slicing-cake.json';
+import buyerGuide from './blog/cake-knife-and-server-set-guide-for-buyer.json';
 
 export const blogCategories = [
   { id: 'champagne-glassware', label: 'Champagne Glassware' },
@@ -21,12 +22,33 @@ interface BlogPost {
   seo?: { title: string; description: string; keywords: string; primaryKeyword: string };
   intro?: string[];
   introImage?: { src: string; alt: string; width: number; height: number };
-  sections: { title: string; text: string; blocks?: { type: string; text?: string; items?: string[]; headers?: string[]; rows?: string[][] }[] }[];
+  sections: { title: string; text: string; blocks?: { type: string; text?: string; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; width?: number; height?: number }[] }[];
   productUrl: string;
   productLabel: string;
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'cake-knife-and-server-set-guide-for-buyer',
+    category: 'cake-knife-set',
+    title: buyerGuide.title,
+    description: 'Plan your custom set with a practical guide to design options, quality checks and purchasing.',
+    seo: {
+      title: 'Cake Knife and Server Set Guide for Smart Buyers',
+      description: 'This cake knife and server set guide covers custom designs and packaging plus quality checks and pricing to help buyers plan bulk orders.',
+      keywords: 'cake knife and server set guide, custom cake knife and server set, cake serving set buyer guide, wholesale cake knife set',
+      primaryKeyword: 'cake knife and server set guide',
+    },
+    image: buyerGuide.introImage.src,
+    imageWidth: buyerGuide.introImage.width,
+    imageHeight: buyerGuide.introImage.height,
+    alt: buyerGuide.introImage.alt,
+    intro: buyerGuide.intro,
+    introImage: buyerGuide.introImage,
+    sections: buyerGuide.sections,
+    productUrl: '/cake-knife-server-sets/',
+    productLabel: 'Explore custom cake knife and server sets',
+  },
   {
     slug: 'best-knife-for-slicing-cake',
     category: 'cake-knife-set',

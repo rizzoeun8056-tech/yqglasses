@@ -63,7 +63,7 @@ const companyPhotos = [
             <h1>{post.title}</h1>
             <p class="article-lead">{post.description}</p>
           </div>
-          <figure class="article-hero-image"><img src={heroImage} alt={heroAlt} width="600" height="600" fetchpriority="high" /></figure>
+          <figure class="article-hero-image"><img src={heroImage} alt={heroAlt} width={post.imageWidth ?? 600} height={post.imageHeight ?? 600} fetchpriority="high" /></figure>
         </div>
       </header>
       <div class="page-width article-layout">
@@ -91,7 +91,8 @@ const companyPhotos = [
               block.type === 'paragraph' ? <p>{block.text}</p> :
               block.type === 'heading' ? <h3>{block.text}</h3> :
               block.type === 'list' ? <ul>{block.items?.map((item) => <li>{item}</li>)}</ul> :
-              block.type === 'table' ? <div class="article-table" role="region" aria-label="Cake types and recommended knives" tabindex="0"><table><thead><tr>{block.headers?.map((cell) => <th scope="col">{cell}</th>)}</tr></thead><tbody>{block.rows?.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody></table></div> : null
+              block.type === 'image' ? <figure class="article-document-image" style={{ maxWidth: `${block.width}px` }}><img src={block.src} alt={block.alt} width={block.width} height={block.height} loading="lazy" /></figure> :
+              block.type === 'table' ? <div class="article-table" role="region" aria-label={block.label ?? 'Cake types and recommended knives'} tabindex="0"><table><thead><tr>{block.headers?.map((cell) => <th scope="col">{cell}</th>)}</tr></thead><tbody>{block.rows?.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody></table></div> : null
             )) : <p>{section.text}</p>}
           </section>)}
           <div class="article-next-step"><span>Explore the product</span><a href={post.productUrl}>{post.productLabel} <span aria-hidden="true">↗</span></a></div>
