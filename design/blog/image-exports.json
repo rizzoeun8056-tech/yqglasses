@@ -1,0 +1,104 @@
+{
+  "limit_bytes_exclusive": 30000,
+  "images": [
+    {
+      "source": "/Users/laotie/Desktop/TP图片/阿钢/蛋糕刀铲/oh42046/1_0000s_0007_DSC07333.jpg",
+      "file": "public/images/blog/cake-slicing-knife-and-servers-oh42046.webp",
+      "width": 372,
+      "height": 372,
+      "bytes": 29826,
+      "quality": 59,
+      "square_crop": false
+    },
+    {
+      "source": "/Users/laotie/.codex/generated_images/01a15337-b339-7cd2-8058-64601b2e816c/exec-f62471ce-ea15-4c65-b3ef-2a6fd925d2bd.png",
+      "file": "public/images/blog/celebration-table-banner.webp",
+      "width": 600,
+      "height": 200,
+      "bytes": 29876,
+      "quality": 84,
+      "square_crop": false
+    },
+    {
+      "source": "/Users/laotie/Desktop/YQ/public/images/champagne-glasses/studded-pair.webp",
+      "file": "public/images/blog/champagne-studded-pair.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 29982,
+      "quality": 82,
+      "square_crop": false
+    },
+    {
+      "source": "/Users/laotie/Desktop/YQ/public/images/champagne-glasses/heart-stem-pair.webp",
+      "file": "public/images/blog/champagne-heart-stem-pair.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 26064,
+      "quality": 92,
+      "square_crop": false
+    },
+    {
+      "source": "/Users/laotie/Desktop/YQ/public/images/cake-knife-sets/studded-pair.webp",
+      "file": "public/images/blog/cake-studded-pair.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 14392,
+      "quality": 92,
+      "square_crop": false
+    },
+    {
+      "source": "/Users/laotie/Desktop/YQ/public/images/cake-knife-sets/rose-pair.webp",
+      "file": "public/images/blog/cake-rose-pair.webp",
+      "width": 507,
+      "height": 507,
+      "bytes": 29850,
+      "quality": 64,
+      "square_crop": false
+    },
+    {
+      "source": "/Users/laotie/Desktop/YQ/public/images/about/assembly-workbench-retouched.webp",
+      "file": "public/images/blog/company/assembly-workbench-retouched.webp",
+      "width": 414,
+      "height": 414,
+      "bytes": 29474,
+      "quality": 62,
+      "square_crop": true
+    },
+    {
+      "source": "/Users/laotie/Desktop/YQ/public/images/about/glass-processing-retouched.webp",
+      "file": "public/images/blog/company/glass-processing-retouched.webp",
+      "width": 450,
+      "height": 450,
+      "bytes": 29224,
+      "quality": 79,
+      "square_crop": true
+    },
+    {
+      "source": "/Users/laotie/Desktop/YQ/public/images/about/cake-serving-batch.webp",
+      "file": "public/images/blog/company/cake-serving-batch.webp",
+      "width": 380,
+      "height": 380,
+      "bytes": 29836,
+      "quality": 65,
+      "square_crop": true
+    },
+    {
+      "source": "/Users/laotie/Desktop/YQ/public/images/about/showroom-aisle-retouched.webp",
+      "file": "public/images/blog/company/showroom-aisle-retouched.webp",
+      "width": 466,
+      "height": 466,
+      "bytes": 29658,
+      "quality": 56,
+      "square_crop": true
+    },
+    {
+      "source": "What Type of Knife Is Best for Slicing Cake?.docx / word/media/image1.jpeg",
+      "file": "public/images/blog/cake-slicing-document-production.webp",
+      "width": 393,
+      "height": 393,
+      "bytes": 29760,
+      "quality": 65,
+      "square_crop": false
+    }
+  ]
+}

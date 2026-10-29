@@ -20,6 +20,8 @@ interface BlogPost {
   heroAlt?: string;
   seo?: { title: string; description: string; keywords: string; primaryKeyword: string };
   intro?: string[];
+  introImage?: { src: string; alt: string; width: number; height: number };
+  showCompanyPhotos?: boolean;
   sections: { title: string; text: string; blocks?: { type: string; text?: string; items?: string[]; headers?: string[]; rows?: string[][] }[] }[];
   productUrl: string;
   productLabel: string;
@@ -38,10 +40,12 @@ export const blogPosts: BlogPost[] = [
       primaryKeyword: 'best knife for slicing cake',
     },
     image: '/images/blog/cake-slicing-knife-and-servers-oh42046.webp',
-    imageWidth: 480,
-    imageHeight: 480,
+    imageWidth: 372,
+    imageHeight: 372,
     alt: 'A cake knife and two cake servers with sparkling decorative handles on a woven mat and wooden table',
     intro: cakeSlicingArticle.intro,
+    introImage: { src: '/images/blog/cake-slicing-document-production.webp', alt: 'Cake knives and servers in protective sleeves on a production workbench', width: 393, height: 393 },
+    showCompanyPhotos: false,
     sections: cakeSlicingArticle.sections,
     productUrl: '/cake-knife-server-sets/',
     productLabel: 'Explore custom cake knife and server sets',
@@ -51,7 +55,7 @@ export const blogPosts: BlogPost[] = [
     category: 'champagne-glassware',
     title: 'Choosing Champagne Glassware for Your Collection',
     description: 'A simple starting point for shape, stem design and a coordinated table.',
-    image: '/images/champagne-glasses/studded-pair.webp',
+    image: '/images/blog/champagne-studded-pair.webp',
     alt: 'Two champagne glasses with decorative studded bases on a dark floral background',
     sections: [
       { title: 'Start with the silhouette', text: 'Compare the profile you want for your collection: a slender flute, a softly curved tulip, a wide coupe or a stemless design. Use a reference image to explain the look, then confirm the available styles and dimensions.' },
@@ -66,7 +70,7 @@ export const blogPosts: BlogPost[] = [
     category: 'champagne-glassware',
     title: 'How to Brief a Personalized Champagne Glass Project',
     description: 'The details to share before reviewing artwork, decoration and packaging.',
-    image: '/images/champagne-glasses/heart-stem-pair.webp',
+    image: '/images/blog/champagne-heart-stem-pair.webp',
     alt: 'Champagne flutes with decorative heart-shaped stems in silver and rose-gold tones',
     sections: [
       { title: 'Choose a reference design', text: 'Send a product photo, sketch or reference image with the shape and decorative details you like. Include your expected quantity and target timing so the team can check the project requirements.' },
@@ -81,7 +85,7 @@ export const blogPosts: BlogPost[] = [
     category: 'cake-knife-set',
     title: 'How to Use a Cake Knife and Server Set',
     description: 'A few practical steps for cutting, lifting and serving a slice.',
-    image: '/images/cake-knife-sets/studded-pair.webp',
+    image: '/images/blog/cake-studded-pair.webp',
     alt: 'Matching silver-colored cake knife and server with decorative handles on a dark background',
     sections: [
       { title: 'Plan your portions', text: 'Choose slice sizes around the cake’s shape, height and number of guests. For a tiered cake, ask the cake maker about boards, supports and serving order before cutting.' },
@@ -97,7 +101,9 @@ export const blogPosts: BlogPost[] = [
     category: 'cake-knife-set',
     title: 'Custom Cake Knife Sets: Handles, Finishes and Packaging',
     description: 'Choose the details that bring your cake serving collection together.',
-    image: '/images/cake-knife-sets/rose-pair.webp',
+    image: '/images/blog/cake-rose-pair.webp',
+    imageWidth: 507,
+    imageHeight: 507,
     alt: 'Gold-colored cake knife and server with rose-shaped metal handles on a wooden surface',
     sections: [
       { title: 'Choose the material and handle', text: 'YQ GLASSES offers stainless steel and zinc alloy cake serving designs, with acrylic, hollow acrylic and metal handle options. Confirm the material of each component and the available combinations for your chosen style.' },

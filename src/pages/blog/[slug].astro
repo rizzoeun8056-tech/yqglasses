@@ -28,10 +28,10 @@ const canonical = `https://yqglasses.com/blog/${post.slug}/`;
 const heroImage = post.heroImage ?? post.image;
 const heroAlt = post.heroAlt ?? post.alt;
 const companyPhotos = [
-  { src: '/images/about/assembly-workbench-retouched.webp', alt: 'YQ GLASSES team assembling decorative glassware at a workbench' },
-  { src: '/images/about/glass-processing-retouched.webp', alt: 'Workers handling glass components at workshop stations' },
-  { src: '/images/about/cake-serving-batch.webp', alt: 'Rows of cake knives and servers prepared in protective sleeves during production' },
-  { src: '/images/about/showroom-aisle-retouched.webp', alt: 'Glassware displays in the YQ GLASSES showroom' },
+  { src: '/images/blog/company/assembly-workbench-retouched.webp', alt: 'YQ GLASSES team assembling decorative glassware at a workbench' },
+  { src: '/images/blog/company/glass-processing-retouched.webp', alt: 'Workers handling glass components at workshop stations' },
+  { src: '/images/blog/company/cake-serving-batch.webp', alt: 'Rows of cake knives and servers prepared in protective sleeves during production' },
+  { src: '/images/blog/company/showroom-aisle-retouched.webp', alt: 'Glassware displays in the YQ GLASSES showroom' },
 ];
 ---
 
@@ -72,19 +72,20 @@ const companyPhotos = [
             <h2>On this page</h2>
             <ol>{post.sections.map((section, index) => <li><a href={`#section-${index + 1}`}>{section.title}</a></li>)}</ol>
           </nav>
-          <section class="article-company" aria-labelledby="company-photos-title">
+          {post.showCompanyPhotos !== false && <section class="article-company" aria-labelledby="company-photos-title">
             <div class="article-company-heading"><span>Behind the work</span><h2 id="company-photos-title">Inside YQ GLASSES</h2></div>
             <div class="article-carousel" aria-roledescription="carousel" aria-label="Four company photographs">
               <div class="article-carousel-track" data-company-track tabindex="0">
-                {companyPhotos.map((photo, index) => <figure class="article-carousel-slide" id={`company-photo-${index + 1}`}><img src={photo.src} alt={photo.alt} width="600" height="450" loading="lazy" /><figcaption>{String(index + 1).padStart(2, '0')} / 04</figcaption></figure>)}
+                {companyPhotos.map((photo, index) => <figure class="article-carousel-slide" id={`company-photo-${index + 1}`}><img src={photo.src} alt={photo.alt} width="450" height="450" loading="lazy" /><figcaption>{String(index + 1).padStart(2, '0')} / 04</figcaption></figure>)}
               </div>
               <div class="article-carousel-controls"><button type="button" data-company-prev aria-label="Previous company photo">←</button><span data-company-count aria-live="polite">01 / 04</span><button type="button" data-company-next aria-label="Next company photo">→</button></div>
             </div>
             <a class="article-inquiry" href={`${site.inquiryUrl}?source=blog&article=${encodeURIComponent(post.slug)}`}>Request a quote <span aria-hidden="true">↗</span></a>
-          </section>
+          </section>}
         </aside>
         <article class="article-content" aria-label={post.title}>
           {post.intro?.map((paragraph) => <p>{paragraph}</p>)}
+          {post.introImage && <figure class="article-document-image"><img src={post.introImage.src} alt={post.introImage.alt} width={post.introImage.width} height={post.introImage.height} loading="lazy" /></figure>}
           {post.sections.map((section, index) => <section id={`section-${index + 1}`}><h2>{section.title}</h2>
             {section.blocks ? section.blocks.map((block) => (
               block.type === 'paragraph' ? <p>{block.text}</p> :
