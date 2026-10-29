@@ -48,7 +48,7 @@ const companyPhotos = [
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <link rel="canonical" href={canonical} />
-    <BrandAssets shareImage={`https://yqglasses.com${heroImage}`} shareImageType="image/webp" shareImageWidth={600} shareImageHeight={600} shareImageAlt={heroAlt} />
+    <BrandAssets shareImage={`https://yqglasses.com${heroImage}`} shareImageType="image/webp" shareImageWidth={post.imageWidth ?? 600} shareImageHeight={post.imageHeight ?? 600} shareImageAlt={heroAlt} />
     <title>{title}</title>
   </head>
   <body class="blog-detail-page">

@@ -13,6 +13,8 @@ interface BlogPost {
   title: string;
   description: string;
   image: string;
+  imageWidth?: number;
+  imageHeight?: number;
   alt: string;
   heroImage?: string;
   heroAlt?: string;
@@ -36,6 +38,8 @@ export const blogPosts: BlogPost[] = [
       primaryKeyword: 'best knife for slicing cake',
     },
     image: '/images/blog/cake-slicing-knife-and-servers-oh42046.webp',
+    imageWidth: 480,
+    imageHeight: 480,
     alt: 'A cake knife and two cake servers with sparkling decorative handles on a woven mat and wooden table',
     intro: cakeSlicingArticle.intro,
     sections: cakeSlicingArticle.sections,
