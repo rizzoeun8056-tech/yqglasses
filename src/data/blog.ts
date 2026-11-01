@@ -1,5 +1,6 @@
 import cakeSlicingArticle from './blog/best-knife-for-slicing-cake.json';
 import buyerGuide from './blog/cake-knife-and-server-set-guide-for-buyer.json';
+import designGuide from './blog/custom-cake-knife-and-server-set-design-guide.json';
 
 export const blogCategories = [
   { id: 'champagne-glassware', label: 'Champagne Glassware' },
@@ -28,6 +29,26 @@ interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'custom-cake-knife-and-server-set-design-guide',
+    category: 'cake-knife-set',
+    title: designGuide.title,
+    description: 'Plan the construction, tooling and branded details of a custom cake knife and server set.',
+    seo: {
+      title: 'Design Guide of Custom Cake Knife and Server Set',
+      description: 'Create a custom collection with our Design Guide of Custom Cake Knife and Server Set. Explore construction, tooling, studded details and packaging.',
+      keywords: 'Design guide of Custom Cake Knife and Server Set',
+      primaryKeyword: 'Design guide of Custom Cake Knife and Server Set',
+    },
+    image: '/images/blog/custom-cake-knife-server-photo.webp',
+    imageWidth: 600,
+    imageHeight: 600,
+    alt: 'Stainless steel cake knife and server with studded handles on a black background',
+    intro: designGuide.intro,
+    sections: designGuide.sections,
+    productUrl: '/cake-knife-server-sets/',
+    productLabel: 'Explore custom cake knife and server sets',
+  },
   {
     slug: 'cake-knife-and-server-set-guide-for-buyer',
     category: 'cake-knife-set',
