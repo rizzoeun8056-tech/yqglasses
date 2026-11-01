@@ -1,7 +1,7 @@
 import cakeSlicingArticle from './blog/best-knife-for-slicing-cake.json';
 import buyerGuide from './blog/cake-knife-and-server-set-guide-for-buyer.json';
 import designGuide from './blog/custom-cake-knife-and-server-set-design-guide.json';
-import studdedQualityGuide from './blog/studded-cake-knife-server-quality-inspection.json';
+import studdedQualityGuide from './blog/studded-cake-knife-and-server-set-quality-checklist.json';
 
 export const blogCategories = [
   { id: 'champagne-glassware', label: 'Champagne Glassware' },
@@ -32,15 +32,15 @@ interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'studded-cake-knife-server-quality-inspection',
+    slug: 'studded-cake-knife-and-server-set-quality-checklist',
     category: 'cake-knife-set',
     title: studdedQualityGuide.title,
     description: 'Inspect materials, decorative accents, performance and packaging before approving a bulk order.',
     seo: {
-      title: 'How to Check a Studded Cake Knife and Server Set',
-      description: 'Learn to inspect a studded cake knife and server set before bulk approval. Assess materials and accent attachment, performance and finish, then packaging.',
-      keywords: 'studded cake knife and server set',
-      primaryKeyword: 'studded cake knife and server set',
+      title: 'Studded Cake Knife and Server Set Quality Checklist',
+      description: 'Use the Studded Cake Knife and Server Set Quality Checklist for bulk approval. Check materials and accent attachment, performance, finish and packaging.',
+      keywords: 'Studded Cake Knife and Server Set Quality Checklist',
+      primaryKeyword: 'Studded Cake Knife and Server Set Quality Checklist',
     },
     image: '/images/blog/studded-quality-four-piece-photo.webp',
     imageWidth: 500,
