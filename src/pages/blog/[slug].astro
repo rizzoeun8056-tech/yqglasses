@@ -27,6 +27,7 @@ const description = post.seo?.description ?? post.description;
 const canonical = `https://yqglasses.com/blog/${post.slug}/`;
 const heroImage = post.heroImage ?? post.image;
 const heroAlt = post.heroAlt ?? post.alt;
+const cakeKnifeProductUrl = '/cake-knife-server-sets/';
 const companyPhotos = [
   { src: '/images/blog/company/assembly-workbench-retouched.webp', alt: 'YQ GLASSES team assembling decorative glassware at a workbench' },
   { src: '/images/blog/company/glass-processing-retouched.webp', alt: 'Workers handling glass components at workshop stations' },
@@ -84,7 +85,11 @@ const companyPhotos = [
           </section>
         </aside>
         <article class="article-content" aria-label={post.title}>
-          {post.intro?.map((paragraph) => <p>{paragraph}</p>)}
+          {post.intro?.map((paragraph, index) => {
+            const phrase = index === 0 ? post.introLinkText : undefined;
+            const position = phrase ? paragraph.indexOf(phrase) : -1;
+            return <p>{position >= 0 && phrase ? <>{paragraph.slice(0, position)}<a href={post.productUrl}>{phrase}</a>{paragraph.slice(position + phrase.length)}</> : paragraph}</p>;
+          })}
           {post.introImage && <figure class="article-document-image"><img src={post.introImage.src} alt={post.introImage.alt} width={post.introImage.width} height={post.introImage.height} loading="lazy" /></figure>}
           {post.sections.map((section, index) => <section id={`section-${index + 1}`}><h2>{section.title}</h2>
             {section.blocks ? section.blocks.map((block) => (
@@ -95,7 +100,13 @@ const companyPhotos = [
               block.type === 'table' ? <div class="article-table" role="region" aria-label={block.label ?? 'Cake types and recommended knives'} tabindex="0"><table><thead><tr>{block.headers?.map((cell) => <th scope="col">{cell}</th>)}</tr></thead><tbody>{block.rows?.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody></table></div> : null
             )) : <p>{section.text}</p>}
           </section>)}
-          <div class="article-next-step"><span>Explore the product</span><a href={post.productUrl}>{post.productLabel} <span aria-hidden="true">↗</span></a></div>
+          <div class="article-next-step">
+            <span>Explore the product</span>
+            <div class="article-next-step-links">
+              <a href={post.productUrl}>{post.productLabel} <span aria-hidden="true">↗</span></a>
+              {post.productUrl !== cakeKnifeProductUrl && <a href={cakeKnifeProductUrl}>Explore cake knife and server sets <span aria-hidden="true">↗</span></a>}
+            </div>
+          </div>
         </article>
       </div>
     </main>

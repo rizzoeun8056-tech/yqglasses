@@ -41,8 +41,11 @@
 .article-content h2 { margin: 0 0 17px; font-size: 24px; line-height: 1.35; letter-spacing: -.025em; }
 .article-content section[data-current-section] > h2 { color: var(--copper-dark); }
 .article-content p { margin: 0; color: #514d48; font-size: 16px; line-height: 1.8; text-align: left; text-indent: 0; overflow-wrap: break-word; }
+.article-content > p a { color: var(--copper-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.article-content > p a:hover { color: var(--brand-copper); }
 .article-content p + p { margin-top: 18px; }
 .article-next-step { margin-top: 49px; padding: 24px 28px; border-left: 3px solid var(--brand-copper); background: var(--brand-surface); }
+.article-next-step-links { display: grid; justify-items: start; gap: 10px; }
 .article-next-step a { display: inline-flex; align-items: center; gap: 16px; color: var(--copper-dark); font-size: 16px; font-weight: 800; line-height: 1.5; }
 
 @media (max-width: 860px) {

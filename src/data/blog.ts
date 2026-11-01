@@ -1,6 +1,7 @@
 import cakeSlicingArticle from './blog/best-knife-for-slicing-cake.json';
 import buyerGuide from './blog/cake-knife-and-server-set-guide-for-buyer.json';
 import designGuide from './blog/custom-cake-knife-and-server-set-design-guide.json';
+import studdedQualityGuide from './blog/studded-cake-knife-server-quality-inspection.json';
 
 export const blogCategories = [
   { id: 'champagne-glassware', label: 'Champagne Glassware' },
@@ -22,6 +23,7 @@ interface BlogPost {
   heroAlt?: string;
   seo?: { title: string; description: string; keywords: string; primaryKeyword: string };
   intro?: string[];
+  introLinkText?: string;
   introImage?: { src: string; alt: string; width: number; height: number };
   sections: { title: string; text: string; blocks?: { type: string; text?: string; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; width?: number; height?: number }[] }[];
   productUrl: string;
@@ -29,6 +31,27 @@ interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'studded-cake-knife-server-quality-inspection',
+    category: 'cake-knife-set',
+    title: studdedQualityGuide.title,
+    description: 'Inspect materials, decorative accents, performance and packaging before approving a bulk order.',
+    seo: {
+      title: 'How to Check a Studded Cake Knife and Server Set',
+      description: 'Learn to inspect a studded cake knife and server set before bulk approval. Assess materials and accent attachment, performance and finish, then packaging.',
+      keywords: 'studded cake knife and server set',
+      primaryKeyword: 'studded cake knife and server set',
+    },
+    image: '/images/blog/studded-quality-four-piece-photo.webp',
+    imageWidth: 500,
+    imageHeight: 500,
+    alt: 'Silver and gold cake knife and server sets with sparkling studded handles on a woven mat',
+    intro: studdedQualityGuide.intro,
+    introLinkText: 'studded cake knife and server set',
+    sections: studdedQualityGuide.sections,
+    productUrl: '/cake-knife-server-sets/',
+    productLabel: 'Explore custom cake knife and server sets',
+  },
   {
     slug: 'custom-cake-knife-and-server-set-design-guide',
     category: 'cake-knife-set',

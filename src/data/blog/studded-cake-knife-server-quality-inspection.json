@@ -1,0 +1,150 @@
+{
+  "title": "Quality Inspection for Studded Cake Knife and Server Sets",
+  "intro": [
+    "Buyers should inspect a studded cake knife and server set against an approved sample and written specifications. The inspection should cover materials, studded detailing and assembly, performance in use, surface finish, and packaging, and continue through acceptance of the bulk order."
+  ],
+  "sections": [
+    {
+      "title": "Intended Use and Acceptance Criteria",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Acceptance criteria should be based on the product’s intended use and approved sample. First determine whether the set is intended for display during a wedding ceremony or for cutting and serving cake, then define the requirements for the cutting edge, serving surface, grip, and care."
+        },
+        {
+          "type": "paragraph",
+          "text": "During sampling, record the dimensions, materials, surface finish, accent placement, and packaging plan for each piece. Before approving the sample, both parties should also agree on acceptable color variation, differences in accent arrangement, and surface imperfections for use in bulk inspection."
+        }
+      ]
+    },
+    {
+      "title": "Material Verification",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Check the materials of the knife blade, server surface, handle, and decorative accents separately, and record the surface treatment of each component. Studded detailing describes the decorative effect; the material of the accents should follow the specification for the selected design."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the parts that come into contact with cake, buyers should also check the applicable product requirements and documentation for the target market. The EU includes kitchenware and tableware within the scope of food-contact materials; the US evaluates food-contact substances according to their materials and intended uses. The documentation should correspond to the materials and construction of the final selected design. Relevant references include European Commission food-contact materials guidance and US FDA food-contact substances guidance."
+        }
+      ]
+    },
+    {
+      "title": "Studded Detailing and Assembly",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Focus on the arrangement and attachment of the accents, as well as the joint between the handle and the knife blade or server surface. Compare the sample with the approved sample and drawings, checking accent spacing, missing accents, the feel of the edges around the decorated area, and gaps at the joint."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hold and use the sample to observe the condition of the accents and joint. For orders that require a dedicated test of retention strength, define the test method, sample quantity, and acceptance criteria during sampling, and include the results in the inspection specification."
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/studded-quality-handle-inspection.webp",
+          "alt": "Concept illustration highlighting the decorated handle and joint of a cake knife and server for quality review",
+          "width": 600,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "title": "Performance in Use",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cut the intended type of cake, then use the server to lift a slice of the size the product is expected to handle. Record the knife’s cutting control, the server’s support, and the grip of both pieces separately."
+        },
+        {
+          "type": "paragraph",
+          "text": "Because the knife and server serve different functions, check their working-end dimensions, weight, and handle length separately. During use, also confirm how the placement of the accents affects grip and the force applied by the fingers."
+        }
+      ]
+    },
+    {
+      "title": "Surface Finish and Care",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Compare the sample with the approved color reference under consistent lighting; determine care requirements from the construction of the complete product. Check the color, luster, scratches, and localized finish of the knife blade, server surface, and handle separately."
+        },
+        {
+          "type": "paragraph",
+          "text": "Care instructions should cover the decorative accents, their attachment method, the joints, and the surface treatment. During sample approval, buyers should confirm the cleaning method and dishwasher suitability, then use the final instructions on the product packaging and sales page."
+        }
+      ]
+    },
+    {
+      "title": "Gift Box Protection",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The gift box should secure the knife and server while protecting their working ends and studded handles. Place the actual sample in the box and check the position of both pieces, how they are removed, and the cushioning space around the decorated areas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Review the retail gift box and shipping carton separately. When confirming the packing arrangement, pay particular attention to where the cutting edge, server surface, and decorated handles could touch or collide during transport."
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/studded-quality-use-packaging.webp",
+          "alt": "Concept illustration of a studded cake knife and server used with cake and arranged in a proposed gift box",
+          "width": 600,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "title": "Bulk Order Acceptance",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Compare bulk products item by item with the approved sample and written specifications. Check materials and dimensions, accent arrangement and attachment, joint condition, surface finish, and packaging, and record the exact location and type of any issue found."
+        },
+        {
+          "type": "paragraph",
+          "text": "Agree on the inspection method for each item before placing the order. Buyers may specify piece-by-piece checks for priority items such as missing accents or loose joints, while using an agreed sampling plan for other items. If an AQL plan is used, define the lot, sample size, and acceptance criteria. ISO 2859-1 is the relevant sampling standard."
+        }
+      ]
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "text": "",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "How Can the Accent Material Be Confirmed"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ask the factory to state the material of the decorative accents in the specification for the selected design, then check it against the sample. Use the same material information in the product name and promotional copy."
+        },
+        {
+          "type": "heading",
+          "text": "How Can Accent Attachment Be Confirmed"
+        },
+        {
+          "type": "paragraph",
+          "text": "Check the condition of the accents after the sample has been held and used. Where a dedicated test is required, agree with the factory in advance on the test method, sample quantity, and acceptance criteria."
+        },
+        {
+          "type": "heading",
+          "text": "How Should the Product Be Cleaned"
+        },
+        {
+          "type": "paragraph",
+          "text": "Follow the care instructions for the complete product. When confirming those instructions, consider the decorative accents, their attachment method, the joints, and the surface treatment."
+        }
+      ]
+    }
+  ]
+}
