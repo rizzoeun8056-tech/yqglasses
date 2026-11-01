@@ -28,9 +28,9 @@ npm run build
 
 构建后的静态文件位于 `dist/`。
 
-蛋糕刀铲页面：`/cake-knife-server-sets/`。共六个区块，首屏支持现货／定制切换；首页蛋糕刀铲入口已链接至该页。询盘按钮会携带产品类别、订单类型和款式，自动填写到表单，并包含在询盘邮件中。页面文案保持英文，开发期间保留 `noindex`。
+蛋糕刀铲页面：`/cake-knife-server-sets/`。共六个区块，首屏支持现货／定制切换；首页蛋糕刀铲入口已链接至该页。询盘按钮会携带产品类别、订单类型和款式，自动填写到表单，并包含在询盘邮件中。页面文案保持英文。
 
-香槟杯页面：`/personalized-champagne-glasses/`。首屏支持现货／定制切换；Flute、Tulip、Coupe、Stemless 四种杯型以轮廓示意，不代表所有款式均有现货。询盘会携带产品类别和订单类型，访客可在表单中填写所选杯型；页面继续保留 `noindex`。
+香槟杯页面：`/personalized-champagne-glasses/`。首屏支持现货／定制切换；Flute、Tulip、Coupe、Stemless 四种杯型以轮廓示意，不代表所有款式均有现货。询盘会携带产品类别和订单类型，访客可在表单中填写所选杯型。
 
 ## 后续需要完善的内容
 
@@ -40,7 +40,7 @@ npm run build
 
 ## 搜索引擎收录
 
-网站目前处于开发阶段：页面保留 `noindex`，并在 `robots.txt` 中使用 `Disallow: /` 阻止搜索引擎抓取全站。普通访客仍可通过网址直接访问。正式开放收录时，需要同时移除页面的 `noindex`、把 `robots.txt` 改为 `Allow: /` 并恢复 Sitemap，然后重新部署并检查 Google Search Console。
+网站公开页面允许搜索引擎抓取和收录。`robots.txt` 使用 `Allow: /` 并指向包含公开页面和博客文章的 Sitemap。品牌素材预览页仍保留 `noindex`。部署后可在 Google Search Console 提交 `https://yqglasses.com/sitemap.xml` 并检查收录状态。
 
 ## GitHub 与 Hostinger 静态部署
 
