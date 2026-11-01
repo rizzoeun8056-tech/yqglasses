@@ -160,22 +160,4 @@ export const blogPosts: BlogPost[] = [
     productUrl: '/cake-knife-server-sets/',
     productLabel: 'Explore cake knife and server sets',
   },
-  {
-    slug: 'custom-cake-knife-set-details',
-    category: 'cake-knife-set',
-    title: 'Custom Cake Knife Sets: Handles, Finishes and Packaging',
-    description: 'Choose the details that bring your cake serving collection together.',
-    image: '/images/blog/cake-rose-pair.webp',
-    imageWidth: 507,
-    imageHeight: 507,
-    alt: 'Gold-colored cake knife and server with rose-shaped metal handles on a wooden surface',
-    sections: [
-      { title: 'Choose the material and handle', text: 'YQ GLASSES offers stainless steel and zinc alloy cake serving designs, with acrylic, hollow acrylic and metal handle options. Confirm the material of each component and the available combinations for your chosen style.' },
-      { title: 'Define the finish and engraving', text: 'Share the metal finish, wording and engraved details you have in mind. We support engraving and laser engraving, with the method, placement and result reviewed for the selected design.' },
-      { title: 'Complete the box design', text: 'Gift boxes and standard boxes are available. Packaging shape, design and text can be customized for your project. Confirm the final box format and product arrangement alongside your sample.' },
-      { title: 'Confirm your schedule', text: 'In-stock dispatch is typically 1–3 days, or 3–7 days for bulk stock orders. Custom samples requiring mold development are planned at 3–7 days, with custom bulk production at 5–25 days. Final timing is confirmed for your design, quantity and packaging; shipping transit time is additional.' },
-    ],
-    productUrl: '/cake-knife-server-sets/',
-    productLabel: 'Explore custom cake serving sets',
-  },
 ];
