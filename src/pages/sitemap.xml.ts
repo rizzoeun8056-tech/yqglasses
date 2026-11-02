@@ -8,6 +8,7 @@ export const GET: APIRoute = () => {
     '/about/',
     '/blog/',
     '/cake-knife-server-sets/',
+    '/custom-shot-glasses/',
     '/file-upload/',
     '/personalized-champagne-glasses/',
     ...blogPosts.map((post) => `/blog/${post.slug}/`),
