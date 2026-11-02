@@ -1,4 +1,5 @@
 User-agent: *
+Allow: /custom-shot-glasses/
 Allow: /
 
 Sitemap: https://yqglasses.com/sitemap.xml
