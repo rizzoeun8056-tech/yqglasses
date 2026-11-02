@@ -9,113 +9,296 @@
       "title": "Define Your Requirements Before Requesting a Quote",
       "text": "",
       "blocks": [
-        { "type": "paragraph", "text": "Start by defining the use case, glass shape and capacity, decoration, order quantity, packaging, and required delivery date. A complete brief helps suppliers assess feasibility and quote against the same specifications." },
-        { "type": "heading", "text": "Use Case" },
-        { "type": "paragraph", "text": "Set durability, appearance, and packaging requirements according to how the glasses will be used. Event giveaways, hotel service, and wedding keepsakes have different priorities; state the expected frequency of use and whether individual gift boxes are needed." },
-        { "type": "heading", "text": "Glass Shape, Capacity, and Material" },
-        { "type": "paragraph", "text": "Specify the shape, capacity, dimensions, and material; the term “champagne glass” alone is not precise enough for comparison. Common shapes include flutes, tulip glasses, and coupes. Choose based on the intended presentation, handling, and budget, then confirm the exact product specifications with the supplier." },
-        { "type": "heading", "text": "Design and Decoration Method" },
-        { "type": "paragraph", "text": "Provide the logo file, colors, dimensions, placement, and desired appearance, then ask which decoration methods are suitable for the selected glass. Screen printing, fired decals, coatings, and laser engraving can produce different effects; feasibility depends on the glass surface, artwork, and process. Confirm color, placement, cleaning instructions, and durability with an approved sample." },
-        { "type": "heading", "text": "Quantity, Budget, and Delivery Date" },
-        { "type": "paragraph", "text": "Provide the estimated quantity, budget range, and latest acceptable arrival date. State whether individual protection or gift boxes are required. Quantity, decoration, packaging, and shipping all affect the total cost and schedule." }
+        {
+          "type": "paragraph",
+          "text": "Start by defining the use case, glass shape and capacity, decoration, order quantity, packaging, and required delivery date. A complete brief helps suppliers assess feasibility and quote against the same specifications."
+        },
+        {
+          "type": "heading",
+          "text": "Use Case"
+        },
+        {
+          "type": "paragraph",
+          "text": "Set durability, appearance, and packaging requirements according to how the glasses will be used. Event giveaways, hotel service, and wedding keepsakes have different priorities; state the expected frequency of use and whether individual gift boxes are needed."
+        },
+        {
+          "type": "heading",
+          "text": "Glass Shape, Capacity, and Material"
+        },
+        {
+          "type": "paragraph",
+          "text": "Specify the shape, capacity, dimensions, and material; the term “champagne glass” alone is not precise enough for comparison. Common shapes include flutes, tulip glasses, and coupes. Choose based on the intended presentation, handling, and budget, then confirm the exact product specifications with the supplier."
+        },
+        {
+          "type": "heading",
+          "text": "Design and Decoration Method"
+        },
+        {
+          "type": "paragraph",
+          "text": "Provide the logo file, colors, dimensions, placement, and desired appearance, then ask which decoration methods are suitable for the selected glass. Screen printing, fired decals, coatings, and laser engraving can produce different effects; feasibility depends on the glass surface, artwork, and process. Confirm color, placement, cleaning instructions, and durability with an approved sample."
+        },
+        {
+          "type": "heading",
+          "text": "Quantity, Budget, and Delivery Date"
+        },
+        {
+          "type": "paragraph",
+          "text": "Provide the estimated quantity, budget range, and latest acceptable arrival date. State whether individual protection or gift boxes are required. Quantity, decoration, packaging, and shipping all affect the total cost and schedule."
+        }
       ]
     },
     {
       "title": "Assess the Supplier on Six Key Criteria",
       "text": "",
       "blocks": [
-        { "type": "paragraph", "text": "Assess suppliers using physical samples, written specifications, and itemized quotations rather than product photos or unit price alone. Check product quality, decoration, sampling, pricing, communication, and delivery arrangements." },
-        { "type": "heading", "text": "1. Is Product Quality Consistent?" },
-        { "type": "paragraph", "text": "Inspect the sample’s bowl, rim, stem, base, dimensions, and decoration, and ask how the supplier checks bulk production. Agree on measurable specifications and acceptable cosmetic variation before ordering. For designs where a glass bowl is joined to a separate stem, inspect the joint and ask what assembly or strength checks are performed; appearance alone cannot establish joint durability." },
-        { "type": "image", "src": "/images/blog/custom-champagne-supplier-inspection.webp", "alt": "Illustrative scene of gloved hands inspecting a champagne flute beside protective packaging and an inspection checklist", "width": 600, "height": 400, "label": "Illustrative quality-inspection scene." },
-        { "type": "heading", "text": "2. Is the Decoration Method Suitable for the Design?" },
-        { "type": "paragraph", "text": "Ask the supplier to confirm whether the artwork can be produced in the specified colors, size, and position, and to explain limits on fine lines, gradients, or complex artwork. Confirm care instructions and wash resistance for the decorated product. Do not assume that a glass is dishwasher-safe based on the undecorated glass or another design; request product-specific guidance or test evidence." },
-        { "type": "heading", "text": "3. Is the Sampling Process Clear?" },
-        { "type": "paragraph", "text": "Before ordering, confirm the sample fee, production time, and number of revision rounds. Use the approved sample or signed-off artwork as the production reference. Record the glass shape, dimensions, capacity, material, decoration, and packaging in the order documents so the bulk order follows the agreed version." },
-        { "type": "heading", "text": "4. Are the MOQ and Quotation Transparent?" },
-        { "type": "paragraph", "text": "Ask the supplier to state the quantity covered by the quote, along with the glass specification, decoration, packaging, and shipping method. Identify additional charges such as sampling, setup, tooling, or freight. Compare total landed cost and included services rather than unit price alone." },
-        { "type": "heading", "text": "5. Are the Lead Time and Communication Reliable?" },
-        { "type": "paragraph", "text": "Ask for separate estimates for artwork approval, sampling, production, and shipping, and confirm when the quoted lead time begins. For a fixed event date, plan backward from the required arrival date and allow time for inspection and issue resolution." },
-        { "type": "heading", "text": "6. Are Packaging and Shipping Adequate?" },
-        { "type": "paragraph", "text": "Confirm how each glass is protected, how inner and outer cartons are packed, which shipping method is quoted, and how transit damage is handled. Make sure packaging and freight costs are clear. For products intended to contact beverages or the mouth, verify the requirements and supporting documentation applicable to the destination market and the specific materials and decoration." }
+        {
+          "type": "paragraph",
+          "text": "Assess suppliers using physical samples, written specifications, and itemized quotations rather than product photos or unit price alone. Check product quality, decoration, sampling, pricing, communication, and delivery arrangements."
+        },
+        {
+          "type": "heading",
+          "text": "1. Is Product Quality Consistent?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Inspect the sample’s bowl, rim, stem, base, dimensions, and decoration, and ask how the supplier checks bulk production. Agree on measurable specifications and acceptable cosmetic variation before ordering. For designs where a glass bowl is joined to a separate stem, inspect the joint and ask what assembly or strength checks are performed; appearance alone cannot establish joint durability."
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/custom-champagne-supplier-inspection.webp",
+          "alt": "Illustrative scene of gloved hands inspecting a champagne flute beside protective packaging and an inspection checklist",
+          "width": 600,
+          "height": 400,
+          "label": "Illustrative quality-inspection scene."
+        },
+        {
+          "type": "heading",
+          "text": "2. Is the Decoration Method Suitable for the Design?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ask the supplier to confirm whether the artwork can be produced in the specified colors, size, and position, and to explain limits on fine lines, gradients, or complex artwork. Confirm care instructions and wash resistance for the decorated product. Do not assume that a glass is dishwasher-safe based on the undecorated glass or another design; request product-specific guidance or test evidence."
+        },
+        {
+          "type": "heading",
+          "text": "3. Is the Sampling Process Clear?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Before ordering, confirm the sample fee, production time, and number of revision rounds. Use the approved sample or signed-off artwork as the production reference. Record the glass shape, dimensions, capacity, material, decoration, and packaging in the order documents so the bulk order follows the agreed version."
+        },
+        {
+          "type": "heading",
+          "text": "4. Are the MOQ and Quotation Transparent?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ask the supplier to state the quantity covered by the quote, along with the glass specification, decoration, packaging, and shipping method. Identify additional charges such as sampling, setup, tooling, or freight. Compare total landed cost and included services rather than unit price alone."
+        },
+        {
+          "type": "heading",
+          "text": "5. Are the Lead Time and Communication Reliable?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ask for separate estimates for artwork approval, sampling, production, and shipping, and confirm when the quoted lead time begins. For a fixed event date, plan backward from the required arrival date and allow time for inspection and issue resolution."
+        },
+        {
+          "type": "heading",
+          "text": "6. Are Packaging and Shipping Adequate?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Confirm how each glass is protected, how inner and outer cartons are packed, which shipping method is quoted, and how transit damage is handled. Make sure packaging and freight costs are clear. For products intended to contact beverages or the mouth, verify the requirements and supporting documentation applicable to the destination market and the specific materials and decoration."
+        }
       ]
     },
     {
       "title": "Compare Potential Suppliers on the Same Basis",
       "text": "",
       "blocks": [
-        { "type": "paragraph", "text": "Send each supplier the same specifications, artwork, quantity, packaging brief, and delivery requirements. If quotations cover different configurations, ask suppliers to re-quote against one shared specification before comparing them." },
+        {
+          "type": "paragraph",
+          "text": "Send each supplier the same specifications, artwork, quantity, packaging brief, and delivery requirements. If quotations cover different configurations, ask suppliers to re-quote against one shared specification before comparing them."
+        },
         {
           "type": "table",
           "label": "Custom champagne glass supplier comparison",
-          "headers": ["Evaluation item", "Supplier A", "Supplier B", "Supplier C"],
+          "headers": [
+            "Evaluation item",
+            "Supplier A",
+            "Supplier B",
+            "Supplier C"
+          ],
           "rows": [
-            ["Glass shape, material, and specifications", "", "", ""],
-            ["Decoration method", "", "", ""],
-            ["MOQ", "", "", ""],
-            ["Sample fee and lead time", "", "", ""],
-            ["Bulk production lead time", "", "", ""],
-            ["Packaging and shipping", "", "", ""],
-            ["Items included in the quotation", "", "", ""],
-            ["Total landed cost", "", "", ""]
+            [
+              "Glass shape, material, and specifications",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Decoration method",
+              "",
+              "",
+              ""
+            ],
+            [
+              "MOQ",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Sample fee and lead time",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Bulk production lead time",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Packaging and shipping",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Items included in the quotation",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Total landed cost",
+              "",
+              "",
+              ""
+            ]
           ]
         },
-        { "type": "paragraph", "text": "Compare the complete offer: product fit, sample quality, specification control, communication, delivery plan, packaging, and after-sales terms. A lower unit price may not represent a lower total cost if important services or protections are excluded." }
+        {
+          "type": "paragraph",
+          "text": "Compare the complete offer: product fit, sample quality, specification control, communication, delivery plan, packaging, and after-sales terms. A lower unit price may not represent a lower total cost if important services or protections are excluded."
+        }
       ]
     },
     {
       "title": "Confirm These Six Points Before Placing an Order",
       "text": "",
       "blocks": [
-        { "type": "paragraph", "text": "Confirm the design, approved sample, quotation, schedule, inspection criteria, and damage process in writing before production begins." },
-        { "type": "list", "items": [
-          "Has the final artwork, colors, dimensions, capacity, and decoration placement been approved?",
-          "Will bulk production follow the approved sample or signed-off artwork?",
-          "What does the quotation include, and are sampling, packaging, or shipping charged separately?",
-          "When does the lead time start, and when are shipment and arrival expected?",
-          "What inspection criteria apply to the bulk order, and how will nonconforming items be handled?",
-          "How will the glasses be protected in transit, and who will handle shipping damage?"
-        ] }
+        {
+          "type": "paragraph",
+          "text": "Confirm the design, approved sample, quotation, schedule, inspection criteria, and damage process in writing before production begins."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Has the final artwork, colors, dimensions, capacity, and decoration placement been approved?",
+            "Will bulk production follow the approved sample or signed-off artwork?",
+            "What does the quotation include, and are sampling, packaging, or shipping charged separately?",
+            "When does the lead time start, and when are shipment and arrival expected?",
+            "What inspection criteria apply to the bulk order, and how will nonconforming items be handled?",
+            "How will the glasses be protected in transit, and who will handle shipping damage?"
+          ]
+        }
       ]
     },
     {
       "title": "Recognize Potential Purchasing Risks",
       "text": "",
       "blocks": [
-        { "type": "paragraph", "text": "Resolve unclear specifications, costs, sample references, or remedies before placing an order. These gaps can lead to different expectations about what will be produced and delivered." },
-        { "type": "list", "items": [
-          "The quotation does not specify the decoration method, packaging, or shipping scope.",
-          "The supplier asks to start bulk production before the design and sample are approved.",
-          "The supplier cannot explain lead time, inspection criteria, or after-sales handling.",
-          "The physical sample does not match the product specification or customization in the quotation."
-        ] }
-      ]
-    },
-    {
-      "title": "Conclusion",
-      "text": "",
-      "blocks": [
-        { "type": "paragraph", "text": "Choose a supplier whose product, decoration, sample approval, quality checks, total cost, and delivery terms fit your project. Confirm the specifications and responsibilities in writing before bulk production." },
-        { "type": "paragraph", "text": "For food-contact suitability, cleaning claims, and any metal-to-glass connection, rely on product-specific documentation or checks rather than assumptions based on appearance." },
-        { "type": "cta", "text": "Share your preferred design, estimated quantity, and delivery requirements to discuss options and request a tailored quote.", "label": "Explore personalized champagne glasses", "href": "/personalized-champagne-glasses/" }
+        {
+          "type": "paragraph",
+          "text": "Resolve unclear specifications, costs, sample references, or remedies before placing an order. These gaps can lead to different expectations about what will be produced and delivered."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The quotation does not specify the decoration method, packaging, or shipping scope.",
+            "The supplier asks to start bulk production before the design and sample are approved.",
+            "The supplier cannot explain lead time, inspection criteria, or after-sales handling.",
+            "The physical sample does not match the product specification or customization in the quotation."
+          ]
+        }
       ]
     },
     {
       "title": "Frequently Asked Questions",
       "text": "",
       "blocks": [
-        { "type": "heading", "text": "What Is the Typical MOQ for Custom Champagne Glasses?" },
-        { "type": "paragraph", "text": "The MOQ depends on the glass design, decoration method, packaging, and supplier’s production setup. Provide your planned quantity when requesting a quote and confirm that the price applies to that configuration." },
-        { "type": "heading", "text": "Can I Review a Sample Before Ordering?" },
-        { "type": "paragraph", "text": "Ask whether a physical sample is available, then confirm its fee, production time, and revision process. Check the shape, dimensions, decoration, and packaging, and agree which approved sample or artwork version will govern bulk production." },
-        { "type": "heading", "text": "How Do Glass Decoration Methods Differ?" },
-        { "type": "paragraph", "text": "Screen printing, fired decals, coatings, and laser engraving differ in appearance, detail capability, and care requirements. Ask the supplier to assess your artwork and use an approved sample to confirm the result." },
-        { "type": "heading", "text": "How Long Does It Take from Sampling to Delivery?" },
-        { "type": "paragraph", "text": "The schedule depends on design approval, sample revisions, order quantity, production availability, and shipping. Request a stage-by-stage estimate and confirm the start point for the quoted lead time." },
-        { "type": "heading", "text": "How Is Transit Damage Handled?" },
-        { "type": "paragraph", "text": "Agree in writing on the packaging method, damage responsibility, claim window, and evidence required. Inspect the cartons and glasses within the agreed period after delivery, photograph any damage, and notify the supplier promptly." },
-        { "type": "heading", "text": "What Should I Check for a Metal-Stem Champagne Glass?" },
-        { "type": "paragraph", "text": "Confirm the bowl and stem materials, how they are joined, and the supplier’s inspection method for that connection. Ask for the care instructions and any applicable test information; a visual review alone cannot establish joint strength or dishwasher suitability." }
+        {
+          "type": "heading",
+          "text": "What Is the Typical MOQ for Custom Champagne Glasses?"
+        },
+        {
+          "type": "paragraph",
+          "text": "The MOQ depends on the glass design, decoration method, packaging, and supplier’s production setup. Provide your planned quantity when requesting a quote and confirm that the price applies to that configuration."
+        },
+        {
+          "type": "heading",
+          "text": "Can I Review a Sample Before Ordering?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ask whether a physical sample is available, then confirm its fee, production time, and revision process. Check the shape, dimensions, decoration, and packaging, and agree which approved sample or artwork version will govern bulk production."
+        },
+        {
+          "type": "heading",
+          "text": "How Do Glass Decoration Methods Differ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Screen printing, fired decals, coatings, and laser engraving differ in appearance, detail capability, and care requirements. Ask the supplier to assess your artwork and use an approved sample to confirm the result."
+        },
+        {
+          "type": "heading",
+          "text": "How Long Does It Take from Sampling to Delivery?"
+        },
+        {
+          "type": "paragraph",
+          "text": "The schedule depends on design approval, sample revisions, order quantity, production availability, and shipping. Request a stage-by-stage estimate and confirm the start point for the quoted lead time."
+        },
+        {
+          "type": "heading",
+          "text": "How Is Transit Damage Handled?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Agree in writing on the packaging method, damage responsibility, claim window, and evidence required. Inspect the cartons and glasses within the agreed period after delivery, photograph any damage, and notify the supplier promptly."
+        },
+        {
+          "type": "heading",
+          "text": "What Should I Check for a Metal-Stem Champagne Glass?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Confirm the bowl and stem materials, how they are joined, and the supplier’s inspection method for that connection. Ask for the care instructions and any applicable test information; a visual review alone cannot establish joint strength or dishwasher suitability."
+        }
+      ]
+    },
+    {
+      "title": "Conclusion",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Choose a supplier whose product, decoration, sample approval, quality checks, total cost, and delivery terms fit your project. Confirm the specifications and responsibilities in writing before bulk production."
+        },
+        {
+          "type": "paragraph",
+          "text": "For food-contact suitability, cleaning claims, and any metal-to-glass connection, rely on product-specific documentation or checks rather than assumptions based on appearance."
+        },
+        {
+          "type": "cta",
+          "text": "Share your preferred design, estimated quantity, and delivery requirements to discuss options and request a tailored quote.",
+          "label": "Explore personalized champagne glasses",
+          "href": "/personalized-champagne-glasses/"
+        }
       ]
     }
   ]

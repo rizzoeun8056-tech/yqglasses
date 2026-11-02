@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
     description: 'Compare quality, customization, samples, pricing, lead times, packaging and shipping before placing a custom champagne glass order.',
     seo: {
       title: 'Choose the Right Custom Champagne Glass Supplier',
-      description: 'Choose a reliable custom champagne glass supplier with confidence. Compare samples and quality, then check customization, pricing, lead times and shipping.',
+      description: 'Choose your custom champagne glass supplier with confidence. Compare samples and quality, then confirm customization details, full costs and delivery terms.',
       keywords: 'custom champagne glass supplier',
       primaryKeyword: 'custom champagne glass supplier',
     },
