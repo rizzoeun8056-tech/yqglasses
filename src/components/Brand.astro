@@ -3,15 +3,20 @@ interface Props {
   href?: string | null;
   footer?: boolean;
   dark?: boolean;
+  markOnly?: boolean;
 }
 
-const { href = '/', footer = false, dark = false } = Astro.props;
+const { href = '/', footer = false, dark = false, markOnly = false } = Astro.props;
 const image = dark ? 'logo-dark-v2' : 'logo-horizontal-v2';
 const format = dark ? 'webp' : 'png';
+const imageSrc = markOnly ? '/images/brand/logo-mark-512.png' : `/images/brand/${image}.${format}`;
+const imageSrcSet = markOnly
+  ? '/images/brand/logo-mark-512.png 512w, /images/brand/logo-mark-1024.png 1024w'
+  : `/images/brand/${image}.${format} 480w, /images/brand/${image}@2x.${format} 960w`;
 ---
 
 {href ? <a class:list={['brand', { 'footer-brand': footer }]} href={href} aria-label="YQ GLASSES home">
-  <img class="brand-image" src={`/images/brand/${image}.${format}`} srcset={`/images/brand/${image}.${format} 480w, /images/brand/${image}@2x.${format} 960w`} sizes={footer ? '240px' : '(max-width: 640px) 180px, (max-width: 1050px) 195px, 216px'} width="480" height="160" alt="YQ GLASSES" decoding="async" />
+  <img class:list={['brand-image', { 'brand-image-mark': markOnly }]} src={imageSrc} srcset={imageSrcSet} sizes={footer ? '104px' : '(max-width: 640px) 60px, 78px'} width={markOnly ? 512 : 480} height={markOnly ? 512 : 160} alt="YQ GLASSES" decoding="async" />
 </a> : <span class:list={['brand', { 'footer-brand': footer }]}>
-  <img class="brand-image" src={`/images/brand/${image}.${format}`} srcset={`/images/brand/${image}.${format} 480w, /images/brand/${image}@2x.${format} 960w`} sizes={footer ? '240px' : '(max-width: 640px) 180px, (max-width: 1050px) 195px, 216px'} width="480" height="160" alt="YQ GLASSES" decoding="async" />
+  <img class:list={['brand-image', { 'brand-image-mark': markOnly }]} src={imageSrc} srcset={imageSrcSet} sizes={footer ? '104px' : '(max-width: 640px) 60px, 78px'} width={markOnly ? 512 : 480} height={markOnly ? 512 : 160} alt="YQ GLASSES" decoding="async" />
 </span>}

@@ -1,33 +1,20 @@
 ---
 import Brand from './Brand.astro';
 import { site } from '../data/site';
-
-interface Props {
-  inquiryPage?: boolean;
-}
-
-const { inquiryPage = false } = Astro.props;
-const inquiryHref = inquiryPage ? '#project-form' : site.inquiryUrl;
 ---
 
 <footer class="site-footer" id="footer">
-  <div class="page-width footer-invite">
-    <div>
-      <p class="footer-kicker">YQ GLASSES · GUANGZHOU</p>
-      <h2>Let's make something<br /><em>worth raising a glass to.</em></h2>
-    </div>
-    <a class="footer-cta" href={inquiryHref}>Start your project <span aria-hidden="true">↗</span></a>
-  </div>
   <div class="page-width footer-main">
     <div class="footer-brand-block">
-      <Brand href="/" footer />
-      <p class="footer-tagline">Your one-stop partner for glassware &amp; tableware.</p>
+      <Brand href="/" footer markOnly />
+      <p class="footer-tagline">Glassware &amp; tableware for moments worth raising a glass to.</p>
     </div>
     <nav class="footer-navigation" aria-label="Footer navigation">
       <h3>Explore</h3>
       <div class="footer-links">
         <a href="/personalized-champagne-glasses/">Champagne Glasses</a>
         <a href="/cake-knife-server-sets/">Cake Knife &amp; Server Sets</a>
+        <a href="/custom-shot-glasses/">Shot Glasses</a>
         <a href="/blog/">Blog</a>
       </div>
     </nav>
