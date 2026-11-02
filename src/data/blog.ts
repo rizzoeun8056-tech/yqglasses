@@ -2,6 +2,7 @@ import cakeSlicingArticle from './blog/best-knife-for-slicing-cake.json';
 import buyerGuide from './blog/cake-knife-and-server-set-guide-for-buyer.json';
 import designGuide from './blog/custom-cake-knife-and-server-set-design-guide.json';
 import studdedQualityGuide from './blog/studded-cake-knife-and-server-set-quality-checklist.json';
+import champagneSupplierGuide from './blog/custom-champagne-glass-supplier-guide.json';
 
 export const blogCategories = [
   { id: 'champagne-glassware', label: 'Champagne Glassware' },
@@ -25,12 +26,32 @@ interface BlogPost {
   intro?: string[];
   introLinkText?: string;
   introImage?: { src: string; alt: string; width: number; height: number };
-  sections: { title: string; text: string; blocks?: { type: string; text?: string; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; width?: number; height?: number }[] }[];
+  sections: { title: string; text: string; blocks?: { type: string; text?: string; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; width?: number; height?: number; href?: string }[] }[];
   productUrl: string;
   productLabel: string;
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'custom-champagne-glass-supplier-guide',
+    category: 'champagne-glassware',
+    title: champagneSupplierGuide.title,
+    description: 'Compare quality, customization, samples, pricing, lead times, packaging and shipping before placing a custom champagne glass order.',
+    seo: {
+      title: 'Choose the Right Custom Champagne Glass Supplier',
+      description: 'Choose a reliable custom champagne glass supplier with confidence. Compare samples and quality, then check customization, pricing, lead times and shipping.',
+      keywords: 'custom champagne glass supplier',
+      primaryKeyword: 'custom champagne glass supplier',
+    },
+    image: '/images/blog/yq-metal-stem-champagne-flute.webp',
+    imageWidth: 600,
+    imageHeight: 600,
+    alt: 'YQ GLASSES champagne flute with a gold-finished studded zinc alloy stem',
+    intro: champagneSupplierGuide.intro,
+    sections: champagneSupplierGuide.sections,
+    productUrl: '/personalized-champagne-glasses/',
+    productLabel: 'Explore personalized champagne glasses',
+  },
   {
     slug: 'studded-cake-knife-and-server-set-quality-checklist',
     category: 'cake-knife-set',
