@@ -51,6 +51,10 @@
     #shot-glass-page .type-copy { padding:17px; }
     #shot-glass-page .type h3 { font:500 19px/1.2 Georgia,serif; }
     #shot-glass-page .type p { margin-top:9px; color:var(--muted); font-size:12px; }
+    #shot-glass-page .type-capacity { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:5px 10px; margin-top:14px; padding-top:11px; border-top:1px solid var(--line); }
+    #shot-glass-page .type-capacity span { color:var(--muted); font-size:11px; }
+    #shot-glass-page .type-capacity strong { color:var(--olive-dark); font-size:12px; font-weight:650; }
+    #shot-glass-page .type-capacity .type-mini-capacity { flex-basis:100%; font-size:10px; line-height:1.5; }
     #shot-glass-page .spec { margin-top:13px; padding-top:11px; border-top:1px solid var(--line); color:#65695f; font-size:11px; }
     #shot-glass-page .split { display:grid; grid-template-columns: .9fr 1.1fr; gap:7vw; align-items:start; }
     #shot-glass-page .split-copy p { margin-top:16px; max-width:480px; color:var(--muted); }
@@ -67,6 +71,9 @@
     #shot-glass-page .method .num { color:var(--gold); font-size:11px; letter-spacing:.12em; }
     #shot-glass-page .method h3 { margin-top:8px; font:500 17px/1.2 Georgia,serif; }
     #shot-glass-page .method p { margin-top:8px; color:var(--muted); font-size:12px; }
+    #shot-glass-page .method strong { color:var(--ink); font-weight:600; }
+    #shot-glass-page .method .method-materials { margin-top:12px; padding-top:10px; border-top:1px solid var(--line); }
+    #shot-glass-page .method .method-colors { margin-top:10px; padding-top:9px; border-top:1px solid var(--line); }
     #shot-glass-page .uses { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
     #shot-glass-page .use { border-top:1px solid var(--olive); padding-top:16px; }
     #shot-glass-page .use h3 { font:500 20px/1.2 Georgia,serif; }
@@ -77,6 +84,9 @@
     #shot-glass-page th { width:25%; color:#74776e; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; }
     #shot-glass-page .steps { display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
     #shot-glass-page .step { border-top:1px solid var(--line); padding-top:13px; }
+    #shot-glass-page .step-top { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    #shot-glass-page .step-icon { display:grid; width:46px; height:46px; place-items:center; border:1px solid var(--line); border-radius:50%; color:var(--olive); }
+    #shot-glass-page .step-icon svg { width:25px; height:25px; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
     #shot-glass-page .step b { color:var(--gold); font:500 24px/1 Georgia,serif; }
     #shot-glass-page .step h3 { margin-top:12px; font:500 17px/1.2 Georgia,serif; }
     #shot-glass-page .step p { margin-top:8px; color:var(--muted); font-size:12px; }
@@ -172,6 +182,7 @@
     #shot-glass-page #process .eyebrow, #shot-glass-page #process .step b { color:#fff; }
     #shot-glass-page #process .section-head p, #shot-glass-page #process .step p { color:#fff; }
     #shot-glass-page .step { border-color:#ffffff55; }
+    #shot-glass-page .step-icon { border-color:#ffffff66; color:#fff; }
     #shot-glass-page .step h3 { font-size:20px; font-weight:400; }
     #shot-glass-page .step p { font-size:14px; line-height:1.8; }
     #shot-glass-page summary { font-size:14px; }

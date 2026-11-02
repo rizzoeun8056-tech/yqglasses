@@ -2,6 +2,8 @@
 import '../../styles/global.css';
 import '../../styles/custom-shot-glasses.css';
 import BrandAssets from '../../components/BrandAssets.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 
 const title = 'Custom Shot Glasses for Bars & Events | YQ';
 const description = 'Explore custom shot glasses in four popular styles with material and logo options for bars, events and branded gifts. Request a tailored quote.';
@@ -24,30 +26,31 @@ const description = 'Explore custom shot glasses in four popular styles with mat
     <title>{title}</title>
   </head>
   <body>
-    <a class="skip-link" href="#shot-glass-page">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
     <div id="shot-glass-page">
-      <main>
+      <main id="main">
     <section class="hero">
       <div>
-        <h1>Custom Shot Glasses for Your Brand or Occasion</h1>
-        <p class="hero-copy">Make your logo, event or original artwork part of the moment. Choose a glass style, select a suitable decoration method and request a quote for your project.</p>
+        <h1>Custom & Ready-to-Ship Shot Glasses</h1>
+        <p class="hero-copy">Choose in-stock shot glasses for quick dispatch, or create custom drinkware with your logo, artwork and preferred materials. Share your quantity and target date to confirm availability and lead time.</p>
         <div class="actions"><a class="button" href="#quote">Request a Quote</a><a class="button secondary" href="#styles">Explore Styles</a></div>
-        <div class="trustline"><span>Logo and artwork customization</span><span>Multiple styles and materials</span><span>Bulk order support</span></div>
+        <div class="trustline"><span>In-stock options for fast dispatch</span><span>Custom logo and artwork</span><span>Multiple styles and materials</span></div>
       </div>
       <div class="image-slot hero-image"><img src="/images/custom-shot-glasses/hero.webp" alt="Custom shot glass styles" width="600" height="600" fetchpriority="high" /></div>
     </section>
 
     <div class="strip" aria-label="Product highlights">
-      <div><b>Glass styles</b><span>Four common profiles</span></div><div><b>Materials</b><span>Options vary by style</span></div><div><b>Minimum order</b><span>Confirmed by project</span></div><div><b>Lead time</b><span>Confirmed with quote</span></div>
+      <div><b>Material Options</b><span>Multiple materials available</span></div><div><b>Sampling</b><span>Samples available</span></div><div><b>Logo Customization</b><span>Custom logos supported</span></div><div><b>Fast Dispatch</b><span>In-stock items: as fast as 1–3 days</span></div>
     </div>
 
     <section class="section" id="styles">
-      <div class="section-head"><div><h2>Four Popular Shot Glass Styles</h2></div><p>Style names vary by supplier. Compare the shape and exact capacity shown for each product before ordering.</p></div>
+      <div class="section-head"><div><h2>Four Popular Shot Glass Styles</h2></div><p>Capacities below are common listed examples, not fixed standards. Available sizes vary by supplier and model; confirm the selected product’s stated capacity before ordering.</p></div>
       <div class="types">
-        <article class="type"><div class="image-slot"><img src="/images/custom-shot-glasses/classic-straight-sided.webp" alt="Straight shot glass" width="600" height="600" loading="lazy" /></div><div class="type-copy"><h3>Classic Straight-Sided</h3><p>A versatile, clean profile for bars, parties, event favors and branded merchandise. The even sides provide a clear area for a simple logo or design.</p><div class="spec">Capacity and dimensions vary by model.</div></div></article>
-        <article class="type"><div class="image-slot"><img src="/images/custom-shot-glasses/heavy-base.webp" alt="Heavy-base shot glass" width="600" height="600" loading="lazy" /></div><div class="type-copy"><h3>Heavy Base</h3><p>A thicker base gives the glass a more substantial feel and a classic barware look. Glass remains breakable and should be packed and handled with care.</p><div class="spec">Capacity and dimensions vary by model.</div></div></article>
-        <article class="type"><div class="image-slot"><img src="/images/custom-shot-glasses/tall-shooter.webp" alt="Tall shot glass" width="600" height="600" loading="lazy" /></div><div class="type-copy"><h3>Tall Shooter</h3><p>A taller, slimmer profile for party service and distinctive drink presentation. Capacity varies by model, so check the listed volume.</p><div class="spec">Capacity and dimensions vary by model.</div></div></article>
-        <article class="type"><div class="image-slot"><img src="/images/custom-shot-glasses/double-capacity.webp" alt="Double-capacity shot glass" width="600" height="600" loading="lazy" /></div><div class="type-copy"><h3>Double Capacity</h3><p>A larger format for projects that call for more volume per glass. “Double” is not a universal capacity standard; confirm the exact volume in the specifications.</p><div class="spec">Capacity and dimensions vary by model.</div></div></article>
+        <article class="type"><div class="image-slot"><img src="/images/custom-shot-glasses/classic-straight-sided.webp" alt="Straight shot glass" width="600" height="600" loading="lazy" /></div><div class="type-copy"><h3>Classic Straight-Sided</h3><p>A versatile, clean profile for bars, parties, event favors and branded merchandise. The even sides provide a clear area for a simple logo or design.</p><div class="type-capacity"><span>Common listed capacity</span><strong>1–2 oz · 30–60 ml</strong><span class="type-mini-capacity">Mini sample formats from 5 ml may be available on request; confirm feasibility for the selected model.</span></div></div></article>
+        <article class="type"><div class="image-slot"><img src="/images/custom-shot-glasses/heavy-base.webp" alt="Heavy-base shot glass" width="600" height="600" loading="lazy" /></div><div class="type-copy"><h3>Heavy Base</h3><p>A thicker base gives the glass a more substantial feel and a classic barware look. Glass remains breakable and should be packed and handled with care.</p><div class="type-capacity"><span>Common listed capacity</span><strong>1.5–2 oz · 45–60 ml</strong><span class="type-mini-capacity">Mini sample formats from 5 ml may be available on request; confirm feasibility for the selected model.</span></div></div></article>
+        <article class="type"><div class="image-slot"><img src="/images/custom-shot-glasses/tall-shooter.webp" alt="Tall shot glass" width="600" height="600" loading="lazy" /></div><div class="type-copy"><h3>Tall Shooter</h3><p>A taller, slimmer profile for party service and distinctive drink presentation.</p><div class="type-capacity"><span>Common listed capacity</span><strong>1.5–2.5 oz · 45–75 ml</strong></div></div></article>
+        <article class="type"><div class="image-slot"><img src="/images/custom-shot-glasses/double-capacity.webp" alt="Double-capacity shot glass" width="600" height="600" loading="lazy" /></div><div class="type-copy"><h3>Double Capacity</h3><p>A larger format for projects that call for more volume. “Double” is not a universal capacity standard.</p><div class="type-capacity"><span>Common listed capacity</span><strong>2–3 oz · 60–90 ml</strong></div></div></article>
       </div>
     </section>
 
@@ -69,13 +72,13 @@ const description = 'Explore custom shot glasses in four popular styles with mat
     <section class="section" id="decoration">
       <div class="section-head"><div><h2>Logo Decoration Methods</h2></div><p>The right method depends on the material, artwork detail, color count, order quantity and care requirements. Confirm compatibility for your selected product.</p></div>
       <div class="methods">
-        <article class="method"><figure class="method-photo"><img src="/images/custom-shot-glasses/logo-screen-print.webp" alt="Screen-printed logo" width="600" height="600" loading="lazy" /></figure><div class="num">01 / PRINT</div><h3>Screen Printing</h3><p>Well suited to clear, defined artwork and solid colors. Each color may require a separate screen; availability and color limits vary.</p></article>
-        <article class="method"><figure class="method-photo"><img src="/images/custom-shot-glasses/logo-ceramic-decal.webp" alt="Ceramic decal logo" width="600" height="600" loading="lazy" /></figure><div class="num">02 / TRANSFER</div><h3>Ceramic Decal</h3><p>Can accommodate detailed or multicolor designs on compatible glass. The process may include firing; confirm finish and production requirements.</p></article>
-        <article class="method"><figure class="method-photo"><img src="/images/custom-shot-glasses/logo-laser-engraving.webp" alt="Laser-engraved logo" width="600" height="600" loading="lazy" /></figure><div class="num">03 / MARK</div><h3>Laser Engraving</h3><p>Creates a subtle etched or frosted look on compatible surfaces. It is generally monochrome and does not reproduce a colored logo.</p></article>
-        <article class="method"><figure class="method-photo"><img src="/images/custom-shot-glasses/logo-sandblasting.webp" alt="Sandblasted logo" width="600" height="600" loading="lazy" /></figure><div class="num">04 / MATTE</div><h3>Sandblasting</h3><p>Creates a matte, frosted design on compatible glass. Fine details and small text should be reviewed for legibility.</p></article>
-        <article class="method"><figure class="method-photo"><img src="/images/custom-shot-glasses/logo-uv-digital-print.webp" alt="UV-printed logo" width="600" height="600" loading="lazy" /></figure><div class="num">05 / DIGITAL</div><h3>UV or Digital Print</h3><p>May suit colorful artwork on selected products. Ink adhesion, durability and cleaning guidance depend on the specific system.</p></article>
+        <article class="method"><figure class="method-photo"><img src="/images/custom-shot-glasses/logo-screen-print.webp" alt="Screen-printed logo" width="600" height="600" loading="lazy" /></figure><div class="num">01 / PRINT</div><h3>Screen Printing</h3><p>Crisp solid-color logos and simple graphics, especially for repeat production.</p><p class="method-materials"><strong>Materials:</strong> Glass; selected metals and plastics with compatible inks and surface treatment.</p><p class="method-colors"><strong>Color options:</strong> Solid and spot colors; exact matching depends on the ink and substrate.</p></article>
+        <article class="method"><figure class="method-photo"><img src="/images/custom-shot-glasses/logo-ceramic-decal.webp" alt="Ceramic decal logo" width="600" height="600" loading="lazy" /></figure><div class="num">02 / TRANSFER</div><h3>Ceramic Decal</h3><p>Detailed, multicolor artwork transferred to glass and fired for a durable finish.</p><p class="method-materials"><strong>Materials:</strong> Compatible glass or glazed ceramics; firing suitability must be confirmed for the item.</p><p class="method-colors"><strong>Color options:</strong> Multiple fired colors; final shades depend on the decal system and firing.</p></article>
+        <article class="method"><figure class="method-photo"><img src="/images/custom-shot-glasses/logo-laser-engraving.webp" alt="Laser-engraved logo" width="600" height="600" loading="lazy" /></figure><div class="num">03 / MARK</div><h3>Laser Engraving</h3><p>Permanent, ink-free monochrome marks with a subtle etched or frosted look.</p><p class="method-materials"><strong>Materials:</strong> Glass, crystal and stainless steel; selected plastics depend on the resin and laser system.</p><p class="method-colors"><strong>Color options:</strong> No ink colors. Glass usually appears frosted; metal and plastic marks vary by material and laser.</p></article>
+        <article class="method"><figure class="method-photo"><img src="/images/custom-shot-glasses/logo-sandblasting.webp" alt="Sandblasted logo" width="600" height="600" loading="lazy" /></figure><div class="num">04 / MATTE</div><h3>Sandblasting</h3><p>Permanent matte, tactile logos with strong shapes; very fine details may lose clarity.</p><p class="method-materials"><strong>Materials:</strong> Primarily glass and crystal for drinkware; metal compatibility depends on the finish and equipment.</p><p class="method-colors"><strong>Color options:</strong> No ink colors; creates a frosted matte contrast on clear glass.</p></article>
+        <article class="method"><figure class="method-photo"><img src="/images/custom-shot-glasses/logo-uv-digital-print.webp" alt="UV-printed logo" width="600" height="600" loading="lazy" /></figure><div class="num">05 / DIGITAL</div><h3>UV or Digital Print</h3><p>Multicolor artwork, gradients and fine details printed directly on compatible surfaces.</p><p class="method-materials"><strong>Materials:</strong> Glass, stainless steel and selected plastics; primer and adhesion testing may be needed.</p><p class="method-colors"><strong>Color options:</strong> Full color and gradients; white ink for clear or dark surfaces depends on printer capability.</p></article>
       </div>
-      <div class="note">Vector artwork is preferred when available. File acceptance, proofing and sample options are confirmed for each project.</div>
+      <div class="note">Vector artwork is preferred. Samples are available on request; confirm material compatibility, finish and cleaning guidance for your selected decoration method.</div>
     </section>
 
     <section class="section white">
@@ -98,11 +101,11 @@ const description = 'Explore custom shot glasses in four popular styles with mat
     <section class="section white" id="process">
       <div class="section-head"><div><h2>How to Order</h2></div></div>
       <div class="steps">
-        <article class="step"><b>01</b><h3>Share Your Brief</h3><p>Send the style, material, quantity, artwork, packaging needs and target date.</p></article>
-        <article class="step"><b>02</b><h3>Confirm the Method</h3><p>We check material and artwork compatibility, then confirm the quote and schedule.</p></article>
-        <article class="step"><b>03</b><h3>Approve the Design</h3><p>Review an artwork proof or sample when included in the project.</p></article>
-        <article class="step"><b>04</b><h3>Production</h3><p>Production begins after the order details and artwork are confirmed.</p></article>
-        <article class="step"><b>05</b><h3>Pack & Ship</h3><p>Finished items are checked, packed and shipped according to the order terms.</p></article>
+        <article class="step"><div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M9 5.5h9l5 5V26H9z"/><path d="M18 5.5v5h5M12.5 16h7M12.5 20h7M12.5 12.5h2"/></svg></span><b>01</b></div><h3>Share Your Brief</h3><p>Send the style, material, quantity, artwork, packaging needs and target date.</p></article>
+        <article class="step"><div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><circle cx="14" cy="14" r="8.5"/><path d="m20.5 20.5 6 6M10.5 14l2.5 2.5 5-5"/></svg></span><b>02</b></div><h3>Confirm the Method</h3><p>We check material and artwork compatibility, then confirm the quote and schedule.</p></article>
+        <article class="step"><div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M8 5.5h12l4 4V26H8z"/><path d="M20 5.5v4h4M12 15h8M12 19l2.5 2.5L20 16"/></svg></span><b>03</b></div><h3>Approve the Design</h3><p>Review an artwork proof or sample when included in the project.</p></article>
+        <article class="step"><div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 26V14l7 4v-5l7 4v-5l8 4v10z"/><path d="M10 22h2M16 22h2M22 22h2M8 10h4M10 8v4"/></svg></span><b>04</b></div><h3>Production</h3><p>Production begins after the order details and artwork are confirmed.</p></article>
+        <article class="step"><div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="m5.5 11 10.5-5.5L26.5 11 16 16.5zM5.5 11v11L16 27.5 26.5 22V11M16 16.5v11"/><path d="m10.5 8.5 10.5 5.5"/></svg></span><b>05</b></div><h3>Pack & Ship</h3><p>Finished items are checked, packed and shipped according to the order terms.</p></article>
       </div>
     </section>
 
@@ -116,5 +119,6 @@ const description = 'Explore custom shot glasses in four popular styles with mat
     </section>
   </main>
 </div>
+    <SiteFooter />
   </body>
 </html>
