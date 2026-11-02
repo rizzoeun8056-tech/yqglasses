@@ -5,8 +5,7 @@
 .about-section { padding: 88px 0; }
 .about-section h2 { margin: 0; font-size: var(--font-size-h2); line-height: 1.14; letter-spacing: -.045em; }
 .about-section p { color: var(--brand-muted); font-size: 14px; line-height: 1.8; }
-.about-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; min-height: 50px; padding: 0 20px; border: 1px solid var(--brand-copper); background: var(--brand-copper); color: #fff; font-size: 14px; font-weight: 700; transition: background .2s, color .2s; }
-.about-button:hover { background: var(--brand-paper); color: var(--brand-copper); }
+.about-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; min-height: 50px; padding: 0 20px; border: 1px solid var(--brand-copper); background: var(--brand-copper); color: #fff; font-size: 14px; font-weight: 700; }
 .about-button span { font-size: 18px; font-weight: 400; }
 .about-hero { padding: 55px 0 60px; }
 .about-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); align-items: center; gap: 60px; max-width: 1020px; }
@@ -36,7 +35,6 @@
 .about-production-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
 .about-carousel-controls { display: flex; justify-content: end; gap: 8px; margin-top: 16px; }
 .about-carousel-controls button { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid #c7b7a5; background: transparent; color: var(--brand-copper); font-size: 20px; cursor: pointer; }
-.about-carousel-controls button:hover { border-color: var(--brand-copper); background: var(--brand-surface); }
 .about-capabilities { background: var(--brand-surface); }
 .about-capabilities-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9%; align-items: start; }
 .about-capabilities-copy h2 { margin-bottom: 22px; }

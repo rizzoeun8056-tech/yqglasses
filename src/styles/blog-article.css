@@ -30,10 +30,8 @@
 .article-carousel-slide figcaption { position: absolute; right: 10px; bottom: 10px; padding: 5px 8px; background: var(--brand-paper); color: var(--brand-ink); font-size: 14px; line-height: 1.2; }
 .article-carousel-controls { display: flex; align-items: center; justify-content: space-between; padding-block: 10px 17px; }
 .article-carousel-controls button { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid var(--line); background: var(--brand-paper); color: var(--copper-dark); font-size: 20px; line-height: 1; }
-.article-carousel-controls button:hover { border-color: var(--brand-copper); }
 .article-carousel-controls > span { color: var(--brand-muted); font-size: 14px; line-height: 1.4; }
 .article-inquiry { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 50px; padding: 12px 16px; background: var(--brand-copper); color: #fff; font-size: 14px; font-weight: 800; line-height: 1.5; }
-.article-inquiry:hover { background: var(--copper-dark); }
 
 .article-content { min-width: 0; max-width: 820px; }
 .article-content section { scroll-margin-top: 28px; }
