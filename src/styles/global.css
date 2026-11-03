@@ -46,7 +46,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
 .primary-nav .nav-dropdown > summary:hover { color: var(--copper-dark); }
 .primary-nav .nav-dropdown > summary span { font-size: 15px; line-height: 1; transition: transform .2s; }
 .primary-nav .nav-dropdown[open] > summary span { transform: rotate(180deg); }
-.primary-nav .nav-submenu { position: absolute; z-index: 40; top: calc(100% + 14px); left: -16px; display: none; min-width: 190px; padding: 8px 0; border: 1px solid #58685a; background: #303d32; box-shadow: 0 12px 28px rgba(0,0,0,.22); }
+.primary-nav .nav-submenu { position: absolute; z-index: 40; top: calc(100% + 14px); left: -16px; display: none; min-width: 290px; padding: 8px 0; border: 1px solid #58685a; background: #303d32; box-shadow: 0 12px 28px rgba(0,0,0,.22); }
 .primary-nav .nav-dropdown[open] .nav-submenu { display: block; }
 .primary-nav .nav-submenu a { display: block; padding: 11px 16px; color: var(--brand-paper); }
 .primary-nav .nav-submenu a:hover { background: #475748; }
