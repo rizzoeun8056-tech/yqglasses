@@ -1,0 +1,122 @@
+---
+import '../../styles/global.css';
+import '../../styles/trumpet-flute-champagne-glasses.css';
+import BrandAssets from '../../components/BrandAssets.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+
+const title = 'Trumpet Flute Champagne Glasses | YQ GLASSES';
+const description = 'Explore trumpet flute champagne glasses in 180ml and 200ml. Discover lead-free glass, metal stem options, rhinestone details and custom logos.';
+const imageBase = '/images/trumpet-flute-champagne-glasses';
+const inquiry = '/file-upload/?product=Trumpet%20Flute%20Champagne%20Glasses&order_type=custom';
+
+const sizes = [
+  { name: 'Small V-Shaped', capacity: '180ml', height: '25cm', rim: '6.2cm', base: '6.8cm', image: 'small-180ml.webp', alt: '180ml champagne flute' },
+  { name: 'Large V-Shaped', capacity: '200ml', height: '24.5cm', rim: '7.5cm', base: '8.1cm', image: 'large-200ml.webp', alt: '200ml champagne flute' },
+];
+
+const customizations = [
+  { title: 'Metal Stem', description: 'Replace the glass stem with a metal stem for a distinct material pairing.', image: 'metal-stem-concept.webp', alt: 'Metal stem glass concept' },
+  { title: 'Hand-Applied Rhinestones', description: 'Add a restrained decorative detail for celebrations, events or gifts.', image: 'rhinestone-concept.webp', alt: 'Rhinestone glass concept' },
+  { title: 'Custom Logo', description: 'Choose from multiple logo processes according to your artwork and selected glass.', image: 'logo-concept.webp', alt: 'Custom logo glass concept' },
+];
+
+const benefits = [
+  { title: 'Flexible Shapes and Capacities', description: 'Start with the shown 180ml or 200ml V-shaped glasses. Ask about other capacities and straight-sided flutes.' },
+  { title: 'Stem and Decoration Options', description: 'Explore a metal stem or hand-applied rhinestone detail for your preferred finish.' },
+  { title: 'Multiple Logo Processes', description: 'Share your artwork so we can review a suitable decoration method and placement.' },
+  { title: 'A Quote for Your Project', description: 'Tell us the shape, capacity, quantity and packaging you need to review available options.' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f1eb" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="trumpet flute champagne glasses, V-shaped champagne glasses, lead-free champagne glasses" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://yqglasses.com/trumpet-flute-champagne-glasses/" />
+    <link rel="canonical" href="https://yqglasses.com/trumpet-flute-champagne-glasses/" />
+    <BrandAssets shareImage="https://yqglasses.com/images/trumpet-flute-champagne-glasses/hero.webp" shareImageType="image/webp" shareImageWidth={600} shareImageHeight={600} shareImageAlt="Trumpet champagne glasses" />
+    <link rel="preload" as="image" href={`${imageBase}/hero.webp`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+
+    <main id="main" class="tf-page">
+      <section class="tf-hero tf-section" aria-labelledby="tf-title">
+        <div class="page-width tf-hero-grid">
+          <div class="tf-hero-media">
+            <img class="tf-main-photo" src={`${imageBase}/hero.webp`} alt="Trumpet champagne glasses" width="600" height="600" fetchpriority="high" />
+            <div class="tf-thumbnails" aria-label="Product and size images">
+              <img src={`${imageBase}/small-180ml.webp`} alt="180ml champagne flute" width="600" height="600" loading="lazy" />
+              <img src={`${imageBase}/large-200ml.webp`} alt="200ml champagne flute" width="600" height="600" loading="lazy" />
+              <img src={`${imageBase}/metal-stem-concept.webp`} alt="Metal stem glass concept" width="600" height="600" loading="lazy" />
+              <img src={`${imageBase}/rhinestone-concept.webp`} alt="Rhinestone glass concept" width="600" height="600" loading="lazy" />
+            </div>
+          </div>
+          <div class="tf-hero-copy">
+            <p class="tf-eyebrow">Lead-free glass · Customizable stemware</p>
+            <h1 id="tf-title">Trumpet Flute Champagne Glasses</h1>
+            <p class="tf-lead">A V-shaped, stemmed glass for champagne, sparkling wine and cocktails. Choose the shown 180ml or 200ml size, or ask about other capacities and glass shapes.</p>
+            <div class="tf-highlights" aria-label="Product highlights"><span>Lead-free glass</span><span>180ml &amp; 200ml</span><span>Custom options</span></div>
+            <div class="tf-hero-actions"><a class="tf-button" href={inquiry}>Request a quote <span aria-hidden="true">↗</span></a><a class="tf-text-link" href="#customization">Explore customization ↓</a></div>
+            <p class="tf-more">Explore more glass shapes and finishes on our <a href="/personalized-champagne-glasses/">personalized champagne glasses page</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-intro" aria-labelledby="tf-intro-title">
+        <div class="page-width tf-split">
+          <div class="tf-copy"><p class="tf-eyebrow">The shape</p><h2 id="tf-intro-title">A V-shaped glass for champagne and cocktails</h2><p>The flared V-shaped bowl, slender stem and round base give this trumpet flute a recognizable silhouette. Clear glass shows the color and bubbles of champagne, sparkling wine or cocktails.</p><p>For a more classic profile, ask about straight-sided champagne flutes and other available shapes.</p></div>
+          <figure class="tf-photo"><img src={`${imageBase}/event-concept.webp`} alt="Champagne glasses at a reception" width="600" height="337" loading="lazy" /><figcaption>Illustrative serving scene</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="tf-section tf-specifications" aria-labelledby="tf-specs-title">
+        <div class="page-width"><p class="tf-eyebrow">Specifications</p><h2 id="tf-specs-title">Two V-shaped sizes</h2><p class="tf-section-lead">The dimensions below apply to the two glasses shown in the product photos.</p>
+          <div class="tf-table-wrap"><table><thead><tr><th>Size</th><th>Capacity</th><th>Height</th><th>Rim diameter</th><th>Base diameter</th></tr></thead><tbody>{sizes.map((size) => <tr><td>{size.name}</td><td>{size.capacity}</td><td>{size.height}</td><td>{size.rim}</td><td>{size.base}</td></tr>)}</tbody></table></div>
+          <p class="tf-note">Material: lead-free glass. Confirm whether quoted capacity is brimful or typical serving volume before ordering. Other sizes and shapes are subject to availability.</p>
+        </div>
+      </section>
+
+      <section class="tf-section" aria-labelledby="tf-shapes-title">
+        <div class="page-width"><p class="tf-eyebrow">Find your style</p><h2 id="tf-shapes-title">Choose a capacity and shape</h2><p class="tf-section-lead">The 180ml and 200ml V-shaped glasses are shown with their measured dimensions. Other capacities and profiles can be discussed for your project.</p>
+          <div class="tf-card-grid tf-shapes">
+            {sizes.map((size) => <article class="tf-card"><img src={`${imageBase}/${size.image}`} alt={size.alt} width="600" height="600" loading="lazy" /><div><h3>{size.name} · {size.capacity}</h3><p>V-shaped bowl with a tall, slender stem.</p></div></article>)}
+            <article class="tf-card"><img src={`${imageBase}/straight-flute-concept.webp`} alt="Straight champagne flute concept" width="600" height="600" loading="lazy" /><div><h3>Straight-Sided Flute</h3><p>Ask about this classic narrow profile and other capacities.</p><small>Illustrative shape example</small></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-surface" id="customization" aria-labelledby="tf-custom-title">
+        <div class="page-width"><p class="tf-eyebrow">Customization</p><h2 id="tf-custom-title">Make the design your own</h2><p class="tf-section-lead">Discuss stem materials, decorative details and branding to suit your event or collection.</p>
+          <div class="tf-card-grid tf-options">{customizations.map((option) => <article class="tf-card"><img src={`${imageBase}/${option.image}`} alt={option.alt} width="600" height="600" loading="lazy" /><div><h3>{option.title}</h3><p>{option.description}</p><small>Illustrative customization example</small></div></article>)}</div>
+          <p class="tf-note">Available processes, decoration placement, MOQ and lead time are confirmed for each project. Share your logo artwork or reference images with your inquiry.</p>
+          <a class="tf-text-link" href="/personalized-champagne-glasses/">Explore personalized champagne glasses <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="tf-section" aria-labelledby="tf-uses-title">
+        <div class="page-width tf-split"><div class="tf-copy"><p class="tf-eyebrow">Occasions</p><h2 id="tf-uses-title">For celebrations and hospitality</h2><p>Use this glass for wedding toasts, reception tables, bars, restaurants, corporate events and branded gifts. Choose the profile and decoration that fit your setting.</p><div class="tf-tags"><span>Weddings</span><span>Hospitality</span><span>Cocktail events</span><span>Branded gifts</span></div></div><figure class="tf-photo"><img src={`${imageBase}/event-concept.webp`} alt="Champagne glasses at an event" width="600" height="337" loading="lazy" /><figcaption>Illustrative event scene</figcaption></figure></div>
+      </section>
+
+      <section class="tf-section tf-surface" aria-labelledby="tf-why-title">
+        <div class="page-width"><p class="tf-eyebrow">Why YQ Glasses</p><h2 id="tf-why-title">Flexible glassware options for your project</h2><div class="tf-benefits">{benefits.map((benefit, index) => <article><span>0{index + 1}</span><h3>{benefit.title}</h3><p>{benefit.description}</p></article>)}</div></div>
+      </section>
+
+      <section class="tf-section" aria-labelledby="tf-care-title"><div class="page-width tf-split tf-care"><div class="tf-copy"><p class="tf-eyebrow">Care guide</p><h2 id="tf-care-title">Care and maintenance</h2><figure class="tf-photo"><img src={`${imageBase}/care-concept.webp`} alt="Hand-washed champagne glass" width="600" height="400" loading="lazy" /><figcaption>Illustrative care scene</figcaption></figure></div><ul><li>Wash with warm water and mild detergent using a soft sponge or cloth.</li><li>Avoid scouring pads, abrasive cleaners and contact with hard objects.</li><li>Support the bowl when washing or drying. Avoid twisting the stem.</li><li>Avoid sudden temperature changes and dry with a soft, lint-free cloth.</li><li>Gently hand-wash metal-stem and rhinestone versions without prolonged soaking. Confirm care instructions for the selected finish.</li><li>Confirm dishwasher suitability for the specific style and finish before use.</li></ul></div></section>
+
+      <section class="tf-section tf-quote" id="quote" aria-labelledby="tf-quote-title"><div class="page-width tf-quote-grid"><div><h2 id="tf-quote-title">Let's plan your<br /><em>champagne glasses.</em></h2><p>Share your preferred shape, quantity and design references. We will help you define the next step.</p><a class="tf-button" href={inquiry}>Send your requirements <span aria-hidden="true">↗</span></a><span class="tf-reference-note">Photos, sketches and artwork welcome.</span></div><div class="tf-faq"><h3>Ordering questions</h3><details><summary>What is the minimum order quantity?<span aria-hidden="true">+</span></summary><p>MOQ depends on the style, decoration and packaging. Share your estimated quantity for a project-specific quote.</p></details><details><summary>Can I request a sample?<span aria-hidden="true">+</span></summary><p>Sample availability, cost and timing depend on the selected style and customization.</p></details><details><summary>How are production time and packaging confirmed?<span aria-hidden="true">+</span></summary><p>We review the order details, set configuration and protective packaging when preparing your quote.</p></details></div></div></section>
+    </main>
+
+    <SiteFooter />
+  </body>
+</html>
