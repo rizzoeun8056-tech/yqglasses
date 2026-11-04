@@ -172,8 +172,12 @@
       "text": "",
       "blocks": [
         {
-          "type": "paragraph",
-          "text": "YQ mainly produces champagne glasses with handmade metal stems, supports hand-set rhinestone detailing, and focuses on value for money. These options suit buyers looking for distinctive stem decoration while keeping the project budget in view."
+          "type": "rich-paragraph",
+          "parts": [
+            { "text": "YQ mainly produces " },
+            { "text": "custom champagne glasses", "href": "/personalized-champagne-glasses/" },
+            { "text": " with handmade metal stems, supports hand-set rhinestone detailing, and focuses on value for money. These options suit buyers looking for distinctive stem decoration while keeping the project budget in view." }
+          ]
         },
         {
           "type": "paragraph",
@@ -202,8 +206,12 @@
           "text": "A clear customization process starts with the glass style, followed by confirmation of the logo method, size, placement, and use requirements. Prepare the artwork and order details in advance, and ask about a physical sample when needed to reduce revisions and align the finished glasses with your expectations."
         },
         {
-          "type": "paragraph",
-          "text": "If you are planning Custom Trumpet Flute Champagne Glasses, share a reference style, logo file, estimated quantity, and packaging requirements with YQ to discuss a suitable customization plan."
+          "type": "rich-paragraph",
+          "parts": [
+            { "text": "If you are planning " },
+            { "text": "Custom Trumpet Flute Champagne Glasses", "href": "/trumpet-flute-champagne-glasses/" },
+            { "text": ", share a reference style, logo file, estimated quantity, and packaging requirements with YQ to discuss a suitable customization plan." }
+          ]
         }
       ]
     },
