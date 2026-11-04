@@ -8,7 +8,7 @@ interface Props {
 
 const { inquiryPage = false } = Astro.props;
 const quoteHref = inquiryPage ? '#project-form' : site.inquiryUrl;
-const quoteLabel = inquiryPage ? 'Start your inquiry' : 'Request a quote';
+const quoteLabel = 'Request a quote';
 const cakePage = Astro.url.pathname.startsWith('/cake-knife-server-sets/');
 const champagnePage = Astro.url.pathname.startsWith('/personalized-champagne-glasses/');
 const shotGlassPage = Astro.url.pathname.startsWith('/custom-shot-glasses/');
@@ -26,8 +26,8 @@ const aboutPage = Astro.url.pathname.startsWith('/about/');
       <details class="nav-dropdown">
         <summary>Other Products <span aria-hidden="true">⌄</span></summary>
         <div class="nav-submenu">
-          <a href="/custom-shot-glasses/" aria-current={shotGlassPage ? 'page' : undefined}>Shot Glasses</a>
           <a href="/trumpet-flute-champagne-glasses/" aria-current={trumpetFlutePage ? 'page' : undefined}>Trumpet Flute Champagne Glasses</a>
+          <a href="/custom-shot-glasses/" aria-current={shotGlassPage ? 'page' : undefined}>Shot Glasses</a>
         </div>
       </details>
       <a href="/blog/" aria-current={blogPage ? 'page' : undefined}>Blog</a>
