@@ -53,20 +53,15 @@ const benefits = [
     <main id="main" class="tf-page">
       <section class="tf-hero tf-section" aria-labelledby="tf-title">
         <div class="page-width tf-hero-grid">
-          <div class="tf-hero-media">
+          <figure class="tf-hero-media">
             <img class="tf-main-photo" src={`${imageBase}/hero.webp`} alt="Trumpet champagne glasses" width="600" height="600" fetchpriority="high" />
-            <div class="tf-thumbnails" aria-label="Product and size images">
-              <img src={`${imageBase}/small-180ml.webp`} alt="180ml champagne flute" width="600" height="600" loading="lazy" />
-              <img src={`${imageBase}/large-200ml.webp`} alt="200ml champagne flute" width="600" height="600" loading="lazy" />
-              <img src={`${imageBase}/metal-stem-concept.webp`} alt="Metal stem glass concept" width="600" height="600" loading="lazy" />
-              <img src={`${imageBase}/rhinestone-concept.webp`} alt="Rhinestone glass concept" width="600" height="600" loading="lazy" />
-            </div>
-          </div>
+            <figcaption>V-shaped flute · 180 ml and 200 ml</figcaption>
+          </figure>
           <div class="tf-hero-copy">
             <p class="tf-eyebrow">Lead-free glass · Customizable stemware</p>
-            <h1 id="tf-title">Trumpet Flute Champagne Glasses</h1>
+            <h1 id="tf-title">Trumpet Flute<br /><em>Champagne Glasses.</em></h1>
             <p class="tf-lead">A V-shaped, stemmed glass for champagne, sparkling wine and cocktails. Choose the shown 180ml or 200ml size, or ask about other capacities and glass shapes.</p>
-            <div class="tf-highlights" aria-label="Product highlights"><span>Lead-free glass</span><span>180ml &amp; 200ml</span><span>Custom options</span></div>
+            <div class="tf-hero-facts" aria-label="Product highlights"><div><strong>180 / 200 ml</strong><span>Shown sizes</span></div><div><strong>Lead-free</strong><span>Clear glass</span></div></div>
             <div class="tf-hero-actions"><a class="tf-button" href={inquiry}>Request a quote <span aria-hidden="true">↗</span></a><a class="tf-text-link" href="#customization">Explore customization ↓</a></div>
             <p class="tf-more">Explore more glass shapes and finishes on our <a href="/personalized-champagne-glasses/">personalized champagne glasses page</a>.</p>
           </div>
@@ -105,14 +100,14 @@ const benefits = [
       </section>
 
       <section class="tf-section" aria-labelledby="tf-uses-title">
-        <div class="page-width tf-split"><div class="tf-copy"><p class="tf-eyebrow">Occasions</p><h2 id="tf-uses-title">For celebrations and hospitality</h2><p>Use this glass for wedding toasts, reception tables, bars, restaurants, corporate events and branded gifts. Choose the profile and decoration that fit your setting.</p><div class="tf-tags"><span>Weddings</span><span>Hospitality</span><span>Cocktail events</span><span>Branded gifts</span></div></div><figure class="tf-photo"><img src={`${imageBase}/event-concept.webp`} alt="Champagne glasses at an event" width="600" height="337" loading="lazy" /><figcaption>Illustrative event scene</figcaption></figure></div>
+        <div class="page-width tf-occasion-layout"><div class="tf-copy"><p class="tf-eyebrow">Occasions</p><h2 id="tf-uses-title">For celebrations<br /><em>and hospitality.</em></h2><p>Use this glass for wedding toasts, reception tables, bars, restaurants, corporate events and branded gifts. Choose the profile and decoration that fit your setting.</p></div><div class="tf-occasion-list" aria-label="Suggested occasions"><span>Weddings</span><span>Hospitality</span><span>Cocktail events</span><span>Branded gifts</span></div></div>
       </section>
 
       <section class="tf-section tf-surface" aria-labelledby="tf-why-title">
         <div class="page-width"><p class="tf-eyebrow">Why YQ Glasses</p><h2 id="tf-why-title">Flexible glassware options for your project</h2><div class="tf-benefits">{benefits.map((benefit, index) => <article><span>0{index + 1}</span><h3>{benefit.title}</h3><p>{benefit.description}</p></article>)}</div></div>
       </section>
 
-      <section class="tf-section" aria-labelledby="tf-care-title"><div class="page-width tf-split tf-care"><div class="tf-copy"><p class="tf-eyebrow">Care guide</p><h2 id="tf-care-title">Care and maintenance</h2><figure class="tf-photo"><img src={`${imageBase}/care-concept.webp`} alt="Hand-washed champagne glass" width="600" height="400" loading="lazy" /><figcaption>Illustrative care scene</figcaption></figure></div><ul><li>Wash with warm water and mild detergent using a soft sponge or cloth.</li><li>Avoid scouring pads, abrasive cleaners and contact with hard objects.</li><li>Support the bowl when washing or drying. Avoid twisting the stem.</li><li>Avoid sudden temperature changes and dry with a soft, lint-free cloth.</li><li>Gently hand-wash metal-stem and rhinestone versions without prolonged soaking. Confirm care instructions for the selected finish.</li><li>Confirm dishwasher suitability for the specific style and finish before use.</li></ul></div></section>
+      <section class="tf-section" aria-labelledby="tf-care-title"><div class="page-width tf-split tf-care"><div class="tf-copy"><p class="tf-eyebrow">Care guide</p><h2 id="tf-care-title">Care and maintenance</h2><ul><li>Wash with warm water and mild detergent using a soft sponge or cloth.</li><li>Avoid scouring pads, abrasive cleaners and contact with hard objects.</li><li>Support the bowl when washing or drying. Avoid twisting the stem.</li><li>Avoid sudden temperature changes and dry with a soft, lint-free cloth.</li><li>Gently hand-wash metal-stem and rhinestone versions without prolonged soaking. Confirm care instructions for the selected finish.</li><li>Confirm dishwasher suitability for the specific style and finish before use.</li></ul></div><figure class="tf-photo"><img src={`${imageBase}/care-concept.webp`} alt="Hand-washed champagne glass" width="600" height="400" loading="lazy" /><figcaption>Illustrative care scene</figcaption></figure></div></section>
 
       <section class="tf-section tf-quote" id="quote" aria-labelledby="tf-quote-title"><div class="page-width tf-quote-grid"><div><h2 id="tf-quote-title">Let's plan your<br /><em>champagne glasses.</em></h2><p>Share your preferred shape, quantity and design references. We will help you define the next step.</p><a class="tf-button" href={inquiry}>Send your requirements <span aria-hidden="true">↗</span></a><span class="tf-reference-note">Photos, sketches and artwork welcome.</span></div><div class="tf-faq"><h3>Ordering questions</h3><details><summary>What is the minimum order quantity?<span aria-hidden="true">+</span></summary><p>MOQ depends on the style, decoration and packaging. Share your estimated quantity for a project-specific quote.</p></details><details><summary>Can I request a sample?<span aria-hidden="true">+</span></summary><p>Sample availability, cost and timing depend on the selected style and customization.</p></details><details><summary>How are production time and packaging confirmed?<span aria-hidden="true">+</span></summary><p>We review the order details, set configuration and protective packaging when preparing your quote.</p></details></div></div></section>
     </main>
