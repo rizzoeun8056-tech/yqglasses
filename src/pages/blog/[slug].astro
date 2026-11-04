@@ -93,6 +93,7 @@ const companyPhotos = [
           {post.sections.map((section, index) => <section id={`section-${index + 1}`}><h2>{section.title}</h2>
             {section.blocks ? section.blocks.map((block) => (
               block.type === 'paragraph' ? <p>{block.text}</p> :
+              block.type === 'rich-paragraph' ? <p>{block.parts?.map((part) => part.href ? <a href={part.href} target="_blank" rel="noreferrer">{part.text}</a> : part.text)}</p> :
               block.type === 'heading' ? <h3>{block.text}</h3> :
               block.type === 'cta' ? <div class="article-inline-cta"><p>{block.text}</p><a href={block.href}>{block.label} <span aria-hidden="true">↗</span></a></div> :
               block.type === 'list' ? <ul>{block.items?.map((item) => <li>{item}</li>)}</ul> :

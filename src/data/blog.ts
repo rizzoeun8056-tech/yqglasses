@@ -3,6 +3,7 @@ import buyerGuide from './blog/cake-knife-and-server-set-guide-for-buyer.json';
 import designGuide from './blog/custom-cake-knife-and-server-set-design-guide.json';
 import studdedQualityGuide from './blog/studded-cake-knife-and-server-set-quality-checklist.json';
 import champagneSupplierGuide from './blog/custom-champagne-glass-supplier-guide.json';
+import trumpetFluteLogoGuide from './blog/custom-trumpet-flute-champagne-glasses-logo-guide.json';
 
 export const blogCategories = [
   { id: 'champagne-glassware', label: 'Champagne Glassware' },
@@ -26,7 +27,7 @@ interface BlogPost {
   intro?: string[];
   introLinkText?: string;
   introImage?: { src: string; alt: string; width: number; height: number };
-  sections: { title: string; text: string; blocks?: { type: string; text?: string; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; width?: number; height?: number; href?: string }[] }[];
+  sections: { title: string; text: string; blocks?: { type: string; text?: string; parts?: { text: string; href?: string }[]; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; width?: number; height?: number; href?: string }[] }[];
   productUrl: string;
   productLabel: string;
 }
@@ -51,6 +52,26 @@ export const blogPosts: BlogPost[] = [
     sections: champagneSupplierGuide.sections,
     productUrl: '/personalized-champagne-glasses/',
     productLabel: 'Explore personalized champagne glasses',
+  },
+  {
+    slug: 'custom-trumpet-flute-champagne-glasses-logo-guide',
+    category: 'champagne-glassware',
+    title: trumpetFluteLogoGuide.title,
+    description: 'Plan a standout logo for Custom Trumpet Flute Champagne Glasses.',
+    seo: {
+      title: 'Custom Trumpet Flute Champagne Glasses Logo Dos & Don’ts',
+      description: 'Custom Trumpet Flute Champagne Glasses Logo Dos & Don’ts: Plan artwork, decoration and sample checks for YQ’s handmade metal stems.',
+      keywords: 'Custom Trumpet Flute Champagne Glasses Logo Dos & Don’ts',
+      primaryKeyword: 'Custom Trumpet Flute Champagne Glasses Logo Dos & Don’ts',
+    },
+    image: '/images/blog/custom-trumpet-flute-logo-studio.webp',
+    imageWidth: 700,
+    imageHeight: 875,
+    alt: 'Illustrative studio display of YQ GLASSES champagne flutes with decorative metal stems and logo branding',
+    intro: trumpetFluteLogoGuide.intro,
+    sections: trumpetFluteLogoGuide.sections,
+    productUrl: '/trumpet-flute-champagne-glasses/',
+    productLabel: 'Explore Trumpet Flute Champagne Glasses',
   },
   {
     slug: 'studded-cake-knife-and-server-set-quality-checklist',
