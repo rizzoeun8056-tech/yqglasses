@@ -16,9 +16,9 @@ const sizes = [
 ];
 
 const customizations = [
-  { title: 'Metal Stem', description: 'Replace the glass stem with a metal stem for a distinct material pairing.', image: 'metal-stem-concept.webp', alt: 'Metal stem glass concept' },
-  { title: 'Hand-Applied Rhinestones', description: 'Add a restrained decorative detail for celebrations, events or gifts.', image: 'rhinestone-concept.webp', alt: 'Rhinestone glass concept' },
-  { title: 'Custom Logo', description: 'Choose from multiple logo processes according to your artwork and selected glass.', image: 'logo-concept.webp', alt: 'Custom logo glass concept' },
+  { title: 'Metal Stem', description: 'Replace the glass stem with a metal stem for a distinct material pairing.', image: 'metal-stem-concept.webp', alt: 'Metal stem glass concept', note: 'Illustrative customization example' },
+  { title: 'Hand-Applied Rhinestones', description: 'Add a restrained decorative detail for celebrations, events or gifts.', image: 'rhinestone-stem.webp', alt: 'Champagne flute with rhinestone gold stem', note: 'Rhinestone stem · finish example' },
+  { title: 'Custom Logo', description: 'Choose from multiple logo processes according to your artwork and selected glass.', image: 'logo-concept.webp', alt: 'Custom logo glass concept', note: 'Illustrative customization example' },
 ];
 
 const benefits = [
@@ -93,7 +93,7 @@ const benefits = [
 
       <section class="tf-section tf-surface" id="customization" aria-labelledby="tf-custom-title">
         <div class="page-width"><p class="tf-eyebrow">Customization</p><h2 id="tf-custom-title">Make the design your own</h2><p class="tf-section-lead">Discuss stem materials, decorative details and branding to suit your event or collection.</p>
-          <div class="tf-card-grid tf-options">{customizations.map((option) => <article class="tf-card"><img src={`${imageBase}/${option.image}`} alt={option.alt} width="600" height="600" loading="lazy" /><div><h3>{option.title}</h3><p>{option.description}</p><small>Illustrative customization example</small></div></article>)}</div>
+          <div class="tf-card-grid tf-options">{customizations.map((option) => <article class="tf-card"><img src={`${imageBase}/${option.image}`} alt={option.alt} width="600" height="600" loading="lazy" /><div><h3>{option.title}</h3><p>{option.description}</p><small>{option.note}</small></div></article>)}</div>
           <p class="tf-note">Available processes, decoration placement, MOQ and lead time are confirmed for each project. Share your logo artwork or reference images with your inquiry.</p>
           <a class="tf-text-link" href="/personalized-champagne-glasses/">Explore personalized champagne glasses <span aria-hidden="true">↗</span></a>
         </div>
