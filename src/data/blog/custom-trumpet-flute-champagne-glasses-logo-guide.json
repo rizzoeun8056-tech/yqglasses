@@ -14,12 +14,8 @@
           "text": "The glass shape affects the logo’s usable placement, proportions, and clarity. A Trumpet Flute bowl has a curved surface, so a design that is too wide or has very fine lines may look distorted or become difficult to read. The exact result depends on the selected glass style."
         },
         {
-          "type": "rich-paragraph",
-          "parts": [
-            { "text": "Glass suppliers also caution that a curved surface can distort artwork and restrict its size, while fine lines may need to be thickened for a clearer print. See the " },
-            { "text": "Glasdec artwork guidelines", "href": "https://www.glasdec.com/artwork-guidelines/" },
-            { "text": "." }
-          ]
+          "type": "paragraph",
+          "text": "The curve also limits the usable logo size. Very fine lines may need to be thickened to remain clear in the finished decoration."
         },
         {
           "type": "paragraph",
@@ -44,12 +40,8 @@
           "text": "Choose a decoration method based on the logo’s colors and complexity, the glass style, the intended use, and the budget. Screen printing, transfers, UV decoration, and laser decoration each have different requirements; ask the supplier which options suit the specific glass and confirm care instructions and minimum order conditions."
         },
         {
-          "type": "rich-paragraph",
-          "parts": [
-            { "text": "Glass decorators offer multiple processes, including screen printing, transfer, UV, digital color, and laser decoration. Ask which process fits your design and use case. See the " },
-            { "text": "SAHM glass decoration FAQ", "href": "https://www.sahmglass.eu/faq/" },
-            { "text": " for examples of available methods." }
-          ]
+          "type": "paragraph",
+          "text": "Decoration methods differ in color, detail, and care requirements. Confirm that the chosen process suits the glass style, artwork, and intended use."
         },
         {
           "type": "heading",
@@ -86,12 +78,8 @@
           "text": "Provide clear artwork and specify its dimensions, colors, and placement. Use a vector file where possible, and simplify very fine lines or small text so the design remains legible at its finished size."
         },
         {
-          "type": "rich-paragraph",
-          "parts": [
-            { "text": "Glassware artwork guidance recommends providing a finished, clear file and notes that fine lines may need to be thickened for a cleaner result. Review the " },
-            { "text": "Glasdec artwork guidelines", "href": "https://www.glasdec.com/artwork-guidelines/" },
-            { "text": " for examples." }
-          ]
+          "type": "paragraph",
+          "text": "Prepare a clear, production-ready file. The supplier may recommend thickening fine lines or simplifying details; confirm file format, colors, and dimensions for the selected decoration method."
         },
         {
           "type": "heading",
@@ -128,12 +116,8 @@
           "text": "Check the logo’s position, size, distortion, color, and edge clarity on the selected glass. If brand color or placement is critical, ask whether a physical sample or preproduction sample is available; a digital proof helps confirm the design direction but may not exactly match the finished product."
         },
         {
-          "type": "rich-paragraph",
-          "parts": [
-            { "text": "Some suppliers describe digital proofs as approximate representations, with possible differences in imprint color, size, and placement. Review the " },
-            { "text": "Prestige Glassware order information", "href": "https://prestigeglassware.com/general-information/" },
-            { "text": "." }
-          ]
+          "type": "paragraph",
+          "text": "A digital proof shows the intended design but may not exactly match the finished color, size, or placement. Use the approved physical sample or final production proof as the reference when those details are critical."
         },
         {
           "type": "list",
