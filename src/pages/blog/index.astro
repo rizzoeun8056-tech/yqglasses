@@ -9,6 +9,9 @@ const title = 'Blog | Glassware & Cake Serving Guides | YQ GLASSES';
 const description = 'Practical guides to cake serving sets, glassware and personalized details from YQ GLASSES.';
 const defaultCategoryId = 'cake-knife-set';
 const pageSize = 9;
+const postsForCategory = (categoryId: string) => blogPosts
+  .filter((post) => post.category === categoryId)
+  .sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
 ---
 
 <!doctype html>
@@ -42,10 +45,21 @@ const pageSize = 9;
       {blogCategories.map((category) => (
         <section class="journal-panel" id={`panel-${category.id}`} role="tabpanel" aria-labelledby={`tab-${category.id}`} tabindex="0" data-page-size={pageSize} hidden={category.id !== defaultCategoryId}>
           <div class="journal-grid">
-            {blogPosts.filter((post) => post.category === category.id).map((post, postIndex) => (
+            {postsForCategory(category.id).map((post, postIndex) => (
               <article class="journal-card" hidden={postIndex >= pageSize}>
                 <a class="journal-card-link" href={`/blog/${post.slug}/`}>
-                  <h2>{post.title} <span aria-hidden="true">↗</span></h2><p>{post.description}</p>
+                  <span class="journal-card-media">
+                    <img
+                      src={post.image}
+                      alt={post.alt}
+                      width={post.imageWidth ?? 600}
+                      height={post.imageHeight ?? 600}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
+                  <h2>{post.title} <span aria-hidden="true">↗</span></h2>
+                  <p>{post.description}</p>
                 </a>
               </article>
             ))}
@@ -77,6 +91,8 @@ const pageSize = 9;
   .journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
   .journal-card { border-top: 1px solid var(--line); }
   .journal-card-link { display: block; height: 100%; padding: 24px 0 18px; }
+  .journal-card-media { display: block; width: 100%; aspect-ratio: 1; margin-bottom: 20px; overflow: hidden; background: var(--brand-surface); }
+  .journal-card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
   h2 { margin-bottom: 14px; font-size: 24px; line-height: 1.3; }
   h2 span { color: var(--copper-dark); font-family: Arial, sans-serif; font-size: 18px; white-space: nowrap; }
   .journal-card-link:hover h2 { color: var(--copper-dark); }
@@ -87,6 +103,7 @@ const pageSize = 9;
   .journal-pagination button[aria-current='page'] { background: var(--brand-copper); border-color: var(--copper); color: #fff; }
   .journal-pagination button:disabled { color: var(--muted); cursor: default; }
   .journal-page-numbers { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+  .journal-page-ellipsis { display: inline-flex; min-width: 24px; align-items: center; justify-content: center; color: var(--muted); }
   .journal-page-status { flex-basis: 100%; text-align: center; color: var(--muted); font-size: 14px; line-height: 1.5; }
   @media (min-width: 701px) and (max-width: 980px) { .journal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 700px) {
@@ -120,7 +137,22 @@ const pageSize = 9;
     pagination.hidden = pageCount <= 1;
     const numbers = panel.querySelector<HTMLElement>('.journal-page-numbers')!;
     numbers.replaceChildren();
-    for (let number = 1; number <= pageCount; number++) {
+    const pageNumbers = pageCount <= 4
+      ? Array.from({ length: pageCount }, (_, index) => index + 1)
+      : page <= 2
+        ? [1, 2, 3, pageCount]
+        : page >= pageCount - 1
+          ? [1, pageCount - 2, pageCount - 1, pageCount]
+          : [1, page, page + 1, pageCount];
+    let previousNumber = 0;
+    for (const number of pageNumbers) {
+      if (previousNumber && number - previousNumber > 1) {
+        const ellipsis = document.createElement('span');
+        ellipsis.className = 'journal-page-ellipsis';
+        ellipsis.textContent = '…';
+        ellipsis.setAttribute('aria-hidden', 'true');
+        numbers.append(ellipsis);
+      }
       const button = document.createElement('button');
       button.type = 'button';
       button.textContent = String(number);
@@ -128,6 +160,7 @@ const pageSize = 9;
       button.setAttribute('aria-label', `Page ${number}`);
       if (number === page) button.setAttribute('aria-current', 'page');
       numbers.append(button);
+      previousNumber = number;
     }
     panel.querySelector<HTMLButtonElement>('[data-page-previous]')!.disabled = page === 1;
     panel.querySelector<HTMLButtonElement>('[data-page-next]')!.disabled = page === pageCount;

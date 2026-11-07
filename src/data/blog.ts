@@ -16,6 +16,7 @@ type BlogCategory = typeof blogCategories[number]['id'];
 
 interface BlogPost {
   slug: string;
+  publishedAt: string;
   category: BlogCategory;
   title: string;
   description: string;
@@ -37,6 +38,7 @@ interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'custom-champagne-glass-supplier-guide',
+    publishedAt: '2026-11-02T12:00:00+08:00',
     category: 'champagne-glassware',
     title: champagneSupplierGuide.title,
     description: 'Compare quality, customization, samples, pricing, lead times, packaging and shipping before placing a custom champagne glass order.',
@@ -57,6 +59,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'custom-trumpet-flute-champagne-glasses-logo-guide',
+    publishedAt: '2026-11-04T12:00:00+08:00',
     category: 'champagne-glassware',
     title: trumpetFluteLogoGuide.title,
     description: 'Plan a standout logo for Custom Trumpet Flute Champagne Glasses.',
@@ -77,6 +80,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'compare-custom-wedding-cake-knife-and-server-set-quotes',
+    publishedAt: '2026-11-07T14:17:31+08:00',
     category: 'cake-knife-set',
     title: customWeddingQuotes.title,
     description: 'A practical guide to comparing custom wedding cake knife and server set quotes.',
@@ -98,6 +102,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'studded-cake-knife-and-server-set-quality-checklist',
+    publishedAt: '2026-11-01T12:08:38+08:00',
     category: 'cake-knife-set',
     title: studdedQualityGuide.title,
     description: 'Inspect materials, decorative accents, performance and packaging before approving a bulk order.',
@@ -119,6 +124,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'custom-cake-knife-server-material-selection',
+    publishedAt: '2026-11-07T16:52:50+08:00',
     category: 'cake-knife-set',
     title: materialSelectionGuide.title,
     description: 'Choose cake knife and server set materials by use, market and budget. See how YQ’s hand-set rhinestones and rhinestone-filled handles shape design options.',
@@ -139,6 +145,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'custom-cake-knife-and-server-set-design-guide',
+    publishedAt: '2026-11-01T11:17:46+08:00',
     category: 'cake-knife-set',
     title: designGuide.title,
     description: 'Plan the construction, tooling and branded details of a custom cake knife and server set.',
@@ -159,6 +166,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'cake-knife-and-server-set-guide-for-buyer',
+    publishedAt: '2026-10-29T10:58:27+08:00',
     category: 'cake-knife-set',
     title: buyerGuide.title,
     description: 'Plan your custom set with a practical guide to design options, quality checks and purchasing.',
@@ -180,6 +188,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'best-knife-for-slicing-cake',
+    publishedAt: '2026-10-29T09:38:04+08:00',
     category: 'cake-knife-set',
     title: cakeSlicingArticle.title,
     description: 'Choose a knife for your cake’s texture and explore matching servers and custom set options.',
@@ -201,6 +210,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'choosing-champagne-glassware',
+    publishedAt: '2026-10-25T12:00:00+08:00',
     category: 'champagne-glassware',
     title: 'Choosing Champagne Glassware for Your Collection',
     description: 'A simple starting point for shape, stem design and a coordinated table.',
@@ -216,6 +226,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'personalized-champagne-glass-brief',
+    publishedAt: '2026-10-25T12:00:00+08:00',
     category: 'champagne-glassware',
     title: 'How to Brief a Personalized Champagne Glass Project',
     description: 'The details to share before reviewing artwork, decoration and packaging.',
@@ -231,6 +242,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'how-to-use-cake-knife-and-server-set',
+    publishedAt: '2026-10-25T12:00:00+08:00',
     category: 'cake-knife-set',
     title: 'How to Use a Cake Knife and Server Set',
     description: 'A few practical steps for cutting, lifting and serving a slice.',
