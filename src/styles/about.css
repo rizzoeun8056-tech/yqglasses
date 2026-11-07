@@ -4,13 +4,13 @@
 .about-container { width: min(1280px, calc(100% - 112px)); margin-inline: auto; }
 .about-section { padding: 88px 0; }
 .about-section h2 { margin: 0; font-size: var(--font-size-h2); line-height: 1.14; letter-spacing: -.045em; }
-.about-section p { color: var(--brand-muted); font-size: 14px; line-height: 1.8; }
-.about-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; min-height: 50px; padding: 0 20px; border: 1px solid var(--brand-copper); background: var(--brand-copper); color: #fff; font-size: 14px; font-weight: 700; }
+.about-section p { color: var(--brand-muted); font-size: 15px; line-height: 1.8; }
+.about-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; min-height: 50px; padding: 0 20px; border: 1px solid var(--brand-copper); background: var(--brand-copper); color: #fff; font-size: 15px; font-weight: 700; }
 .about-button span { font-size: 18px; font-weight: 400; }
 .about-hero { padding: 55px 0 60px; }
 .about-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); align-items: center; gap: 60px; max-width: 1020px; }
 .about-hero-copy { max-width: 520px; }
-.about-section-label { margin-bottom: 21px; color: var(--brand-copper); font-size: 14px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.about-section-label { margin-bottom: 21px; color: var(--brand-copper); font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .about-hero h1 { margin: 0 0 21px; font-size: var(--font-size-h1); line-height: 1.08; letter-spacing: -.05em; }
 .about-hero-copy > p:not(.about-section-label) { max-width: 520px; margin-bottom: 24px; color: var(--brand-muted); font-size: 15px; line-height: 1.8; }
 .about-hero-visual { display: grid; gap: 12px; width: min(100%, 420px); justify-self: center; }
@@ -24,7 +24,7 @@
 .about-facts-grid > div:first-child { padding-left: 0; }
 .about-facts-grid > div:last-child { border: 0; }
 .about-facts strong { font-family: Georgia, 'Times New Roman', serif; font-size: 31px; font-weight: 400; letter-spacing: -.04em; }
-.about-facts span { color: var(--brand-muted); font-size: 14px; }
+.about-facts span { color: var(--brand-muted); font-size: 15px; }
 .about-heading { display: flex; align-items: end; justify-content: space-between; gap: 35px; margin-bottom: 30px; }
 .about-heading > p { max-width: 390px; margin: 0; }
 .about-production { background: var(--brand-paper); }

@@ -21,7 +21,6 @@
 .tf-hero-grid { display: grid; grid-template-columns: minmax(0, 470px) minmax(0, 1fr); gap: clamp(65px, 9vw, 130px); align-items: center; max-width: 1180px; }
 .tf-hero-media { justify-self: center; width: min(100%, 440px); }
 .tf-main-photo { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
-.tf-hero-media figcaption { padding-top: 10px; color: #877b74; font-size: var(--font-size-small); letter-spacing: .04em; }
 .tf-hero-copy { max-width: 465px; }
 .tf-lead { max-width: 440px; margin-top: 24px !important; font-size: var(--font-size-small) !important; }
 .tf-hero-facts { display: flex; max-width: 410px; margin: 28px 0; padding: 17px 0; border-top: 1px solid var(--tf-line); border-bottom: 1px solid var(--tf-line); }
@@ -38,7 +37,6 @@
 .tf-copy p:not(.tf-eyebrow) { margin-top: 19px; }
 .tf-photo { justify-self: center; width: min(100%, 420px); }
 .tf-photo img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
-.tf-photo figcaption { padding-top: 9px; color: #847972; font-size: var(--font-size-small); }
 .tf-table-wrap { max-width: 1000px; overflow-x: auto; }
 .tf-page table { width: 100%; min-width: 590px; border-collapse: collapse; font-size: var(--font-size-small); }
 .tf-page th, .tf-page td { padding: 17px 13px; border-bottom: 1px solid var(--tf-line); text-align: left; }
@@ -68,7 +66,7 @@
 .tf-quote p { max-width: 400px; margin-bottom: 25px; }
 .tf-reference-note { display: block; margin-top: 15px; color: #9a8d86; font-size: var(--font-size-small); }
 .tf-faq { border-top: 1px solid var(--tf-line); }
-.tf-faq h3 { padding: 14px 0 13px; border-bottom: 1px solid var(--tf-line); font: 700 14px Arial, sans-serif; }
+.tf-faq h3 { padding: 14px 0 13px; border-bottom: 1px solid var(--tf-line); font: 700 15px Arial, sans-serif; }
 .tf-faq details { border-bottom: 1px solid var(--tf-line); }
 .tf-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 15px 0; font-size: var(--font-size-small); cursor: pointer; list-style: none; }
 .tf-faq summary::-webkit-details-marker { display: none; }

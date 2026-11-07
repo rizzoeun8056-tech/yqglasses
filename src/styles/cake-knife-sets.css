@@ -10,7 +10,7 @@
 .ck-hero-layout { display: grid; grid-template-columns: minmax(0, 470px) minmax(0, 1fr); gap: clamp(96px, 10vw, 150px); align-items: center; max-width: 1180px; }
 .ck-hero-copy { grid-column: 2; grid-row: 1; padding: 9px 0; }
 .ck-hero h1 { margin-bottom: 18px; font-size: var(--font-size-h1); line-height: 1.055; letter-spacing: -.05em; }
-.ck-hero-panel > p { max-width: 400px; margin-bottom: 22px; color: #726b60; font-size: 14px; line-height: 1.8; }
+.ck-hero-panel > p { max-width: 400px; margin-bottom: 22px; color: #726b60; font-size: 15px; line-height: 1.8; }
 .ck-hero-timing { display: flex; gap: 35px; margin-bottom: 24px; }
 .ck-hero-timing > div { display: flex; flex-direction: column; gap: 7px; }
 .ck-hero-timing > div + div { border-left: 1px solid #d5cbbf; padding-left: 35px; }

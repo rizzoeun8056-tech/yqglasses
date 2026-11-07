@@ -41,11 +41,11 @@ const shapes = [
 ];
 
 const productionCases = [
-  { image: 'oh41013c-gold-studded-zinc-alloy-stem.webp', alt: 'Champagne flute with a gold-finished zinc alloy stem and studded detailing', caption: 'Gold-finished · studded zinc alloy' },
-  { image: 'oh41014-enamel-zinc-alloy-stem.webp', alt: 'Champagne flute with a decorative enamel zinc alloy stem', caption: 'Enamel · zinc alloy stem' },
-  { image: 'oh31007-studded-stainless-steel-stem.webp', alt: 'Pair of champagne flutes with studded stainless steel stems', caption: 'Studded · stainless steel stem' },
-  { image: 'oh13197a-crystal-filled-acrylic-stem.webp', alt: 'Two champagne flutes with glass bowls and bases connected by crystal-filled acrylic stems', caption: 'Crystal-filled acrylic · glass base' },
-  { image: '13172-silver-plated-zinc-alloy-stem.webp', alt: 'Pair of champagne flutes with silver-plated zinc alloy stems', caption: 'Silver-plated · zinc alloy stem' },
+  { image: 'oh41013c-gold-studded-zinc-alloy-stem.webp', alt: 'Champagne flute with a gold-finished zinc alloy stem and studded detailing' },
+  { image: 'oh41014-enamel-zinc-alloy-stem.webp', alt: 'Champagne flute with a decorative enamel zinc alloy stem' },
+  { image: 'oh31007-studded-stainless-steel-stem.webp', alt: 'Pair of champagne flutes with studded stainless steel stems' },
+  { image: 'oh13197a-crystal-filled-acrylic-stem.webp', alt: 'Two champagne flutes with glass bowls and bases connected by crystal-filled acrylic stems' },
+  { image: '13172-silver-plated-zinc-alloy-stem.webp', alt: 'Pair of champagne flutes with silver-plated zinc alloy stems' },
 ];
 
 const uses = [
@@ -129,7 +129,7 @@ const description = 'Explore champagne glass shapes, available designs and custo
           </div>
           <div class="cg-case-heading"><h3>Our production examples</h3><p>Selected champagne glass designs photographed for YQ GLASSES.</p></div>
           <div class="cg-case-row" aria-label="YQ GLASSES champagne glass production examples">
-            {productionCases.map((item) => <figure><img src={`/images/champagne-glasses/${item.image}`} alt={item.alt} width="600" height="600" loading="lazy" /><figcaption>{item.caption}</figcaption></figure>)}
+            {productionCases.map((item) => <figure><img src={`/images/champagne-glasses/${item.image}`} alt={item.alt} width="600" height="600" loading="lazy" /></figure>)}
           </div>
           <div class="cg-style-action"><p>Have a preferred shape? Include it in your inquiry.</p><a class="ck-button" href={inquiry()} data-inquiry-link>Discuss glass styles <span aria-hidden="true">↗</span></a></div>
         </div>
@@ -137,7 +137,7 @@ const description = 'Explore champagne glass shapes, available designs and custo
 
       <section class="ck-customization ck-section" id="customization" aria-labelledby="customization-title">
         <div class="ck-container ck-detail-grid">
-          <figure class="ck-detail-image"><img src="/images/champagne-glasses/heart-stem-pair.webp" alt="Clear champagne flutes with decorative heart details on the stems" width="600" height="600" loading="lazy" /><figcaption class="cg-image-caption">Decorative stem detail · style example</figcaption></figure>
+          <figure class="ck-detail-image"><img src="/images/champagne-glasses/heart-stem-pair.webp" alt="Clear champagne flutes with decorative heart details on the stems" width="600" height="600" loading="lazy" /></figure>
           <div class="ck-detail-copy"><h2 id="customization-title">Details that<br /><em>make it yours.</em></h2><p>Personalized champagne glasses start with your words or artwork. We will review how they can work with your chosen glass and decorative finish.</p>
             <div class="ck-options">
               <div><span>01</span><div><h3>Wording & branding</h3><p>Share names, dates, a short message or your logo artwork for review.</p></div></div>
@@ -156,7 +156,7 @@ const description = 'Explore champagne glass shapes, available designs and custo
       <section class="ck-packaging ck-section cg-presentation" id="packaging" aria-labelledby="packaging-title">
         <div class="ck-container ck-packaging-grid">
           <div class="ck-packaging-copy"><h2 id="packaging-title">A considered<br /><em>complete set.</em></h2><p>Discuss gift boxes, branded packaging and protective inserts to suit your glasses. A matching cake knife and server can bring the collection together.</p><p class="cg-configuration-note">Product pairings and packaging are confirmed for each order.</p><a class="ck-text-link" href={inquiry('custom')} data-inquiry-link data-inquiry-mode="custom">Discuss packaging <span aria-hidden="true">↗</span></a></div>
-          <figure class="ck-packaging-image cg-presentation-photo"><img src="/images/champagne-glasses/coordinated-set.webp" alt="Champagne flutes displayed beside a cake knife and server on a tray" width="600" height="600" loading="lazy" /><figcaption class="cg-image-caption">Coordinated display · style example</figcaption></figure>
+          <figure class="ck-packaging-image cg-presentation-photo"><img src="/images/champagne-glasses/coordinated-set.webp" alt="Champagne flutes displayed beside a cake knife and server on a tray" width="600" height="600" loading="lazy" /></figure>
         </div>
       </section>
 
