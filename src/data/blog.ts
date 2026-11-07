@@ -1,7 +1,7 @@
 import cakeSlicingArticle from './blog/best-knife-for-slicing-cake.json';
 import buyerGuide from './blog/cake-knife-and-server-set-guide-for-buyer.json';
 import designGuide from './blog/custom-cake-knife-and-server-set-design-guide.json';
-import customWeddingQuotes from './blog/custom-wedding-cake-knife-and-server-set-quotes.json';
+import customWeddingQuotes from './blog/compare-custom-wedding-cake-knife-and-server-set-quotes.json';
 import studdedQualityGuide from './blog/studded-cake-knife-and-server-set-quality-checklist.json';
 import champagneSupplierGuide from './blog/custom-champagne-glass-supplier-guide.json';
 import trumpetFluteLogoGuide from './blog/custom-trumpet-flute-champagne-glasses-logo-guide.json';
@@ -75,15 +75,15 @@ export const blogPosts: BlogPost[] = [
     productLabel: 'Explore Trumpet Flute Champagne Glasses',
   },
   {
-    slug: 'custom-wedding-cake-knife-and-server-set-quotes',
+    slug: 'compare-custom-wedding-cake-knife-and-server-set-quotes',
     category: 'cake-knife-set',
     title: customWeddingQuotes.title,
     description: 'A practical guide to comparing custom wedding cake knife and server set quotes.',
     seo: {
       title: 'Compare Custom Wedding Cake Knife and Server Set Quotes',
-      description: 'Compare wedding cake knife and server set quotes with matching specifications. Check samples and customization, then confirm packaging and landed costs.',
-      keywords: 'wedding cake knife and server set',
-      primaryKeyword: 'wedding cake knife and server set',
+      description: 'Compare Custom Wedding Cake Knife and Server Set Quotes with a guide to specs, samples, customization and landed costs.',
+      keywords: 'Compare Custom Wedding Cake Knife and Server Set Quotes',
+      primaryKeyword: 'Compare Custom Wedding Cake Knife and Server Set Quotes',
     },
     image: '/images/blog/custom-cake-knife-server-photo.webp',
     imageWidth: 600,
