@@ -86,6 +86,14 @@
         {
           "type": "paragraph",
           "text": "Check the sample for overall weight, grip, component joints and finish, and confirm how the set sits in and is protected by its gift box. If a handle or decorative component may contact food, verify the applicable information for that component and its finish."
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/cake-knife-server-material-hand-set.webp",
+          "alt": "Full cake knife and server with surface-set crystal handles on a plate",
+          "width": 500,
+          "height": 500,
+          "label": "Surface-set crystal handles"
         }
       ]
     },
@@ -267,10 +275,14 @@
       "text": "",
       "blocks": [
         {
+          "type": "paragraph",
+          "text": "YQ specializes in cake knife and server set processing, with stainless steel and zinc alloy as its main materials. Its decorative craft specialties are hand-set rhinestones and rhinestone filling. Hand-set rhinestones can add fine points of sparkle to handles and other decorative areas."
+        },
+        {
           "type": "rich-paragraph",
           "parts": [
             {
-              "text": "YQ specializes in cake knife and server set processing, with stainless steel and zinc alloy as its main materials. Its decorative craft specialties are hand-set rhinestones and rhinestone filling. Hand-set rhinestones can add fine points of sparkle to handles and other decorative areas; rhinestone-filled handles can add depth and light to transparent or hollow handles, giving gift sets a more premium feel and a stronger design identity. Review "
+              "text": "Rhinestone-filled handles can add depth and light to transparent or hollow handles, giving gift sets a more premium feel and a stronger design identity. Review "
             },
             {
               "text": "YQ’s decorative-detail quality checks",
@@ -283,19 +295,11 @@
         },
         {
           "type": "image",
-          "src": "/images/blog/cake-knife-server-material-hand-set.webp",
-          "alt": "Cake knife and server with surface-set crystal handles on a plate",
-          "width": 500,
-          "height": 500,
-          "label": "Surface-set crystal handles"
-        },
-        {
-          "type": "image",
           "src": "/images/blog/cake-knife-server-material-filled-handle.webp",
-          "alt": "Close-up of transparent handles filled with crystals and metal end caps",
+          "alt": "Full view of a cake knife and server set with crystal-filled transparent handles",
           "width": 600,
           "height": 600,
-          "label": "Crystal-filled handle detail"
+          "label": "Full set with crystal-filled handles"
         },
         {
           "type": "paragraph",
