@@ -3,6 +3,7 @@ import buyerGuide from './blog/cake-knife-and-server-set-guide-for-buyer.json';
 import designGuide from './blog/custom-cake-knife-and-server-set-design-guide.json';
 import customWeddingQuotes from './blog/compare-custom-wedding-cake-knife-and-server-set-quotes.json';
 import studdedQualityGuide from './blog/studded-cake-knife-and-server-set-quality-checklist.json';
+import materialSelectionGuide from './blog/custom-cake-knife-server-material-selection.json';
 import champagneSupplierGuide from './blog/custom-champagne-glass-supplier-guide.json';
 import trumpetFluteLogoGuide from './blog/custom-trumpet-flute-champagne-glasses-logo-guide.json';
 
@@ -113,6 +114,26 @@ export const blogPosts: BlogPost[] = [
     intro: studdedQualityGuide.intro,
     introLinkText: 'studded cake knife and server set',
     sections: studdedQualityGuide.sections,
+    productUrl: '/cake-knife-server-sets/',
+    productLabel: 'Explore custom cake knife and server sets',
+  },
+  {
+    slug: 'custom-cake-knife-server-material-selection',
+    category: 'cake-knife-set',
+    title: materialSelectionGuide.title,
+    description: 'Choose cake knife and server set materials by use, market and budget. See how YQ’s hand-set rhinestones and rhinestone-filled handles shape design options.',
+    seo: {
+      title: 'Choose Cake Knife and Server Set Materials',
+      description: 'Choose cake knife and server set materials by use, market and budget. See how YQ’s hand-set rhinestones and rhinestone-filled handles shape design options.',
+      keywords: 'cake knife and server set materials',
+      primaryKeyword: 'cake knife and server set materials',
+    },
+    image: '/images/blog/cake-knife-server-material-selection-hero.webp',
+    imageWidth: 600,
+    imageHeight: 600,
+    alt: 'Cake knife and server with crystal-filled transparent handles on a black background',
+    intro: materialSelectionGuide.intro,
+    sections: materialSelectionGuide.sections,
     productUrl: '/cake-knife-server-sets/',
     productLabel: 'Explore custom cake knife and server sets',
   },

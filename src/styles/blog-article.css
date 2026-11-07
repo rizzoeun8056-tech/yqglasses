@@ -11,7 +11,7 @@
 .article-hero-image img { width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; background: var(--brand-paper); }
 
 .article-layout { display: grid; grid-template-columns: minmax(250px, 290px) minmax(0, 1fr); gap: clamp(44px, 6vw, 92px); align-items: start; padding-block: 70px 104px; }
-.article-sidebar { position: sticky; top: 20px; display: flex; flex-direction: column; min-width: 0; max-height: calc(100dvh - 40px); overflow-y: auto; scrollbar-width: thin; }
+.article-sidebar-stack { position: sticky; top: 20px; display: flex; flex-direction: column; min-width: 0; max-height: calc(100dvh - 40px); overflow-y: auto; scrollbar-width: thin; }
 .article-toc { display: flex; flex-direction: column; flex: 0 1 auto; min-height: 100px; border-top: 2px solid var(--brand-copper); padding-top: 16px; }
 .article-toc h2, .article-company h2 { margin: 0; font-size: 20px; line-height: 1.35; letter-spacing: -.02em; }
 .article-toc ol { display: grid; gap: 0; overflow-y: auto; min-height: 0; margin: 14px 0 0; padding: 0; list-style: none; counter-reset: article-heading; scrollbar-width: thin; }
@@ -56,14 +56,17 @@
   .article-hero-copy { padding-block: 26px 38px; }
   .article-back-link { margin-bottom: 27px; }
   .article-layout { grid-template-columns: 1fr; gap: 46px; padding-block: 38px 72px; }
-  .article-sidebar { position: static; max-height: none; overflow: visible; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 25px; }
+  .article-sidebar-stack { display: contents; }
+  .article-toc { order: 1; }
+  .article-content { order: 2; }
+  .article-company { order: 3; grid-column: 1; width: 100%; max-width: none; }
+  .article-carousel { width: min(100%, 380px); }
   .article-toc ol { max-height: 300px; }
   .article-company { margin-top: 0; }
   .article-content h2 { font-size: 22px; }
 }
 @media (max-width: 520px) {
-  .article-sidebar { grid-template-columns: 1fr; gap: 36px; }
-  .article-company { max-width: 380px; }
+  .article-company { max-width: none; }
   .article-content section + section { margin-top: 30px; padding-top: 28px; }
   .article-next-step { padding: 22px; }
 }

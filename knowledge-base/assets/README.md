@@ -1,6 +1,6 @@
 # YQ GLASSES 产品与公司图片素材库
 
-此目录保存供后续网站内容选用的产品、办公室、展厅、加工现场与外观设计专利证书图片及说明。库内图片统一为 **WebP**，宽高不超过 **600 px**，单张小于 **40,000 字节**。原始文件仍保存在用户提供的来源位置；图片放在 `knowledge-base/assets/`，不会随 Astro 构建自动发布。选定网页图片后可复制到 `public/images/` 并在页面中引用。
+此目录保存供后续网站内容选用的产品、办公室、展厅、加工现场与外观设计专利证书图片及说明。库内图片为 **WebP**，宽高不超过 **700 px**，单张小于 **40,000 字节**；最新入库的钻石点缀款图片按用户要求压到 **30,000 字节以内**。原始文件仍保存在用户提供的来源位置；图片放在 `knowledge-base/assets/`，不会随 Astro 构建自动发布。选定网页图片后可复制到 `public/images/` 并在页面中引用。
 
 | 素材组 | 图片数量 | 内容 | 对应知识条目 |
 |---|---:|---|---|
@@ -20,5 +20,6 @@
 | [OH41101 来源文件夹天鹅点钻香槟杯](champagne-glasses/oh41101-swan-source/README.md) | 9 | 玻璃杯头、金银电镀、点钻天鹅、包装图及去标识尺寸图 | [天鹅香槟杯产品记录](../products/swan-champagne-flutes.md)；尺寸图标 OH13370C，型号关系待核对 |
 | [OH41013R 镂空雕花香槟杯](champagne-glasses/oh41013r-openwork-stem/README.md) | 6 | 玻璃杯头、锌合金镂空雕花杯杆、去标识图片及尺寸图 | [OH41013R 产品记录](../products/oh41013r-openwork-champagne-flute.md) |
 | [五款香槟杯生产案例图](champagne-glasses/production-cases/README.md) | 5 | 金色点钻锌合金、珐琅锌合金、点钻不锈钢、灌钻亚克力、镀银锌合金杯杆 | [五款杯杆产品记录](../products/champagne-glass-production-cases.md) |
+| [钻石点缀蛋糕刀铲套装](cake-knife-server/diamond-accent-sets/README.md) | 9 | 不锈钢刀铲、表面点钻、透明手柄灌钻、礼盒与平面刀铲素材 | 用户提供；含英文 alt 文本及原图对应表 |
 
 使用图片时以各组的来源映射、画面说明和已确认信息为准；不要把不同素材组的材质或规格合并成同一款产品的声明。

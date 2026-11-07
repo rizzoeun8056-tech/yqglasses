@@ -67,12 +67,12 @@ const companyPhotos = [
         </div>
       </header>
       <div class="page-width article-layout">
-        <aside class="article-sidebar" aria-label="Article navigation and company information">
+        <div class="article-sidebar-stack">
           <nav class="article-toc" aria-label="On this page">
             <h2>On this page</h2>
             <ol>{post.sections.map((section, index) => <li><a href={`#section-${index + 1}`}>{section.title}</a></li>)}</ol>
           </nav>
-          <section class="article-company" aria-labelledby="company-photos-title">
+          <aside class="article-company" aria-labelledby="company-photos-title">
             <div class="article-company-heading"><span>Behind the work</span><h2 id="company-photos-title">Inside YQ GLASSES</h2></div>
             <div class="article-carousel" aria-roledescription="carousel" aria-label="Four company photographs">
               <div class="article-carousel-track" data-company-track tabindex="0">
@@ -81,8 +81,8 @@ const companyPhotos = [
               <div class="article-carousel-controls"><button type="button" data-company-prev aria-label="Previous company photo">←</button><span data-company-count aria-live="polite">01 / 04</span><button type="button" data-company-next aria-label="Next company photo">→</button></div>
             </div>
             <a class="article-inquiry" href={`${site.inquiryUrl}?source=blog&article=${encodeURIComponent(post.slug)}`}>Request a quote <span aria-hidden="true">↗</span></a>
-          </section>
-        </aside>
+          </aside>
+        </div>
         <article class="article-content" aria-label={post.title}>
           {post.intro?.map((paragraph, index) => {
             const phrase = index === 0 ? post.introLinkText : undefined;
@@ -93,7 +93,7 @@ const companyPhotos = [
           {post.sections.map((section, index) => <section id={`section-${index + 1}`}><h2>{section.title}</h2>
             {section.blocks ? section.blocks.map((block) => (
               block.type === 'paragraph' ? <p>{block.text}</p> :
-              block.type === 'rich-paragraph' ? <p>{block.parts?.map((part) => part.href ? <a href={part.href} target="_blank" rel="noreferrer">{part.text}</a> : part.text)}</p> :
+              block.type === 'rich-paragraph' ? <p>{block.parts?.map((part) => part.href ? <a href={part.href} target={/^https?:\/\//i.test(part.href) ? '_blank' : undefined} rel={/^https?:\/\//i.test(part.href) ? 'noreferrer' : undefined}>{part.text}</a> : part.text)}</p> :
               block.type === 'heading' ? <h3>{block.text}</h3> :
               block.type === 'cta' ? <div class="article-inline-cta"><p>{block.text}</p><a href={block.href}>{block.label} <span aria-hidden="true">↗</span></a></div> :
               block.type === 'list' ? <ul>{block.items?.map((item) => <li>{item}</li>)}</ul> :
