@@ -58,8 +58,7 @@ const postsForCategory = (categoryId: string) => blogPosts
                       decoding="async"
                     />
                   </span>
-                  <h2>{post.title} <span aria-hidden="true">↗</span></h2>
-                  <p>{post.description}</p>
+                  <h2>{post.title}</h2>
                 </a>
               </article>
             ))}
@@ -94,9 +93,8 @@ const postsForCategory = (categoryId: string) => blogPosts
   .journal-card-media { display: block; width: 100%; aspect-ratio: 1; margin-bottom: 20px; overflow: hidden; background: var(--brand-surface); }
   .journal-card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
   h2 { margin-bottom: 14px; font-size: 24px; line-height: 1.3; }
-  h2 span { color: var(--copper-dark); font-family: Arial, sans-serif; font-size: 18px; white-space: nowrap; }
   .journal-card-link:hover h2 { color: var(--copper-dark); }
-  .journal-card p, .journal-empty { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+  .journal-empty { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
   .journal-empty { text-align: center; padding-block: 32px; }
   .journal-pagination { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
   .journal-pagination button { min-height: 42px; min-width: 42px; padding: 9px 12px; border: 1px solid var(--line); background: var(--brand-paper); color: var(--ink); font-size: 14px; }
