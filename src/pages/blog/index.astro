@@ -7,6 +7,7 @@ import { blogCategories, blogPosts } from '../../data/blog';
 
 const title = 'Blog | Glassware & Cake Serving Guides | YQ GLASSES';
 const description = 'Practical guides to cake serving sets, glassware and personalized details from YQ GLASSES.';
+const defaultCategoryId = 'cake-knife-set';
 const pageSize = 9;
 ---
 
@@ -34,12 +35,12 @@ const pageSize = 9;
       </header>
       <div class="journal page-width">
       <div class="journal-tabs" role="tablist" aria-label="Blog topics">
-        {blogCategories.map((category, index) => (
-          <button type="button" role="tab" id={`tab-${category.id}`} aria-controls={`panel-${category.id}`} aria-selected={index === 0 ? 'true' : 'false'} tabindex={index === 0 ? 0 : -1} data-blog-category={category.id}>{category.label}</button>
+        {blogCategories.map((category) => (
+          <button type="button" role="tab" id={`tab-${category.id}`} aria-controls={`panel-${category.id}`} aria-selected={category.id === defaultCategoryId ? 'true' : 'false'} tabindex={category.id === defaultCategoryId ? 0 : -1} data-blog-category={category.id}>{category.label}</button>
         ))}
       </div>
-      {blogCategories.map((category, index) => (
-        <section class="journal-panel" id={`panel-${category.id}`} role="tabpanel" aria-labelledby={`tab-${category.id}`} tabindex="0" data-page-size={pageSize} hidden={index !== 0}>
+      {blogCategories.map((category) => (
+        <section class="journal-panel" id={`panel-${category.id}`} role="tabpanel" aria-labelledby={`tab-${category.id}`} tabindex="0" data-page-size={pageSize} hidden={category.id !== defaultCategoryId}>
           <div class="journal-grid">
             {blogPosts.filter((post) => post.category === category.id).map((post, postIndex) => (
               <article class="journal-card" hidden={postIndex >= pageSize}>
@@ -162,7 +163,7 @@ const pageSize = 9;
     });
   };
   const selectFromHash = () => {
-    const selected = tabs.find((tab) => tab.dataset.blogCategory === window.location.hash.slice(1)) || tabs[0];
+    const selected = tabs.find((tab) => tab.dataset.blogCategory === window.location.hash.slice(1)) || tabs.find((tab) => tab.dataset.blogCategory === 'cake-knife-set') || tabs[0];
     const requestedPage = Number(new URLSearchParams(window.location.search).get('page')) || 1;
     if (selected) selectCategory(selected, requestedPage);
   };
