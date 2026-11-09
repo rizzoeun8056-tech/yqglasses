@@ -42,13 +42,14 @@ const companyPhotos = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {post.noindex && <meta name="robots" content="noindex, nofollow" />}
     {post.seo && <meta name="keywords" content={post.seo.keywords} />}
     <meta property="og:type" content="article" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <link rel="canonical" href={canonical} />
-    <BrandAssets shareImage={`https://yqglasses.com${heroImage}`} shareImageType="image/webp" shareImageWidth={post.imageWidth ?? 600} shareImageHeight={post.imageHeight ?? 600} shareImageAlt={heroAlt} />
+    {heroImage ? <BrandAssets shareImage={`https://yqglasses.com${heroImage}`} shareImageType="image/webp" shareImageWidth={post.imageWidth ?? 600} shareImageHeight={post.imageHeight ?? 600} shareImageAlt={heroAlt} /> : <BrandAssets />}
     <title>{title}</title>
   </head>
   <body class="blog-detail-page">
@@ -56,21 +57,21 @@ const companyPhotos = [
     <SiteHeader />
     <main id="main" class="blog-article">
       <header class="article-hero">
-        <div class="page-width article-hero-grid">
+        <div class:list={['page-width', 'article-hero-grid', { 'article-hero-grid--text-only': !heroImage }]}>
           <div class="article-hero-copy">
             <a class="article-back-link" href={`/blog/#${category.id}`}>← Back to blog</a>
             <p class="article-category">{category.label}</p>
             <h1>{post.title}</h1>
-            <p class="article-lead">{post.description}</p>
+            {post.showHeroDescription !== false && <p class="article-lead">{post.description}</p>}
           </div>
-          <figure class="article-hero-image"><img src={heroImage} alt={heroAlt} width={post.imageWidth ?? 600} height={post.imageHeight ?? 600} fetchpriority="high" /></figure>
+          {heroImage && <figure class="article-hero-image"><img src={heroImage} alt={heroAlt} width={post.imageWidth ?? 600} height={post.imageHeight ?? 600} fetchpriority="high" /></figure>}
         </div>
       </header>
       <div class="page-width article-layout">
         <div class="article-sidebar-stack">
           <nav class="article-toc" aria-label="On this page">
             <h2>On this page</h2>
-            <ol>{post.sections.map((section, index) => <li><a href={`#section-${index + 1}`}>{section.title}</a></li>)}</ol>
+            <ol>{post.sections.map((section, index) => <li><a href={`#section-${index + 1}`}>{section.title.replace(/^\d+\.\s*/, '')}</a></li>)}</ol>
           </nav>
           <aside class="article-company" aria-labelledby="company-photos-title">
             <div class="article-company-heading"><span>Behind the work</span><h2 id="company-photos-title">Inside YQ GLASSES</h2></div>
@@ -93,21 +94,27 @@ const companyPhotos = [
           {post.sections.map((section, index) => <section id={`section-${index + 1}`}><h2>{section.title}</h2>
             {section.blocks ? section.blocks.map((block) => (
               block.type === 'paragraph' ? <p>{block.text}</p> :
-              block.type === 'rich-paragraph' ? <p>{block.parts?.map((part) => part.href ? <a href={part.href} target={/^https?:\/\//i.test(part.href) ? '_blank' : undefined} rel={/^https?:\/\//i.test(part.href) ? 'noreferrer' : undefined}>{part.text}</a> : part.text)}</p> :
+              block.type === 'rich-paragraph' ? <p>{block.parts?.map((part) => part.href ? <a href={part.href} target={/^https?:\/\//i.test(part.href) ? '_blank' : undefined} rel={/^https?:\/\//i.test(part.href) ? 'noreferrer' : undefined}>{part.text}</a> : part.strong ? <strong>{part.text}</strong> : part.text)}</p> :
+              block.type === 'blockquote' ? <blockquote><p>{block.text}</p></blockquote> :
               block.type === 'heading' ? <h3>{block.text}</h3> :
               block.type === 'cta' ? <div class="article-inline-cta"><p>{block.text}</p><a href={block.href}>{block.label} <span aria-hidden="true">↗</span></a></div> :
               block.type === 'list' ? <ul>{block.items?.map((item) => <li>{item}</li>)}</ul> :
+              block.type === 'ordered-list' ? <ol>{block.items?.map((item) => {
+                const separator = item.indexOf(':');
+                return <li>{separator >= 0 ? <><strong>{item.slice(0, separator + 1)}</strong>{item.slice(separator + 1)}</> : item}</li>;
+              })}</ol> :
               block.type === 'image' ? <figure class="article-document-image" style={{ maxWidth: `${block.width}px` }}><img src={block.src} alt={block.alt} width={block.width} height={block.height} loading="lazy" /></figure> :
               block.type === 'table' ? <div class="article-table" role="region" aria-label={block.label ?? 'Cake types and recommended knives'} tabindex="0"><table><thead><tr>{block.headers?.map((cell) => <th scope="col">{cell}</th>)}</tr></thead><tbody>{block.rows?.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody></table></div> : null
             )) : <p>{section.text}</p>}
           </section>)}
-          <div class="article-next-step">
+          {post.outro && <div class="article-outro"><hr />{post.outro.map((paragraph) => <p>{paragraph}</p>)}</div>}
+          {post.showProductCta !== false && <div class="article-next-step">
             <span>Explore the product</span>
             <div class="article-next-step-links">
               <a href={post.productUrl}>{post.productLabel} <span aria-hidden="true">↗</span></a>
               {post.productUrl !== cakeKnifeProductUrl && <a href={cakeKnifeProductUrl}>Explore cake knife and server sets <span aria-hidden="true">↗</span></a>}
             </div>
-          </div>
+          </div>}
         </article>
       </div>
     </main>

@@ -48,16 +48,6 @@ const postsForCategory = (categoryId: string) => blogPosts
             {postsForCategory(category.id).map((post, postIndex) => (
               <article class="journal-card" hidden={postIndex >= pageSize}>
                 <a class="journal-card-link" href={`/blog/${post.slug}/`}>
-                  <span class="journal-card-media">
-                    <img
-                      src={post.image}
-                      alt={post.alt}
-                      width={post.imageWidth ?? 600}
-                      height={post.imageHeight ?? 600}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </span>
                   <h2>{post.title}</h2>
                 </a>
               </article>
@@ -90,8 +80,6 @@ const postsForCategory = (categoryId: string) => blogPosts
   .journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
   .journal-card { border-top: 1px solid var(--line); }
   .journal-card-link { display: block; height: 100%; padding: 24px 0 18px; }
-  .journal-card-media { display: block; width: 100%; aspect-ratio: 1; margin-bottom: 20px; overflow: hidden; background: var(--brand-surface); }
-  .journal-card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
   h2 { margin-bottom: 14px; font-size: 24px; line-height: 1.3; }
   .journal-card-link:hover h2 { color: var(--copper-dark); }
   .journal-empty { margin-bottom: 0; color: var(--muted); font-size: 15px; line-height: 1.75; }

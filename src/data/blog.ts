@@ -6,6 +6,7 @@ import studdedQualityGuide from './blog/studded-cake-knife-and-server-set-qualit
 import materialSelectionGuide from './blog/custom-cake-knife-server-material-selection.json';
 import champagneSupplierGuide from './blog/custom-champagne-glass-supplier-guide.json';
 import trumpetFluteLogoGuide from './blog/custom-trumpet-flute-champagne-glasses-logo-guide.json';
+import bulkShippingGuide from './blog/reduce-bulk-cake-knife-server-set-shipping-costs.json';
 
 export const blogCategories = [
   { id: 'champagne-glassware', label: 'Champagne Glassware' },
@@ -20,22 +21,52 @@ interface BlogPost {
   category: BlogCategory;
   title: string;
   description: string;
-  image: string;
+  image?: string;
   imageWidth?: number;
   imageHeight?: number;
-  alt: string;
+  alt?: string;
   heroImage?: string;
   heroAlt?: string;
   seo?: { title: string; description: string; keywords: string; primaryKeyword: string };
   intro?: string[];
   introLinkText?: string;
+  outro?: string[];
+  noindex?: boolean;
+  showHeroDescription?: boolean;
+  showProductCta?: boolean;
   introImage?: { src: string; alt: string; width: number; height: number };
-  sections: { title: string; text: string; blocks?: { type: string; text?: string; parts?: { text: string; href?: string }[]; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; width?: number; height?: number; href?: string }[] }[];
+  sections: { title: string; text: string; blocks?: { type: string; text?: string; parts?: { text: string; href?: string; strong?: boolean }[]; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; width?: number; height?: number; href?: string }[] }[];
   productUrl: string;
   productLabel: string;
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'reduce-bulk-cake-knife-server-set-shipping-costs',
+    publishedAt: '2026-11-09T22:15:00+08:00',
+    category: 'cake-knife-set',
+    title: bulkShippingGuide.title,
+    description: bulkShippingGuide.intro[0],
+    image: '/images/blog/cake-knife-server-foam-box.webp',
+    imageWidth: 600,
+    imageHeight: 600,
+    alt: 'Cake knife and server in a foam-lined gift box',
+    seo: {
+      title: 'Cut Bulk Cake Knife and Server Set Shipping Costs',
+      description: 'Cut bulk cake knife and server set shipping costs by optimizing gift box size, foam thickness and carton packing while keeping products protected.',
+      keywords: 'Cut Bulk Cake Knife and Server Set Shipping Costs',
+      primaryKeyword: 'Cut Bulk Cake Knife and Server Set Shipping Costs',
+    },
+    intro: bulkShippingGuide.intro,
+    introLinkText: 'cake knife and server set',
+    sections: bulkShippingGuide.sections,
+    outro: bulkShippingGuide.outro,
+    noindex: true,
+    showHeroDescription: false,
+    showProductCta: false,
+    productUrl: '/cake-knife-server-sets/',
+    productLabel: 'Explore cake knife and server sets',
+  },
   {
     slug: 'custom-champagne-glass-supplier-guide',
     publishedAt: '2026-11-02T12:00:00+08:00',

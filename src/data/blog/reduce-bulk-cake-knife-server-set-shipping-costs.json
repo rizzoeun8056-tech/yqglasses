@@ -1,0 +1,353 @@
+{
+  "title": "Cut Bulk Cake Knife and Server Set Shipping Costs",
+  "intro": [
+    "To lower shipping costs for bulk cake knife and server set orders, you can start by optimizing gift box dimensions and foam inserts to reduce packaging volume while meeting protection requirements. Then adjust the master carton layout to suit the gift box dimensions, confirm the final packing data, and compare shipping quotes.",
+    "For orders of hundreds or thousands of sets, a little space saved on each package can add up to a noticeable difference in volume. The key is to consider product protection, gift presentation, and packing efficiency together."
+  ],
+  "sections": [
+    {
+      "title": "1. Why Does Gift Box Size Affect Bulk Shipping Costs?",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gift box dimensions affect the size of the master cartons and the number of sets per carton, which in turn changes the shipping volume of the entire order. When a shipping service charges by volumetric weight, larger packaging can increase the chargeable weight."
+        },
+        {
+          "type": "paragraph",
+          "text": "Using the rules published by DHL Express as an example:"
+        },
+        {
+          "type": "blockquote",
+          "text": "Volumetric weight (kg) = master carton length × width × height (cm) ÷ 5,000"
+        },
+        {
+          "type": "paragraph",
+          "text": "Chargeable weight is the greater of actual gross weight and volumetric weight, calculated separately for each carton in a multi-carton shipment. Confirm the applicable formula and billing rounding rules for your chosen shipping service. (DHL Weight and Dimensions Guide)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Before making changes, ask the logistics provider to confirm the chargeable weight used in the current quote. If volumetric weight is noticeably higher than actual gross weight, reducing packaging size is generally worth evaluating first; if the shipment is already charged by actual gross weight, compare transport options and rates as well."
+        }
+      ]
+    },
+    {
+      "title": "2. How Should Gift Box Length, Width, and Height Be Determined?",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "First determine the internal box dimensions from the actual knife and server dimensions, their arrangement, and the protection required, then confirm the external dimensions based on the box construction. The internal dimensions determine whether the products fit properly, while the external dimensions are used to calculate packaging volume and plan carton packing."
+        },
+        {
+          "type": "heading",
+          "text": "Length: How Much Space Should Be Left to Protect the Knife Tip?"
+        },
+        {
+          "type": "paragraph",
+          "text": "The gift box should accommodate the full length of the knife, with room for tip protection and the structures that hold it in place. The allowance should be determined by the product position, insert construction, and trial-packing results."
+        },
+        {
+          "type": "paragraph",
+          "text": "Check that the knife cannot slide back and forth inside the box and that movement will not cause its tip to press directly against the box wall. Protective materials around the tip and cutting edge should be securely fixed to prevent shifting in transit. (FedEx Packaging Optimization Recommendations)"
+        },
+        {
+          "type": "heading",
+          "text": "Width: How Can the Knife and Server Be Arranged to Save Space?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Adjusting the spacing, orientation, and offset arrangement of the knife and server can reduce unused space across the width of the gift box. Reliable separation is still needed after adjustment to prevent the two pieces from touching in transit."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, try placing the wider server surface alongside a narrower part of the other piece, then check whether the handles, decorative details, or space for placing and removing the products interfere with one another."
+        },
+        {
+          "type": "heading",
+          "text": "Height: How Can Cushioning and Compact Packaging Be Balanced?"
+        },
+        {
+          "type": "paragraph",
+          "text": "The clear internal height of the gift box should accommodate the highest point of the products when seated in the insert, with the required clearance or cushioning above them. Take measurements with the products actually fitted in place."
+        },
+        {
+          "type": "paragraph",
+          "text": "The lid should close naturally without putting excessive pressure on the handles or raised decorative details. If there is still substantial empty space above the products, reassess the top cushioning and box height, then use a sample to confirm whether the adjustment is suitable."
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/oh42053-white-gift-box.webp",
+          "alt": "Cake knife and server in a white windowed gift box",
+          "width": 600,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "title": "3. How Can Foam Thickness Balance Protection and Packaging Volume?",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Foam thickness should be determined by the material properties, product weight, load-bearing area, and vulnerable parts, then verified with packaging samples. Evaluate the overall insert thickness, the foam remaining beneath the cutouts, and the protective space around the products together."
+        },
+        {
+          "type": "paragraph",
+          "text": "Foam density, thickness, and load-bearing area all affect cushioning performance, so thickness alone cannot accurately indicate the level of protection. (ARPLANK Foam Cushioning Design Resources)"
+        },
+        {
+          "type": "heading",
+          "text": "How Can the Cutouts Keep the Products Stable?"
+        },
+        {
+          "type": "paragraph",
+          "text": "The cutouts should follow the contours of the knife and server and provide support in suitable places, keeping the products stable and easy to remove. Cutouts that are too loose allow movement, while overly tight cutouts can make insertion and removal harder or put pressure on decorative parts."
+        },
+        {
+          "type": "paragraph",
+          "text": "During sampling, check whether the handles are secure, the knife and server remain separated, and removing the products takes noticeable effort. Confirm the support points for the specific construction, without relying on delicate or protruding decorations to hold the products in place."
+        },
+        {
+          "type": "heading",
+          "text": "Where Should Sufficient Foam Be Retained?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pay particular attention to the protective structures beneath the cutouts, at the handle support points, between the knife and server, and between the products and box walls. Check each area against the product weight and how the products are held in place."
+        },
+        {
+          "type": "rich-paragraph",
+          "parts": [
+            {
+              "text": "The "
+            },
+            {
+              "text": "foam thickness remaining beneath the cutouts",
+              "strong": true
+            },
+            {
+              "text": " is easy to overlook. Even a thick insert can leave only a thin layer beneath the products if the cutouts are too deep."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Also check:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Whether the handles are securely supported and decorative parts are being squeezed.",
+            "Whether effective separation is maintained between the knife and server.",
+            "Whether suitable protective space remains between the product edges and box walls.",
+            "Whether materials in contact with the products cause scratches, pressure marks, or residue."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How Can You Determine How Much the Foam Can Be Thinned?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Compare packaging samples with different specifications and verify the protective performance of the complete package to determine how much the thickness can be adjusted. Confirm the specific solution for the selected design."
+        },
+        {
+          "type": "paragraph",
+          "text": "You can first settle on the product arrangement and cutout positions, then gradually adjust the foam specification or box height. Change one main factor at a time where possible, making it easier to see how each adjustment affects retention, cushioning, and ease of placing and removing the products."
+        }
+      ]
+    },
+    {
+      "title": "4. How Much Space Can Be Saved by Reducing Gift Box Height by 1 cm?",
+      "text": "",
+      "blocks": [
+        {
+          "type": "rich-paragraph",
+          "parts": [
+            {
+              "text": "Assuming the length and width remain 36 cm and 16 cm, reducing the external gift box height from 6 cm to 5 cm cuts the volume per box by approximately "
+            },
+            {
+              "text": "16.7%",
+              "strong": true
+            },
+            {
+              "text": ". For an order of 1,000 sets, the combined gift box volume decreases by "
+            },
+            {
+              "text": "0.576 m³",
+              "strong": true
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "label": "Gift box volume before and after a 1 cm height reduction",
+          "headers": [
+            "Item",
+            "Original Design",
+            "Adjusted Design"
+          ],
+          "rows": [
+            [
+              "External gift box dimensions",
+              "36 × 16 × 6 cm",
+              "36 × 16 × 5 cm"
+            ],
+            [
+              "Volume per gift box",
+              "3,456 cm³",
+              "2,880 cm³"
+            ],
+            [
+              "Combined volume of 1,000 gift boxes",
+              "3.456 m³",
+              "2.880 m³"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "These dimensions are for calculation purposes only. Whether the box height can actually be reduced needs to be confirmed through trial packing and protection testing."
+        },
+        {
+          "type": "paragraph",
+          "text": "This percentage represents the change in the volume of the gift boxes themselves. Final master carton volume also depends on carton wall thickness, the packing layout, and additional protective materials; actual shipping costs are also affected by chargeable weight, rate brackets, and surcharges."
+        }
+      ]
+    },
+    {
+      "title": "5. How Can Gift Box Optimization Improve Carton Packing Efficiency?",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "After adjusting the gift box dimensions, trial-pack the master cartons again and compare carton dimensions, sets per carton, and gross weight for different layouts. Once the changes are reflected in the final shipping package, you can accurately assess their effect on the cost allocated to each set."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ask the supplier to provide the following data:"
+        },
+        {
+          "type": "table",
+          "label": "Packing data to confirm with the supplier",
+          "headers": [
+            "Data",
+            "What to Confirm"
+          ],
+          "rows": [
+            [
+              "Sets per carton",
+              "Whether the arrangement is suitable and the products are easy to place, remove, and pack"
+            ],
+            [
+              "Master carton dimensions",
+              "Actual external dimensions after the carton is filled and sealed"
+            ],
+            [
+              "Gross weight per carton",
+              "Whether it meets the carton’s load capacity and the shipping service’s requirements"
+            ],
+            [
+              "Carton count and total volume",
+              "Totals based on the final packing plan"
+            ],
+            [
+              "Additional protective materials",
+              "Dividers, cushioning materials, and the space they occupy"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "During trial packing, also check for bulging cartons, gift boxes being squeezed inside, and noticeable deformation after stacking. Determine the number of sets per carton together with the carton’s load capacity and protection requirements."
+        }
+      ]
+    },
+    {
+      "title": "6. How Can You Confirm Packaging Suitability and Obtain Comparable Shipping Quotes?",
+      "text": "",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "First use the actual products to verify retention, cushioning, and surface protection in the complete package, then request quotes using the confirmed packing data. Give different logistics providers the same shipment information, destination, and arrival requirements so you can compare costs for the same scope of service."
+        },
+        {
+          "type": "paragraph",
+          "text": "Packaging checks can be divided into two stages:"
+        },
+        {
+          "type": "ordered-list",
+          "items": [
+            "Trial-packing checks: Confirm that the products are secure, the lid closes properly, the products are easy to place and remove, and there are no noticeable surface marks caused by the packaging.",
+            "Transport validation: Assess the complete package under drop, vibration, and stacking conditions appropriate to the actual transport method."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "A simple movement check can reveal loose products, while transport protection needs to be confirmed through appropriate validation. Packaging design and testing should take product shape, weight, fragility, and the shipping environment into account. (Sealed Air Packaging Design Approach)"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/oh42053-blue-gift-box.webp",
+          "alt": "Cake knife and server in a blue gift box",
+          "width": 600,
+          "height": 600
+        },
+        {
+          "type": "paragraph",
+          "text": "Once the design is approved, record the gift box dimensions, foam specification, cutout positions, and carton packing method as the reference for bulk packing."
+        },
+        {
+          "type": "paragraph",
+          "text": "When requesting quotes, also check whether pickup, international transport, destination handling, and final delivery are included. If different designs are going to the same customer, coordinate production schedules in advance and assess whether a consolidated shipment is suitable."
+        }
+      ]
+    },
+    {
+      "title": "7. Frequently Asked Questions",
+      "text": "",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Will a Smaller Gift Box Always Reduce Shipping Costs?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Whether shipping costs decrease depends on the final master carton data and the shipping service’s billing rules. If smaller gift boxes also reduce master carton volume or improve packing efficiency, there is a greater opportunity to lower the cost allocated to each set."
+        },
+        {
+          "type": "heading",
+          "text": "How Thick Should the Foam Be?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Determine the thickness through sampling and validation based on the specific product, foam material, and transport conditions. When sourcing, ask the supplier to state the overall insert thickness, cutout depth, and foam thickness remaining beneath the cutouts so you can compare the options accurately."
+        },
+        {
+          "type": "heading",
+          "text": "Can Compact Packaging Still Present a Wedding Gift Set Well?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Yes, compact packaging can still provide a neat, attractive presentation. Keep appropriate visual spacing in the design, and review the sample for color coordination, branding, and ease of placing and removing the products."
+        },
+        {
+          "type": "heading",
+          "text": "What Information Is Needed to Assess Packaging and Shipping Costs?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Provide the order quantity, product design, packaging requirements, destination postal code, and required arrival date. Once the packaging is confirmed, also provide the sets per carton, master carton dimensions, gross weight per carton, and total carton count to obtain a more accurate shipping quote."
+        }
+      ]
+    }
+  ],
+  "outro": [
+    "YQ supports gift boxes, standard boxes, and customized packaging shapes and designs. Providing product and purchasing requirements in advance allows gift box dimensions, foam inserts, and carton packing plans to be assessed together, helping bulk orders achieve a suitable balance of protection, presentation, and shipping cost."
+  ]
+}
