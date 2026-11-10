@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "node scripts/check-blog-images.mjs",
+    "postbuild": "node scripts/check-blog-images.mjs && node scripts/check-blog-indexing.mjs",
     "preview": "astro preview",
     "check": "astro check"
   },

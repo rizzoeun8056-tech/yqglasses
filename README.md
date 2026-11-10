@@ -40,7 +40,7 @@ npm run build
 
 ## 搜索引擎收录
 
-网站公开页面允许搜索引擎抓取和收录。`robots.txt` 使用 `Allow: /` 并指向包含公开页面和博客文章的 Sitemap。品牌素材预览页仍保留 `noindex`。部署后可在 Google Search Console 提交 `https://yqglasses.com/sitemap.xml` 并检查收录状态。
+网站公开页面允许搜索引擎抓取和收录。所有现有及未来新增的博客文章和博客列表页统一输出 `index, follow`，不提供单篇 `noindex` 覆盖选项；`npm run build` 会检查生成的博客页面，发现缺失索引声明或包含禁止索引、禁止跟踪指令时使构建失败。永久跳转页不作为文章检查。`robots.txt` 使用 `Allow: /` 并指向包含公开页面和博客文章的 Sitemap。品牌素材预览页仍保留 `noindex`。部署后可在 Google Search Console 提交 `https://yqglasses.com/sitemap.xml` 并检查收录状态。
 
 ## GitHub 与 Hostinger 静态部署
 

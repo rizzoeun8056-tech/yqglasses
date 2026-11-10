@@ -46,7 +46,7 @@ const companyPhotos = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    {post.noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="robots" content="index, follow" />
     {post.seo && <meta name="keywords" content={post.seo.keywords} />}
     <meta property="og:type" content="article" />
     <meta property="og:title" content={title} />

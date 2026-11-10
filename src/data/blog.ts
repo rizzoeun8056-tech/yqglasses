@@ -33,7 +33,6 @@ interface BlogPost {
   intro?: string[];
   introLinkText?: string;
   outro?: string[];
-  noindex?: boolean;
   showHeroDescription?: boolean;
   showProductCta?: boolean;
   introImage?: { src: string; alt: string; width: number; height: number; caption?: string };
@@ -59,7 +58,6 @@ export const blogPosts: BlogPost[] = [
     introLinkText: 'cake knife and server set',
     introImage: scratchedCakeGuide.introImage,
     sections: scratchedCakeGuide.sections,
-    noindex: true,
     showHeroDescription: false,
     showProductCta: false,
     productUrl: '/cake-knife-server-sets/',
@@ -83,7 +81,6 @@ export const blogPosts: BlogPost[] = [
     },
     intro: champagnePremiumGuide.intro,
     sections: champagnePremiumGuide.sections,
-    noindex: true,
     showHeroDescription: false,
     showProductCta: false,
     productUrl: '/personalized-champagne-glasses/',
@@ -109,7 +106,6 @@ export const blogPosts: BlogPost[] = [
     introLinkText: 'cake knife and server set',
     sections: bulkShippingGuide.sections,
     outro: bulkShippingGuide.outro,
-    noindex: true,
     showHeroDescription: false,
     showProductCta: false,
     productUrl: '/cake-knife-server-sets/',
