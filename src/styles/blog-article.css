@@ -76,6 +76,7 @@
 .article-content > p + section { margin-top: 36px; }
 .article-document-image { max-width: 480px; margin: 28px auto 36px; }
 .article-document-image img { width: 100%; height: auto; }
+.article-document-image figcaption { margin-top: 10px; color: var(--brand-muted); font-size: 13px; line-height: 1.6; }
 .article-inline-cta { margin-top: 22px; padding: 20px 22px; border-left: 3px solid var(--brand-copper); background: var(--brand-surface); }
 .article-inline-cta p { margin: 0 0 12px; }
 .article-inline-cta a { color: var(--copper-dark); font-size: 16px; font-weight: 800; line-height: 1.5; text-decoration: underline; text-underline-offset: 3px; }

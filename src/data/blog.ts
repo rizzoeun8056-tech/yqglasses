@@ -7,6 +7,8 @@ import materialSelectionGuide from './blog/custom-cake-knife-server-material-sel
 import champagneSupplierGuide from './blog/custom-champagne-glass-supplier-guide.json';
 import trumpetFluteLogoGuide from './blog/custom-trumpet-flute-champagne-glasses-logo-guide.json';
 import bulkShippingGuide from './blog/reduce-bulk-cake-knife-server-set-shipping-costs.json';
+import champagnePremiumGuide from './blog/champagne-glasses-premium-price.json';
+import scratchedCakeGuide from './blog/why-did-cake-knife-and-server-set-arrive-scratched.json';
 
 export const blogCategories = [
   { id: 'champagne-glassware', label: 'Champagne Glassware' },
@@ -34,13 +36,59 @@ interface BlogPost {
   noindex?: boolean;
   showHeroDescription?: boolean;
   showProductCta?: boolean;
-  introImage?: { src: string; alt: string; width: number; height: number };
+  introImage?: { src: string; alt: string; width: number; height: number; caption?: string };
   sections: { title: string; text: string; blocks?: { type: string; text?: string; parts?: { text: string; href?: string; strong?: boolean }[]; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; width?: number; height?: number; href?: string }[] }[];
   productUrl: string;
   productLabel: string;
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'why-did-cake-knife-and-server-set-arrive-scratched',
+    publishedAt: '2026-11-10T12:00:00+08:00',
+    category: 'cake-knife-set',
+    title: scratchedCakeGuide.title,
+    description: 'Why Did Cake Knife and Server Set Arrive Scratched? Learn the causes, how to resolve damage and ways to prevent scratches in future orders.',
+    seo: {
+      title: 'Why Did Cake Knife and Server Set Arrive Scratched?',
+      description: 'Why Did Cake Knife and Server Set Arrive Scratched? Learn the causes, how to resolve damage and ways to prevent scratches in future orders.',
+      keywords: 'Why Did Cake Knife and Server Set Arrive Scratched?',
+      primaryKeyword: 'Why Did Cake Knife and Server Set Arrive Scratched?',
+    },
+    intro: scratchedCakeGuide.intro,
+    introLinkText: 'cake knife and server set',
+    introImage: scratchedCakeGuide.introImage,
+    sections: scratchedCakeGuide.sections,
+    noindex: true,
+    showHeroDescription: false,
+    showProductCta: false,
+    productUrl: '/cake-knife-server-sets/',
+    productLabel: 'Explore custom cake knife and server sets',
+  },
+  {
+    slug: 'what-makes-champagne-glasses-worth-more',
+    publishedAt: '2026-11-10T12:00:00+08:00',
+    category: 'champagne-glassware',
+    title: champagnePremiumGuide.title,
+    description: 'What Makes Champagne Glasses Worth More? Discover how design, gifting and brand trust shape value and how to test premium pricing before launch.',
+    image: '/images/blog/champagne-glasses-premium-product.webp',
+    imageWidth: 600,
+    imageHeight: 600,
+    alt: 'Two champagne flutes with silver-tone and rose-gold-tone stems and studded heart details',
+    seo: {
+      title: 'What Makes Champagne Glasses Worth More?',
+      description: 'What Makes Champagne Glasses Worth More? Discover how design, gifting and brand trust shape value and how to test premium pricing before launch.',
+      keywords: 'What Makes Champagne Glasses Worth',
+      primaryKeyword: 'What Makes Champagne Glasses Worth',
+    },
+    intro: champagnePremiumGuide.intro,
+    sections: champagnePremiumGuide.sections,
+    noindex: true,
+    showHeroDescription: false,
+    showProductCta: false,
+    productUrl: '/personalized-champagne-glasses/',
+    productLabel: 'Explore personalized champagne glasses',
+  },
   {
     slug: 'reduce-bulk-cake-knife-server-set-shipping-costs',
     publishedAt: '2026-11-09T22:15:00+08:00',

@@ -1,0 +1,20 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: product-mockup. Asset type: square editorial blog illustration for an article about receiving scratched cake knife and server sets. Primary request: create a highly photorealistic close-up product photograph style image of a stainless steel cake knife and matching triangular cake server with clearly visible realistic scratches. This is a generated educational illustration, not documentary evidence of an actual shipment. Scene: plain matte charcoal gray inspection tabletop, no props. Subject: one physically plausible broad triangular cake server with a slightly rounded tip and one long slim rounded-tip cake knife with a fine serrated cutting edge, arranged diagonally beside each other with both working surfaces fully visible; handles extend toward the bottom and remain partly in frame. Simple unbranded silver handles. Composition: close three-quarter overhead view, square 1:1, working surfaces fill about 75 percent of the frame, realistic tabletop scale and metal thickness. Materials and scratches: silver mirror-polished stainless steel with several clearly visible thin irregular hairline scratches and a few slightly broader shallow scuff streaks across the center of the server and the flat of the knife; vary directions and lengths naturally. The scratches are localized mechanical abrasion in metal, not drawn lines or decorative engraving. Keep the products intact, no cracks, rust, food residue, deep gouges, chipped edges, or severe destruction. Lighting: soft directional side lighting and controlled highlights that reveal surface scratches while retaining natural metallic reflections; balanced exposure, no blown-out glare. Style: convincing inspection photography, accurate stainless steel texture, crisp detail on both working surfaces, restrained natural colors, no glossy CGI appearance, no heavy bokeh. Constraints: no people, no hands, no logo, no text, no watermark, no collage, no arrows. The scratch detail must remain legible when resized to 600 by 600 pixels.",
+  "generated_source": "/Users/laotie/.codex/generated_images/01a1c565-1b20-7021-b62f-640804f360a0/exec-a4f80bc0-8c72-4d03-93a6-22cc6c3b479c.png",
+  "preserved_original": "design/blog/source-images/scratched-cake-knife-server-ai-original.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "export": "public/images/blog/cake-scratches.webp",
+  "width": 600,
+  "height": 600,
+  "bytes": 23942,
+  "quality": 80,
+  "ai_generated": true,
+  "alt": "AI-generated close-up of scratches on a stainless steel cake knife and server",
+  "caption": "AI-generated illustration of surface scratches on a stainless steel cake knife and server.",
+  "article_slug": "why-did-cake-knife-and-server-set-arrive-scratched",
+  "placement": "After the opening paragraph and before section 1"
+}

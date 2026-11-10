@@ -27,6 +27,10 @@ const description = post.seo?.description ?? post.description;
 const canonical = `https://yqglasses.com/blog/${post.slug}/`;
 const heroImage = post.heroImage ?? post.image;
 const heroAlt = post.heroAlt ?? post.alt;
+const shareImage = heroImage ?? post.introImage?.src;
+const shareAlt = heroImage ? heroAlt : post.introImage?.alt;
+const shareWidth = heroImage ? (post.imageWidth ?? 600) : (post.introImage?.width ?? 600);
+const shareHeight = heroImage ? (post.imageHeight ?? 600) : (post.introImage?.height ?? 600);
 const cakeKnifeProductUrl = '/cake-knife-server-sets/';
 const companyPhotos = [
   { src: '/images/blog/company/assembly-workbench-retouched.webp', alt: 'YQ GLASSES team assembling decorative glassware at a workbench' },
@@ -49,7 +53,7 @@ const companyPhotos = [
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <link rel="canonical" href={canonical} />
-    {heroImage ? <BrandAssets shareImage={`https://yqglasses.com${heroImage}`} shareImageType="image/webp" shareImageWidth={post.imageWidth ?? 600} shareImageHeight={post.imageHeight ?? 600} shareImageAlt={heroAlt} /> : <BrandAssets />}
+    {shareImage ? <BrandAssets shareImage={`https://yqglasses.com${shareImage}`} shareImageType="image/webp" shareImageWidth={shareWidth} shareImageHeight={shareHeight} shareImageAlt={shareAlt} /> : <BrandAssets />}
     <title>{title}</title>
   </head>
   <body class="blog-detail-page">
@@ -90,7 +94,7 @@ const companyPhotos = [
             const position = phrase ? paragraph.indexOf(phrase) : -1;
             return <p>{position >= 0 && phrase ? <>{paragraph.slice(0, position)}<a href={post.productUrl}>{phrase}</a>{paragraph.slice(position + phrase.length)}</> : paragraph}</p>;
           })}
-          {post.introImage && <figure class="article-document-image"><img src={post.introImage.src} alt={post.introImage.alt} width={post.introImage.width} height={post.introImage.height} loading="lazy" /></figure>}
+          {post.introImage && <figure class="article-document-image"><img src={post.introImage.src} alt={post.introImage.alt} width={post.introImage.width} height={post.introImage.height} loading="lazy" />{post.introImage.caption && <figcaption>{post.introImage.caption}</figcaption>}</figure>}
           {post.sections.map((section, index) => <section id={`section-${index + 1}`}><h2>{section.title}</h2>
             {section.blocks ? section.blocks.map((block) => (
               block.type === 'paragraph' ? <p>{block.text}</p> :
