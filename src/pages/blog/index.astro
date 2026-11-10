@@ -45,19 +45,24 @@ const postsForCategory = (categoryId: string) => blogPosts
       {blogCategories.map((category) => (
         <section class="journal-panel" id={`panel-${category.id}`} role="tabpanel" aria-labelledby={`tab-${category.id}`} tabindex="0" data-page-size={pageSize} hidden={category.id !== defaultCategoryId}>
           <div class="journal-grid">
-            {postsForCategory(category.id).map((post, postIndex) => (
+            {postsForCategory(category.id).map((post, postIndex) => {
+              const image = post.heroImage ?? post.image ?? post.introImage?.src;
+              const alt = (post.heroImage ? post.heroAlt : undefined) ?? post.alt ?? post.introImage?.alt ?? post.title;
+              return (
               <article class="journal-card" hidden={postIndex >= pageSize}>
                 <a class="journal-card-link" href={`/blog/${post.slug}/`}>
+                  {image && <span class="journal-card-image"><img src={image} alt={alt} width={post.imageWidth ?? post.introImage?.width ?? 600} height={post.imageHeight ?? post.introImage?.height ?? 600} loading="lazy" decoding="async" /></span>}
                   <h2>{post.title}</h2>
                 </a>
               </article>
-            ))}
+              );
+            })}
           </div>
           <p class="journal-empty" hidden={blogPosts.some((post) => post.category === category.id)}>Articles coming soon.</p>
           <nav class="journal-pagination" aria-label={`${category.label} article pages`} hidden>
-            <button type="button" data-page-previous aria-label="Previous page">← Previous</button>
+            <button type="button" data-page-previous aria-label="Previous page">←</button>
             <div class="journal-page-numbers"></div>
-            <button type="button" data-page-next aria-label="Next page">Next →</button>
+            <button type="button" data-page-next aria-label="Next page">→</button>
             <span class="journal-page-status" aria-live="polite" aria-atomic="true"></span>
           </nav>
         </section>
@@ -78,25 +83,30 @@ const postsForCategory = (categoryId: string) => blogPosts
   .journal-tabs button[aria-selected='true'] { border-color: var(--copper); background: var(--brand-copper); color: #fff; }
   .journal-panel[hidden], .journal-card[hidden], .journal-pagination[hidden], .journal-empty[hidden] { display: none; }
   .journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
-  .journal-card { border-top: 1px solid var(--line); }
-  .journal-card-link { display: block; height: 100%; padding: 24px 0 18px; }
-  h2 { margin-bottom: 14px; font-size: 24px; line-height: 1.3; }
+  .journal-card { min-width: 0; }
+  .journal-card-link { display: flex; flex-direction: column; gap: 18px; height: 100%; padding-bottom: 18px; }
+  .journal-card-image { display: block; width: 100%; aspect-ratio: 1 / 1; overflow: hidden; background: var(--brand-surface); }
+  .journal-card-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  h2 { margin: 0; font-size: 24px; line-height: 1.3; }
   .journal-card-link:hover h2 { color: var(--copper-dark); }
   .journal-empty { margin-bottom: 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
   .journal-empty { text-align: center; padding-block: 32px; }
-  .journal-pagination { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+  .journal-pagination { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 40px; }
   .journal-pagination button { min-height: 42px; min-width: 42px; padding: 9px 12px; border: 1px solid var(--line); background: var(--brand-paper); color: var(--ink); font-size: 15px; }
   .journal-pagination button[aria-current='page'] { background: var(--brand-copper); border-color: var(--copper); color: #fff; }
   .journal-pagination button:disabled { color: var(--muted); cursor: default; }
-  .journal-page-numbers { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
-  .journal-page-ellipsis { display: inline-flex; min-width: 24px; align-items: center; justify-content: center; color: var(--muted); }
-  .journal-page-status { flex-basis: 100%; text-align: center; color: var(--muted); font-size: 15px; line-height: 1.5; }
+  .journal-page-numbers { display: flex; gap: 4px; justify-content: center; }
+  .journal-page-ellipsis { display: inline-flex; min-width: 18px; align-items: center; justify-content: center; color: var(--muted); }
+  .journal-page-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
   @media (min-width: 701px) and (max-width: 980px) { .journal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 700px) {
     .journal { padding-block: 30px 60px; }
     .journal-tabs { gap: 6px; margin-bottom: 28px; }
     .journal-tabs button { flex: 1; padding: 10px 8px; }
     .journal-grid { grid-template-columns: 1fr; gap: 32px; }
+    .journal-pagination { gap: 6px; }
+    .journal-page-numbers { gap: 2px; }
+    .journal-page-ellipsis { min-width: 14px; }
     h2 { font-size: 22px; }
   }
 </style>
@@ -123,22 +133,18 @@ const postsForCategory = (categoryId: string) => blogPosts
     pagination.hidden = pageCount <= 1;
     const numbers = panel.querySelector<HTMLElement>('.journal-page-numbers')!;
     numbers.replaceChildren();
-    const pageNumbers = pageCount <= 4
-      ? Array.from({ length: pageCount }, (_, index) => index + 1)
-      : page <= 2
-        ? [1, 2, 3, pageCount]
-        : page >= pageCount - 1
-          ? [1, pageCount - 2, pageCount - 1, pageCount]
-          : [1, page, page + 1, pageCount];
-    let previousNumber = 0;
-    for (const number of pageNumbers) {
-      if (previousNumber && number - previousNumber > 1) {
-        const ellipsis = document.createElement('span');
-        ellipsis.className = 'journal-page-ellipsis';
-        ellipsis.textContent = '…';
-        ellipsis.setAttribute('aria-hidden', 'true');
-        numbers.append(ellipsis);
-      }
+    const visiblePageCount = Math.min(3, pageCount);
+    const firstPage = Math.min(Math.max(1, page - 1), pageCount - visiblePageCount + 1);
+    const lastPage = firstPage + visiblePageCount - 1;
+    const appendEllipsis = () => {
+      const ellipsis = document.createElement('span');
+      ellipsis.className = 'journal-page-ellipsis';
+      ellipsis.textContent = '…';
+      ellipsis.setAttribute('aria-hidden', 'true');
+      numbers.append(ellipsis);
+    };
+    if (firstPage > 1) appendEllipsis();
+    for (let number = firstPage; number <= lastPage; number++) {
       const button = document.createElement('button');
       button.type = 'button';
       button.textContent = String(number);
@@ -146,11 +152,11 @@ const postsForCategory = (categoryId: string) => blogPosts
       button.setAttribute('aria-label', `Page ${number}`);
       if (number === page) button.setAttribute('aria-current', 'page');
       numbers.append(button);
-      previousNumber = number;
     }
+    if (lastPage < pageCount) appendEllipsis();
     panel.querySelector<HTMLButtonElement>('[data-page-previous]')!.disabled = page === 1;
     panel.querySelector<HTMLButtonElement>('[data-page-next]')!.disabled = page === pageCount;
-    panel.querySelector<HTMLElement>('.journal-page-status')!.textContent = `Page ${page} of ${pageCount}`;
+    panel.querySelector<HTMLElement>('.journal-page-status')!.textContent = `Page ${page}`;
     return page;
   };
   panels.forEach((panel) => {

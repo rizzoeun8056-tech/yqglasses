@@ -23,10 +23,10 @@
         },
         {
           "type": "image",
-          "src": "/images/blog/custom-trumpet-flute-logo-studio.webp",
+          "src": "/images/blog/custom-trumpet-flute-logo-studio-600.webp",
           "alt": "Illustrative studio display of champagne flutes with YQ GLASSES branding and decorative metal stems",
-          "width": 700,
-          "height": 875,
+          "width": 480,
+          "height": 600,
           "label": "Illustrative logo placement and decorative stem concept."
         }
       ]
@@ -169,10 +169,10 @@
         },
         {
           "type": "image",
-          "src": "/images/blog/custom-trumpet-flute-logo-event.webp",
+          "src": "/images/blog/custom-trumpet-flute-logo-event-600.webp",
           "alt": "Illustrative table setting with YQ GLASSES champagne flutes, handmade metal stems, and hand-set studded heart details",
-          "width": 700,
-          "height": 875,
+          "width": 480,
+          "height": 600,
           "label": "Illustrative handmade metal stem and studded detail concept."
         },
         {

@@ -7,7 +7,7 @@ For every new blog article, read the complete supplied content and prepare Engli
 - Use at most two commas in the title and at most two in the description. Prefer natural sentences over keyword lists.
 - Set relevant keywords separately in `seo.keywords`; save `seo.primaryKeyword` and run the build-time TDK validation.
 - Use the user's designated featured image. Preserve the original and export WebP at no more than 600px per side and strictly below 30,000 bytes for every blog image (including the banner and sidebar carousel). Use accurate English alt text and the same image for article social previews.
-- Preserve meaningful article content, comparison tables, lists and FAQ hierarchy. Assign one of the two existing blog categories. Keep the Blog index free of article thumbnails and limited to nine posts per category per page.
+- Preserve meaningful article content, comparison tables, lists and FAQ hierarchy. Assign one of the two existing blog categories. Show each article's featured image above its title in the Blog index and keep each category limited to nine posts per page. Pagination shows previous/next arrow buttons, at most three page numbers and ellipses for omitted pages; do not display a total-page count.
 - Preserve the site's noindex/robots restrictions until the user explicitly requests indexing. Verify the local result before publishing through the existing GitHub → Hostinger workflow.
 - Publication must not include unrelated files, credentials or generated document output. Preserve existing user changes.
 
