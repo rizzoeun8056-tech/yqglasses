@@ -1,0 +1,4 @@
+# Permanent redirects for retired blog articles on Hostinger.
+RedirectMatch 301 ^/blog/how-to-use-cake-knife-and-server-set(?:/index\.html|/)?$ https://yqglasses.com/cake-knife-server-sets/
+RedirectMatch 301 ^/blog/personalized-champagne-glass-brief(?:/index\.html|/)?$ https://yqglasses.com/personalized-champagne-glasses/
+RedirectMatch 301 ^/blog/choosing-champagne-glassware(?:/index\.html|/)?$ https://yqglasses.com/personalized-champagne-glasses/
