@@ -9,6 +9,7 @@ import trumpetFluteLogoGuide from './blog/custom-trumpet-flute-champagne-glasses
 import bulkShippingGuide from './blog/reduce-bulk-cake-knife-server-set-shipping-costs.json';
 import champagnePremiumGuide from './blog/champagne-glasses-premium-price.json';
 import scratchedCakeGuide from './blog/why-did-cake-knife-and-server-set-arrive-scratched.json';
+import bendingPreventionGuide from './blog/prevent-cake-knife-and-server-set-bending.json';
 
 export const blogCategories = [
   { id: 'champagne-glassware', label: 'Champagne Glassware' },
@@ -31,17 +32,45 @@ interface BlogPost {
   heroAlt?: string;
   seo?: { title: string; description: string; keywords: string; primaryKeyword: string };
   intro?: string[];
+  introSubtitle?: string;
   introLinkText?: string;
+  introLinkParagraph?: number;
   outro?: string[];
   showHeroDescription?: boolean;
   showProductCta?: boolean;
   introImage?: { src: string; alt: string; width: number; height: number; caption?: string };
-  sections: { title: string; text: string; blocks?: { type: string; text?: string; parts?: { text: string; href?: string; strong?: boolean }[]; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; width?: number; height?: number; href?: string }[] }[];
+  sections: { title: string; text: string; blocks?: { type: string; text?: string; parts?: { text: string; href?: string; strong?: boolean }[]; items?: string[]; headers?: string[]; rows?: string[][]; label?: string; src?: string; alt?: string; caption?: string; width?: number; height?: number; href?: string }[] }[];
   productUrl: string;
   productLabel: string;
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'prevent-cake-knife-and-server-set-bending',
+    publishedAt: '2026-11-17T12:00:00+08:00',
+    category: 'cake-knife-set',
+    title: bendingPreventionGuide.title,
+    description: 'Prevent cake knife and server set bending during shipping and use. Explore packing tips and YQ’s successful delivery to a South African customer.',
+    seo: {
+      title: 'Prevent Cake Knife and Server Set Bending',
+      description: 'Prevent cake knife and server set bending during shipping and use. Explore packing tips and YQ’s successful delivery to a South African customer.',
+      keywords: 'prevent cake knife and server set bending',
+      primaryKeyword: 'prevent cake knife and server set bending',
+    },
+    image: '/images/blog/prevent-bending-featured.webp',
+    imageWidth: 531,
+    imageHeight: 600,
+    alt: 'Side view of a cake server with a visibly bent metal working end and a clear sparkling handle',
+    introSubtitle: bendingPreventionGuide.introSubtitle,
+    intro: bendingPreventionGuide.intro,
+    introLinkText: 'custom cake knife and server sets',
+    introLinkParagraph: 1,
+    sections: bendingPreventionGuide.sections,
+    showHeroDescription: false,
+    showProductCta: false,
+    productUrl: '/cake-knife-server-sets/',
+    productLabel: 'Explore custom cake knife and server sets',
+  },
   {
     slug: 'why-did-cake-knife-and-server-set-arrive-scratched',
     publishedAt: '2026-11-10T12:00:00+08:00',

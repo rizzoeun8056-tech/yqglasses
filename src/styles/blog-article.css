@@ -60,8 +60,8 @@
   .article-layout { grid-template-columns: 1fr; gap: 46px; padding-block: 38px 72px; }
   .article-sidebar-stack { display: contents; }
   .article-toc { order: 1; }
-  .article-content { order: 2; }
-  .article-company { order: 3; grid-column: 1; width: 100%; max-width: none; }
+  .article-content { order: 3; }
+  .article-company { order: 2; grid-column: 1; width: 100%; max-width: none; }
   .article-carousel { width: min(100%, 380px); }
   .article-toc ol { max-height: 300px; }
   .article-company { margin-top: 0; }

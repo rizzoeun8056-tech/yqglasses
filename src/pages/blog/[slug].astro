@@ -89,8 +89,9 @@ const companyPhotos = [
           </aside>
         </div>
         <article class="article-content" aria-label={post.title}>
+          {post.introSubtitle && <p><em>{post.introSubtitle}</em></p>}
           {post.intro?.map((paragraph, index) => {
-            const phrase = index === 0 ? post.introLinkText : undefined;
+            const phrase = index === (post.introLinkParagraph ?? 0) ? post.introLinkText : undefined;
             const position = phrase ? paragraph.indexOf(phrase) : -1;
             return <p>{position >= 0 && phrase ? <>{paragraph.slice(0, position)}<a href={post.productUrl}>{phrase}</a>{paragraph.slice(position + phrase.length)}</> : paragraph}</p>;
           })}
@@ -107,7 +108,7 @@ const companyPhotos = [
                 const separator = item.indexOf(':');
                 return <li>{separator >= 0 ? <><strong>{item.slice(0, separator + 1)}</strong>{item.slice(separator + 1)}</> : item}</li>;
               })}</ol> :
-              block.type === 'image' ? <figure class="article-document-image" style={{ maxWidth: `${block.width}px` }}><img src={block.src} alt={block.alt} width={block.width} height={block.height} loading="lazy" /></figure> :
+              block.type === 'image' ? <figure class="article-document-image" style={{ maxWidth: `${block.width}px` }}><img src={block.src} alt={block.alt} width={block.width} height={block.height} loading="lazy" />{block.caption && <figcaption>{block.caption}</figcaption>}</figure> :
               block.type === 'table' ? <div class="article-table" role="region" aria-label={block.label ?? 'Cake types and recommended knives'} tabindex="0"><table><thead><tr>{block.headers?.map((cell) => <th scope="col">{cell}</th>)}</tr></thead><tbody>{block.rows?.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody></table></div> : null
             )) : <p>{section.text}</p>}
           </section>)}
